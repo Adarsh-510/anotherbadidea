@@ -7,9 +7,10 @@ var sleep_duration = 1.5
 
 @onready var Interface = get_tree().get_first_node_in_group("Interface")
 
+func _ready() -> void:
+	add_to_group("TurnsHandler")
+
 func enemy_turn():
-	#REMOVE THIS LATER
-	DataBase.curr_enemy = DataBase.Bully1
 	
 	if randf_range(0,1) > 0.5:
 		FightSystem.actions_array.append(DataBase.curr_enemy["attack1"])
@@ -78,8 +79,11 @@ func show_turns():
 	
 	await get_tree().create_timer(sleep_duration).timeout
 	
-	
-	#set enemy health to 100 after battle is over
-	
 	FightSystem.active_state = FightSystem.STATE.SELECTION
 	Interface.show_menu()
+	
+
+func visual_feedback():
+	pass
+	#activated after every "player used that" frame
+	#pass 2 arguements, entity attacked and attack names, also store the position of all player panels and enemy

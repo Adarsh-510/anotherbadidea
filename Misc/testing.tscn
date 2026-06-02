@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhgfp833ww8ou"]
+
+[ext_resource type="Script" uid="uid://bl2j6t03j0rha" path="res://Misc/testing.gd" id="1_usb5w"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_usb5w")
+
+[node name="BL" type="Button" parent="."]
+offset_left = 189.0
+offset_top = 92.0
+offset_right = 446.0
+offset_bottom = 164.0
+text = "Bully Leader"
+
+[node name="B1" type="Button" parent="."]
+offset_left = 234.0
+offset_top = 207.0
+offset_right = 496.0
+offset_bottom = 289.0
+text = "Bully 1"
+
+[node name="B2" type="Button" parent="."]
+offset_left = 582.0
+offset_top = 97.0
+offset_right = 837.0
+offset_bottom = 161.0
+text = "Bully 2"
+
+[node name="B3" type="Button" parent="."]
+offset_left = 576.0
+offset_top = 240.0
+offset_right = 823.0
+offset_bottom = 308.0
+text = "Bully 3"
+
+[connection signal="pressed" from="BL" to="." method="_on_bl_pressed"]
+[connection signal="pressed" from="B1" to="." method="_on_b_1_pressed"]
+[connection signal="pressed" from="B2" to="." method="_on_b_2_pressed"]
+[connection signal="pressed" from="B3" to="." method="_on_b_3_pressed"]

@@ -18,6 +18,9 @@ var current_UI
 var iterator = 1
 
 func _ready() -> void:
+	
+	add_to_group("Interface")
+	
 	init_position = UI_position.global_position
 	UI_menu = UI.instantiate()
 	UI_menu.global_position = init_position
@@ -27,6 +30,7 @@ func _ready() -> void:
 	turns_info_panel.position = init_position + Vector2(0,500)
 
 func _process(delta: float) -> void:
+	
 	if (FightSystem.active_state == FightSystem.STATE.SELECTION):
 		if Input.is_action_just_pressed("ui_up") and iterator > 1 and iterator <= 3:
 			iterator -= 1

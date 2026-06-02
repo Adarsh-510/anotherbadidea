@@ -2,15 +2,6 @@ extends Node
 
 #in description add the damage it deals
 
-enum ENEMIES {
-	NONE,
-	BULLY_1,
-	BULLY_2,
-	BULLY_3,
-	BULLY_4,
-	BULLY_LEADER
-}
-
 enum CHECKPOINTS {
 	INTRO,
 	SISTER_STEALTH,
@@ -21,7 +12,7 @@ enum CHECKPOINTS {
 }
 
 var curr_checkpoint = CHECKPOINTS.INTRO
-var curr_enemy = ENEMIES.BULLY_1
+var curr_enemy = Bully1
 
 var Player1 = {
 	"name": "Player 1",
@@ -174,24 +165,6 @@ var Bully3 = {
 	"attack2": "Flying Kick",
 	"attack2_desc": "Deals 20 damage.",
 	"attack2_damage": 20
-}
-
-var Bully4 = {
-	"name": "Bully 4",
-
-	"max_hp": 100,
-	"hp": 100,
-
-	"attack": 18,
-	"defense": 10,
-
-	"attack1": "Combo Punch",
-	"attack1_desc": "Deals 18 damage.",
-	"attack1_damage": 18,
-
-	"attack2": "Trash Can Slam",
-	"attack2_desc": "Deals 24 damage.",
-	"attack2_damage": 24
 }
 
 var BullyLeader = {

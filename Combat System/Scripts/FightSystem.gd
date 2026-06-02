@@ -10,9 +10,6 @@ var active_state
 var damage_array = []
 var actions_array = []
 
-@onready var Interface = get_tree().get_first_node_in_group("Interface")
-@onready var TurnsHandler = get_tree().get_first_node_in_group("TurnsHandler")
-
 func _ready() -> void:
 	active_state = STATE.SELECTION
 
@@ -25,7 +22,12 @@ func next_turn(prev_turn_damage, prev_turn_name):
 	
 	iterator += 1
 	if iterator >= entity_array.size() -1:
-		iterator = 0 
+		
 		active_state = STATE.ATTACK
+		iterator = 0 
+		
+		var Interface = get_tree().get_first_node_in_group("Interface")
+		var TurnsHandler = get_tree().get_first_node_in_group("TurnsHandler")
+		
 		Interface.hide_menu()
-		TurnsHandler.enemy_turn()
+		TurnsHandler.enemy_turn()    
