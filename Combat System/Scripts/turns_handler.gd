@@ -3,7 +3,7 @@ extends Node
 @onready var turns: Label = $"../Visuals/turns_info_panel"
 var iterator = 0
 var typing_duration = 2.5
-var sleep_duration = 1
+var sleep_duration = 1.5
 
 @onready var Interface = get_tree().get_first_node_in_group("Interface")
 

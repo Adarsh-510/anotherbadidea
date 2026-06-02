@@ -1,8 +1,8 @@
 extends Control
 
-@onready var attack_UI = preload("res://attacks.tscn")
-@onready var item_UI = preload("res://items.tscn")
-@onready var UI = preload("res://uiui.tscn")
+@onready var attack_UI = preload("res://Combat System/Scenes/attacks.tscn")
+@onready var item_UI = preload("res://Combat System/Scenes/items.tscn")
+@onready var UI = preload("res://Combat System/Scenes/ui.tscn")
 
 @onready var UI_position: Marker2D = $Marker2D
 @onready var desc_label: Label = $description/desc_label
@@ -24,7 +24,7 @@ func _ready() -> void:
 	add_child(UI_menu)
 	current_UI = UI_menu
 	
-	turns_info_panel.position = init_position + Vector2(0, 500)
+	turns_info_panel.position = init_position + Vector2(0,500)
 
 func _process(delta: float) -> void:
 	if (FightSystem.active_state == FightSystem.STATE.SELECTION):

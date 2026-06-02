@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgijj5tu3xi5j"
-path="res://.godot/imported/publicdomainpictures-scrapyard-70908_1280-dithered.jpg-95089073bd74a052f946c63c427ffbce.ctex"
+uid="uid://ddbngllqckwdq"
+path="res://.godot/imported/Bully 2.png-fddf6919431fe570347c90430c287162.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://publicdomainpictures-scrapyard-70908_1280-dithered.jpg"
-dest_files=["res://.godot/imported/publicdomainpictures-scrapyard-70908_1280-dithered.jpg-95089073bd74a052f946c63c427ffbce.ctex"]
+source_file="res://Combat System/Assets/Bully 2.png"
+dest_files=["res://.godot/imported/Bully 2.png-fddf6919431fe570347c90430c287162.ctex"]
 
 [params]
 

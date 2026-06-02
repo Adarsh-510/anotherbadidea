@@ -1,0 +1,49 @@
+[gd_scene load_steps=7 format=3 uid="uid://bb55eu704pk1h"]
+
+[ext_resource type="Script" uid="uid://c5neiaotu3w2w" path="res://Combat System/Scripts/pointer.gd" id="1_u5wui"]
+[ext_resource type="Script" uid="uid://bcoklm4m2qmhq" path="res://Combat System/Scripts/items.gd" id="2_aa2cp"]
+[ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="2_rolsa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn3mr"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdhaj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs652"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Items" type="VBoxContainer"]
+offset_left = 981.0
+offset_top = 747.0
+offset_right = 1854.0
+offset_bottom = 1266.0
+script = ExtResource("1_u5wui")
+
+[node name="element1" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rolsa")
+theme_override_font_sizes/font_size = 78
+theme_override_styles/normal = SubResource("StyleBoxFlat_yn3mr")
+text = "Item 1"
+horizontal_alignment = 1
+
+[node name="element2" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rolsa")
+theme_override_font_sizes/font_size = 78
+theme_override_styles/normal = SubResource("StyleBoxFlat_rdhaj")
+text = "Item 2"
+horizontal_alignment = 1
+
+[node name="element3" type="Label" parent="."]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_rolsa")
+theme_override_font_sizes/font_size = 78
+theme_override_styles/normal = SubResource("StyleBoxFlat_fs652")
+text = "Item 3"
+horizontal_alignment = 1
+
+[node name="item_names" type="Node" parent="."]
+script = ExtResource("2_aa2cp")

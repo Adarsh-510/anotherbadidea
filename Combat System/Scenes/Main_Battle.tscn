@@ -1,0 +1,307 @@
+[gd_scene load_steps=26 format=3 uid="uid://dcdb6n4hcp8xv"]
+
+[ext_resource type="Script" uid="uid://b455ccp0ty5nk" path="res://Combat System/Scripts/FightSystem.gd" id="1_m5e66"]
+[ext_resource type="Script" uid="uid://cqe560ehscjuy" path="res://Combat System/Scripts/main_ui.gd" id="2_ee3ch"]
+[ext_resource type="Script" uid="uid://bmshd2w6qqxp7" path="res://Combat System/Scripts/turn_indicator.gd" id="3_6e522"]
+[ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="3_yj703"]
+[ext_resource type="Script" uid="uid://fnxtnt8oaimo" path="res://Combat System/Scripts/visuals.gd" id="4_whf4a"]
+[ext_resource type="Texture2D" uid="uid://bwpqshb6ms372" path="res://Combat System/Assets/Mr White.png" id="5_etnwf"]
+[ext_resource type="Texture2D" uid="uid://qygat123m3hv" path="res://Combat System/Assets/Mr Green.png" id="6_yj703"]
+[ext_resource type="Texture2D" uid="uid://cll2pfpgmpixb" path="res://Combat System/Assets/Mr Orange.png" id="7_diypt"]
+[ext_resource type="Script" uid="uid://bgp1g5ix68l8o" path="res://Combat System/Scripts/data_base.gd" id="7_etnwf"]
+[ext_resource type="Texture2D" uid="uid://d4fsy13p5ervp" path="res://Combat System/Assets/Bully Leader.png" id="8_jbu2x"]
+[ext_resource type="Script" uid="uid://bj1ltxixeygi6" path="res://Combat System/Scripts/turns_handler.gd" id="8_yj703"]
+[ext_resource type="Texture2D" uid="uid://byj3m2hm5ydd0" path="res://Combat System/Assets/Bully 1.png" id="9_sa1l6"]
+[ext_resource type="Texture2D" uid="uid://ddbngllqckwdq" path="res://Combat System/Assets/Bully 2.png" id="10_hrp83"]
+[ext_resource type="Texture2D" uid="uid://byht1p2akn8ts" path="res://Combat System/Assets/Bully 3.png" id="11_15u7x"]
+[ext_resource type="Texture2D" uid="uid://c45tknkav5kkg" path="res://Combat System/Assets/Junkyard BG.png" id="12_if0dm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_etnwf"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj703"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kek77"]
+bg_color = Color(0.045, 0.16799998, 0.25, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4c57u"]
+bg_color = Color(0.62352943, 0.09803922, 0.21960784, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diypt"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jbu2x"]
+bg_color = Color(0, 0, 0, 0)
+border_color = Color(0.8, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efxa6"]
+bg_color = Color(0.3114381, 0.023901204, 0.03137592, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dg77c"]
+bg_color = Color(0.79, 0, 0.18433316, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_bottom = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vw27"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 10
+border_width_top = 5
+border_width_right = 10
+border_width_bottom = 5
+
+[node name="FightSystem" type="Node2D"]
+script = ExtResource("1_m5e66")
+
+[node name="InterFace" type="Control" parent="." groups=["Interface"]]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1916.0
+offset_bottom = 1070.0
+script = ExtResource("2_ee3ch")
+
+[node name="description" type="Panel" parent="InterFace"]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 748.0
+offset_right = 936.0
+offset_bottom = 1002.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
+
+[node name="desc_label" type="Label" parent="InterFace/description"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 18.0
+offset_right = 261.0
+offset_bottom = 232.0
+theme_override_fonts/font = ExtResource("3_yj703")
+theme_override_font_sizes/font_size = 48
+text = "What will you do?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="turn_indicator" type="Panel" parent="InterFace"]
+layout_mode = 0
+offset_left = 995.0
+offset_top = 678.0
+offset_right = 1274.0
+offset_bottom = 733.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_etnwf")
+script = ExtResource("3_6e522")
+
+[node name="turn_label" type="Label" parent="InterFace/turn_indicator"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 7.0
+offset_right = 277.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("3_yj703")
+theme_override_font_sizes/font_size = 42
+text = "Player 1's Turn"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Marker2D" type="Marker2D" parent="InterFace"]
+position = Vector2(981, 747)
+
+[node name="Visuals" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_whf4a")
+
+[node name="player1" type="Panel" parent="Visuals"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 680.0
+offset_right = 428.0
+offset_bottom = 1027.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yj703")
+
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/player1"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 12.0
+offset_right = 339.0
+offset_bottom = 39.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4c57u")
+value = 50.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/player1"]
+position = Vector2(197, 194)
+scale = Vector2(0.75, 0.689)
+texture = ExtResource("5_etnwf")
+
+[node name="player2" type="Panel" parent="Visuals"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 32.0
+offset_right = 428.0
+offset_bottom = 379.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_diypt")
+
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/player2"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 12.0
+offset_right = 339.0
+offset_bottom = 39.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4c57u")
+value = 50.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/player2"]
+position = Vector2(197, 194)
+scale = Vector2(0.75, 0.689)
+texture = ExtResource("6_yj703")
+
+[node name="player3" type="Panel" parent="Visuals"]
+layout_mode = 0
+offset_left = 1491.0
+offset_top = 32.0
+offset_right = 1884.0
+offset_bottom = 379.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jbu2x")
+
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/player3"]
+layout_mode = 0
+offset_left = 58.0
+offset_top = 12.0
+offset_right = 339.0
+offset_bottom = 39.0
+theme_override_styles/background = SubResource("StyleBoxFlat_kek77")
+theme_override_styles/fill = SubResource("StyleBoxFlat_4c57u")
+value = 50.0
+show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/player3"]
+position = Vector2(197, 194)
+scale = Vector2(0.75, 0.689)
+texture = ExtResource("7_diypt")
+
+[node name="enemy" type="Control" parent="Visuals"]
+z_index = -1
+anchors_preset = 0
+offset_left = 728.0
+offset_top = 144.0
+offset_right = 948.0
+offset_bottom = 609.5
+scale = Vector2(2, 2)
+
+[node name="BullyLeader" type="Sprite2D" parent="Visuals/enemy"]
+visible = false
+position = Vector2(103, 235)
+scale = Vector2(0.5, 0.489)
+texture = ExtResource("8_jbu2x")
+
+[node name="BullyLeader_Marker" type="Marker2D" parent="Visuals/enemy"]
+visible = false
+position = Vector2(41, -17.5)
+
+[node name="Bully1" type="Sprite2D" parent="Visuals/enemy"]
+visible = false
+position = Vector2(117.5, 265.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_sa1l6")
+
+[node name="Bully1_Marker" type="Marker2D" parent="Visuals/enemy"]
+visible = false
+position = Vector2(52.49994, 44.5)
+scale = Vector2(0.8753296, 0.5452409)
+
+[node name="Bully2" type="Sprite2D" parent="Visuals/enemy"]
+visible = false
+position = Vector2(96, 328)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("10_hrp83")
+
+[node name="Bully2_Marker" type="Marker2D" parent="Visuals/enemy"]
+visible = false
+position = Vector2(26, 182.50002)
+scale = Vector2(0.8753296, 0.5452409)
+
+[node name="Bully3" type="Sprite2D" parent="Visuals/enemy"]
+position = Vector2(106.5, 274.5)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_15u7x")
+
+[node name="Bully3_Marker" type="Marker2D" parent="Visuals/enemy"]
+position = Vector2(59, 69.5)
+scale = Vector2(0.8753296, 0.5452409)
+
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/enemy"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49100003
+anchor_top = -0.023000002
+anchor_right = 0.5
+anchor_bottom = -0.023000002
+offset_left = -49.020004
+offset_top = 80.2065
+offset_right = 108.93976
+offset_bottom = 107.2065
+scale = Vector2(0.8753296, 0.5452409)
+theme_override_styles/background = SubResource("StyleBoxFlat_efxa6")
+theme_override_styles/fill = SubResource("StyleBoxFlat_dg77c")
+value = 50.0
+show_percentage = false
+
+[node name="turns_info_panel" type="Label" parent="Visuals"]
+layout_mode = 0
+offset_left = 1064.0
+offset_top = 901.0
+offset_right = 1805.0
+offset_bottom = 993.0
+theme_override_fonts/font = ExtResource("3_yj703")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_5vw27")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Background" type="TextureRect" parent="Visuals"]
+self_modulate = Color(0.75, 0.75, 0.75, 1)
+z_index = -2
+layout_mode = 0
+offset_right = 1924.0
+offset_bottom = 1084.0
+texture = ExtResource("12_if0dm")
+expand_mode = 2
+stretch_mode = 1
+
+[node name="DataBase" type="Node" parent="."]
+script = ExtResource("7_etnwf")
+
+[node name="TurnsHandler" type="Node" parent="." groups=["TurnsHandler"]]
+script = ExtResource("8_yj703")
