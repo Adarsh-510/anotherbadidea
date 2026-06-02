@@ -79,7 +79,7 @@ func show_turns():
 	await get_tree().create_timer(sleep_duration).timeout
 	
 	
-	
+	#set enemy health to 100 after battle is over
 	
 	FightSystem.active_state = FightSystem.STATE.SELECTION
 	Interface.show_menu()

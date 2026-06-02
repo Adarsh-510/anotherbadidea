@@ -125,8 +125,8 @@ var Player3 = {
 var Bully1 = {
 	"name": "Bully 1",
 
-	"max_hp": 50,
-	"hp": 50,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 10,
 	"defense": 5,
@@ -143,8 +143,8 @@ var Bully1 = {
 var Bully2 = {
 	"name": "Bully 2",
 
-	"max_hp": 60,
-	"hp": 60,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 12,
 	"defense": 6,
@@ -161,8 +161,8 @@ var Bully2 = {
 var Bully3 = {
 	"name": "Bully 3",
 
-	"max_hp": 75,
-	"hp": 75,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 15,
 	"defense": 8,
@@ -179,8 +179,8 @@ var Bully3 = {
 var Bully4 = {
 	"name": "Bully 4",
 
-	"max_hp": 90,
-	"hp": 90,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 18,
 	"defense": 10,
@@ -197,8 +197,8 @@ var Bully4 = {
 var BullyLeader = {
 	"name": "Junkyard King",
 
-	"max_hp": 150,
-	"hp": 150,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 25,
 	"defense": 15,
