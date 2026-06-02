@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://n31ladbg55cj"]
+
+[ext_resource type="Script" uid="uid://c5neiaotu3w2w" path="res://pointer.gd" id="1_rdhaj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yn3mr"]
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rdhaj"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs652"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="VBoxContainer"]
+offset_left = 560.0
+offset_top = 467.0
+offset_right = 1119.0
+offset_bottom = 613.0
+script = ExtResource("1_rdhaj")
+
+[node name="element1" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_yn3mr")
+text = "Attack"
+
+[node name="element2" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rdhaj")
+text = "Item"
+
+[node name="element3" type="Button" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_fs652")
+text = "Run"
