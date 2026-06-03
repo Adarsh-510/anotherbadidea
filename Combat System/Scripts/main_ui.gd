@@ -45,48 +45,56 @@ func _process(delta: float) -> void:
 				player = DataBase.Player2
 			FightSystem.ENTITIES.P3:
 				player = DataBase.Player3
+				
 		
-		match iterator:
-			1:
-				if Input.is_action_just_pressed("ui_accept") and current_UI == UI_menu:
-					attack_menu = attack_UI.instantiate()
-					attack_menu.global_position = init_position
-					add_child(attack_menu)
-					current_UI = attack_menu
-					UI_menu.queue_free()
-				
-				elif Input.is_action_just_pressed("ui_accept") and current_UI == attack_menu:
-					FightSystem.next_turn(player["attack1_damage"], player["attack1"])
-					remove_curr_menu()
-					
-				elif Input.is_action_just_pressed("ui_accept") and current_UI == item_menu:
-					FightSystem.next_turn(player["item1_damage"], player["item1"])
-					remove_curr_menu()
+		if Input.is_action_just_pressed("ui_accept") and current_UI == UI_menu and iterator == 1:
+			attack_menu = attack_UI.instantiate()
+			attack_menu.global_position = init_position
+			add_child(attack_menu)
+			current_UI = attack_menu
+			UI_menu.queue_free()
 
-			2:
-				if Input.is_action_just_pressed("ui_accept") and current_UI == UI_menu:
-					item_menu = item_UI.instantiate()
-					item_menu.global_position = init_position
-					add_child(item_menu)
-					current_UI = item_menu
-					UI_menu.queue_free()
-				
-				elif Input.is_action_just_pressed("ui_accept") and current_UI == attack_menu:
-					FightSystem.next_turn(player["attack2_damage"], player["attack2"])
-					remove_curr_menu()
-					
-				elif Input.is_action_just_pressed("ui_accept") and current_UI == item_menu:
-					FightSystem.next_turn(player["item2_damage"], player["item2"])
-					remove_curr_menu()
-				
-			3:
-				if Input.is_action_just_pressed("ui_accept") and current_UI == attack_menu:
-					FightSystem.next_turn(player["attack3_damage"], player["attack3"])
-					remove_curr_menu()
-					
-				if Input.is_action_just_pressed("ui_accept") and current_UI == item_menu:
-					FightSystem.next_turn(player["item3_damage"], player["item3"])
-					remove_curr_menu()
+		
+		elif Input.is_action_just_pressed("ui_accept") and current_UI == UI_menu and iterator == 2:
+			item_menu = item_UI.instantiate()
+			item_menu.global_position = init_position
+			add_child(item_menu)
+			current_UI = item_menu
+			UI_menu.queue_free()
+
+		
+		elif Input.is_action_just_pressed("ui_accept") and current_UI == attack_menu:
+			match attack_menu.iterator:
+				1:
+					FightSystem.next_turn(player["attack1_damage"], player["attack1"], player["attack1_miss_chance"])
+				2:
+					FightSystem.next_turn(player["attack2_damage"], player["attack2"], player["attack2_miss_chance"])
+				3:
+					FightSystem.next_turn(player["attack3_damage"], player["attack3"], player["attack3_miss_chance"])
+
+			remove_curr_menu()
+
+		
+		elif Input.is_action_just_pressed("ui_accept") and current_UI == item_menu:
+			match item_menu.iterator:
+				1:
+					FightSystem.next_turn(player["item1_damage"], player["item1"], player["item_miss_chance"])
+					player["item1"] = "Nothing"
+					player["item1_desc"] = "Wow, so empty"
+					player["item1_damage"] = "0"
+				2:
+					FightSystem.next_turn(player["item2_damage"], player["item2"], player["item_miss_chance"])
+					player["item2"] = "Nothing"
+					player["item2_desc"] = "Wow, so empty"
+					player["item2_damage"] = "0"
+				3:
+					FightSystem.next_turn(player["item3_damage"], player["item3"], player["item_miss_chance"])
+					player["item3"] = "Nothing"
+					player["item3_desc"] = "Wow, so empty"
+					player["item3_damage"] = "0"
+
+			remove_curr_menu()
+		
 		
 		
 		if Input.is_action_just_pressed("ui_cancel") and current_UI != UI_menu:
@@ -138,3 +146,7 @@ func show_menu():
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "global_position:y", global_position.y - 500, 1)
 	turns_info_panel.position = init_position + Vector2(0, 500)
+
+func reset():
+	current_UI = UI_menu
+	iterator = 1

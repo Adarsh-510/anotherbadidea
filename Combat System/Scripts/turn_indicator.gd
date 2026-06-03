@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 	if (FightSystem.active_state == FightSystem.STATE.SELECTION):
 		match FightSystem.current_entity:
 			FightSystem.ENTITIES.P1:
-				turn_label.text = "Player 1's turn"
+				turn_label.text = str(DataBase.Player1["name"]) + "'s turn"
 
 				blink_border(p1_highlight)
 
@@ -39,7 +39,7 @@ func _process(delta: float) -> void:
 				p3_highlight.border_color.a = 0.0
 
 			FightSystem.ENTITIES.P2:
-				turn_label.text = "Player 2's turn"
+				turn_label.text = str(DataBase.Player2["name"]) + "'s turn"
 
 				p1_highlight.border_width_left = 0
 				p1_highlight.border_width_right = 0
@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 				p3_highlight.border_color.a = 0.0
 
 			FightSystem.ENTITIES.P3:
-				turn_label.text = "Player 3's turn"
+				turn_label.text = str(DataBase.Player3["name"]) + "'s turn"
 
 				p1_highlight.border_width_left = 0
 				p1_highlight.border_width_right = 0

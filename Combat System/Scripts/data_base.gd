@@ -1,6 +1,8 @@
 extends Node
 
-#in description add the damage it deals
+#game over screen
+#save files
+#delete enemy instance
 
 enum CHECKPOINTS {
 	INTRO,
@@ -14,139 +16,155 @@ enum CHECKPOINTS {
 var curr_checkpoint = CHECKPOINTS.INTRO
 var curr_enemy = Bully1
 
+
 var Player1 = {
-	"name": "Player 1",
+	"name": "Andy",
 	"max_hp": 100,
 	"hp": 100,
 
 	"attack": 15,
 	"defense": 8,
 
-	"attack1": "Player 1's Attack 1",
-	"attack1_desc": "This is Player 1's Attack 1",
-	"attack1_damage": 10,
+	"attack1": "Slingshot",
+	"attack1_desc": "Shoots slingshot right into enemy's eye\nDamage:22\n25% chance to miss",
+	"attack1_damage": 22,
+	"attack1_miss_chance": 25,
 
-	"attack2": "Player 1's Attack 2",
-	"attack2_desc": "This is Player 1's Attack 2",
-	"attack2_damage": 15,
+	"attack2": "Knuckle Sandwich",
+	"attack2_desc": "Served Fresh, straight to the face\nDamage:16\n15% chance to miss",
+	"attack2_damage": 16,
+	"attack2_miss_chance": 15,
 
-	"attack3": "Player 1's Attack 3",
-	"attack3_desc": "This is Player 1's Attack 3",
-	"attack3_damage": 20,
+	"attack3": "Nothing",
+	"attack3_desc": "Does.....nothing?",
+	"attack3_damage": 0,
+	"attack3_miss_chance": 0,
 
-	"item1": "Player 1's Item 1",
-	"item1_desc": "This is Player 1's Item 1",
-	"item1_damage": 10,
+	"item_miss_chance": 0,
 
-	"item2": "Player 1's Item 2",
-	"item2_desc": "This is Player 1's Item 2",
-	"item2_damage": 20,
+	"item1": "Sock",
+	"item1_desc": "His Dad's smelly sock?\nDamage:40",
+	"item1_damage": 40,
 
-	"item3": "Player 1's Item 3",
-	"item3_desc": "This is Player 1's Item 3",
-	"item3_damage": 30
+	"item2": "Nothing",
+	"item2_desc": "Wow, so empty",
+	"item2_damage": 0,
+
+	"item3": "Nothing",
+	"item3_desc": "Wow, so empty",
+	"item3_damage": 0
 }
 
 var Player2 = {
-	"name": "Player 2",
+	"name": "Rudy",
 	"max_hp": 100,
 	"hp": 100,
 
-	"attack": 12,
-	"defense": 10,
+	"attack": 10,
+	"defense": 12,
 
-	"attack1": "Player 2's Attack 1",
-	"attack1_desc": "This is Player 2's Attack 1",
-	"attack1_damage": 12,
+	"attack1": "The Legendary Elbow",
+	"attack1_desc": "Sharp elbow right to the ribs\nDamage:18\n20% chance to miss",
+	"attack1_damage": 18,
+	"attack1_miss_chance": 20,
 
-	"attack2": "Player 2's Attack 2",
-	"attack2_desc": "This is Player 2's Attack 2",
-	"attack2_damage": 18,
+	"attack2": "Nothing",
+	"attack2_desc": "Does.....nothing?",
+	"attack2_damage": 0,
+	"attack2_miss_chance": 0,
 
-	"attack3": "Player 2's Attack 3",
-	"attack3_desc": "This is Player 2's Attack 3",
-	"attack3_damage": 25,
+	"attack3": "Nothing",
+	"attack3_desc": "Does.....nothing?",
+	"attack3_damage": 0,
+	"attack3_miss_chance": 0,
 
-	"item1": "Player 2's Item 1",
-	"item1_desc": "This is Player 2's Item 1",
-	"item1_damage": 10,
+	"item_miss_chance": 0,
 
-	"item2": "Player 2's Item 2",
-	"item2_desc": "This is Player 2's Item 2",
-	"item2_damage": 20,
+	"item1": "Firecrackers",
+	"item1_desc": "New year's eve came early\nDamage:30",
+	"item1_damage": 30,
 
-	"item3": "Player 2's Item 3",
-	"item3_desc": "This is Player 2's Item 3",
-	"item3_damage": 30
+	"item2": "Bio-enhancement Serum",
+	"item2_desc": "Tastes Terrible\nDamage:25",
+	"item2_damage": 25,
+
+	"item3": "Nothing",
+	"item3_desc": "Wow, so empty",
+	"item3_damage": 0
 }
 
 var Player3 = {
-	"name": "Player 3",
+	"name": "Owen",
 	"max_hp": 100,
 	"hp": 100,
 
-	"attack": 18,
-	"defense": 5,
+	"attack": 8,
+	"defense": 8,
 
-	"attack1": "Player 3's Attack 1",
-	"attack1_desc": "This is Player 3's Attack 1",
-	"attack1_damage": 15,
+	"attack1": "Flying Tackle",
+	"attack1_desc": "Sacrifices safety for extra momentum\nDamage:20\n15% chance to miss",
+	"attack1_damage": 20,
+	"attack1_miss_chance": 15,
 
-	"attack2": "Player 3's Attack 2",
-	"attack2_desc": "This is Player 3's Attack 2",
-	"attack2_damage": 20,
+	"attack2": "Dragon Warrior Kick",
+	"attack2_desc": "Pretty cool kick, no dragons involved\nDamage:28\n35% chance to miss",
+	"attack2_damage": 28,
+	"attack2_miss_chance": 35,
 
-	"attack3": "Player 3's Attack 3",
-	"attack3_desc": "This is Player 3's Attack 3",
-	"attack3_damage": 30,
+	"attack3": "Nothing",
+	"attack3_desc": "Does.....nothing?",
+	"attack3_damage": 0,
+	"attack3_miss_chance": 0,
 
-	"item1": "Player 3's Item 1",
-	"item1_desc": "This is Player 3's Item 1",
-	"item1_damage": 10,
+	"item_miss_chance": 0,
 
-	"item2": "Player 3's Item 2",
-	"item2_desc": "This is Player 3's Item 2",
-	"item2_damage": 20,
+	"item1": "Frozen Hot Dog",
+	"item1_desc": "Harder than expected\nDamage:30",
+	"item1_damage": 30,
 
-	"item3": "Player 3's Item 3",
-	"item3_desc": "This is Player 3's Item 3",
-	"item3_damage": 30
+	"item2": "Nothing",
+	"item2_desc": "Wow, so empty",
+	"item2_damage": 0,
+
+	"item3": "Nothing",
+	"item3_desc": "Wow, so empty",
+	"item3_damage": 0
 }
 
 var Bully1 = {
 	"name": "Bully 1",
 
-	"max_hp": 100,
-	"hp": 100,
+	"max_hp": 80,
+	"hp": 80,
 
 	"attack": 10,
 	"defense": 5,
 
-	"attack1": "Punch",
-	"attack1_desc": "Deals 10 damage.",
-	"attack1_damage": 10,
+	"attack1": "Mean Stare",
+	"attack1_damage": 12,
+	"attack1_miss_chance": 10,
 
-	"attack2": "Kick",
-	"attack2_desc": "Deals 15 damage.",
-	"attack2_damage": 15
+	"attack2": "Scratch",
+	"attack2_damage": 18,
+	"attack2_miss_chance": 20
 }
 
 var Bully2 = {
 	"name": "Bully 2",
 
-	"max_hp": 100,
-	"hp": 100,
+	"max_hp": 90,
+	"hp": 90,
 
 	"attack": 12,
 	"defense": 6,
 
-	"attack1": "Punch",
-	"attack1_desc": "Deals 12 damage.",
-	"attack1_damage": 12,
+	"attack1": "Cigarette Burns",
+	"attack1_damage": 25,
+	"attack1_miss_chance": 50,
 
-	"attack2": "Headbutt",
-	"attack2_desc": "Deals 18 damage.",
-	"attack2_damage": 18
+	"attack2": "Harsh Insults",
+	"attack2_damage": 18,
+	"attack2_miss_chance": 20
 }
 
 var Bully3 = {
@@ -159,28 +177,28 @@ var Bully3 = {
 	"defense": 8,
 
 	"attack1": "Heavy Punch",
-	"attack1_desc": "Deals 15 damage.",
-	"attack1_damage": 15,
+	"attack1_damage": 22,
+	"attack1_miss_chance": 20,
 
 	"attack2": "Flying Kick",
-	"attack2_desc": "Deals 20 damage.",
-	"attack2_damage": 20
+	"attack2_damage": 28,
+	"attack2_miss_chance": 35
 }
 
 var BullyLeader = {
 	"name": "Junkyard King",
 
-	"max_hp": 100,
-	"hp": 100,
+	"max_hp": 150,
+	"hp": 150,
 
-	"attack": 25,
-	"defense": 15,
+	"attack": 20,
+	"defense": 12,
 
-	"attack1": "Royal Beatdown",
-	"attack1_desc": "Deals 25 damage.",
+	"attack1": "Pipe Swing",
 	"attack1_damage": 25,
+	"attack1_miss_chance": 10,
 
-	"attack2": "Ice Cream Theft",
-	"attack2_desc": "Deals 35 damage.",
-	"attack2_damage": 35
+	"attack2": "Royal Beatdown",
+	"attack2_damage": 40,
+	"attack2_miss_chance": 25
 }
