@@ -134,8 +134,8 @@ var Player3 = {
 var Bully1 = {
 	"name": "Bully 1",
 
-	"max_hp": 80,
-	"hp": 80,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 10,
 	"defense": 5,
@@ -188,8 +188,8 @@ var Bully3 = {
 var BullyLeader = {
 	"name": "Junkyard King",
 
-	"max_hp": 150,
-	"hp": 150,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 20,
 	"defense": 12,
