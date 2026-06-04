@@ -9,9 +9,7 @@ enum STATE {SELECTION, ATTACK}
 var active_state
 var damage_array = []
 var actions_array = []
-
-@onready var Interface = get_tree().get_first_node_in_group("Interface")
-@onready var TurnsHandler = get_tree().get_first_node_in_group("TurnsHandler")
+var accuracy_array = []
 
 func _ready() -> void:
 	active_state = STATE.SELECTION
@@ -19,13 +17,19 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	current_entity = entity_array[iterator]
 
-func next_turn(prev_turn_damage, prev_turn_name):
+func next_turn(prev_turn_damage, prev_turn_name, prev_turn_acc):
 	damage_array.append(prev_turn_damage)
 	actions_array.append(prev_turn_name)
+	accuracy_array.append(prev_turn_acc)
 	
 	iterator += 1
 	if iterator >= entity_array.size() -1:
-		iterator = 0 
+		
 		active_state = STATE.ATTACK
+		iterator = 0 
+		
+		var Interface = get_tree().get_first_node_in_group("Interface")
+		var TurnsHandler = get_tree().get_first_node_in_group("TurnsHandler")
+		
 		Interface.hide_menu()
-		TurnsHandler.enemy_turn()
+		TurnsHandler.enemy_turn()    
