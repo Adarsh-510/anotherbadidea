@@ -32,6 +32,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-1130, -946, 2962, -106
 agent_radius = 60.0
 
 [node name="Test Level" type="Node2D" unique_id=2101091609]
+y_sort_enabled = true
 
 [node name="Characters" type="Node2D" parent="." unique_id=81425201]
 

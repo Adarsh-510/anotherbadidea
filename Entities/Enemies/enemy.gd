@@ -30,6 +30,15 @@ func player_noise_lost():
 	can_hear_player = false
 
 func start_battle():
+	var dead_sprite = Sprite2D.new()
+	dead_sprite.texture = load("res://Entities/Assets/Sprite Sheets/death.png")
+	dead_sprite.global_position = global_position
+	dead_sprite.scale *= 0.07
+	dead_sprite.z_index = -10
+	get_parent().add_child(dead_sprite)
+	
+	# call battle scene HERE IDK HOW TO DO TATSVABDCASODNSCAOSC
+	
 	queue_free()
 
 func confusion(player):

@@ -19,7 +19,6 @@ func _ready() -> void:
 	enemy_progress_bar.value = 100
 
 func _process(delta: float) -> void:
-	
 	enemy_progress_bar.value = DataBase.curr_enemy["hp"]
 	p1_progress_bar.value = DataBase.Player1["hp"]
 	p2_progress_bar.value = DataBase.Player2["hp"]
