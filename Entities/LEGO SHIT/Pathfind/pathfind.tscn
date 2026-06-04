@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cbvtewrk8owi3"]
+
+[ext_resource type="Script" uid="uid://btsgxf6upjahh" path="res://Entities/LEGO SHIT/Pathfind/pathfind.gd" id="1_x0r5b"]
+
+[node name="Pathfind" type="NavigationAgent2D" unique_id=649794201]
+path_desired_distance = 100.0
+target_desired_distance = 100.0
+path_max_distance = 50.0
+avoidance_enabled = true
+radius = 30.0
+max_speed = 1000.0
+debug_enabled = true
+script = ExtResource("1_x0r5b")
+
+[node name="refresh_position" type="Timer" parent="." unique_id=1257263142]
+wait_time = 0.2
+
+[connection signal="velocity_computed" from="." to="." method="_on_velocity_computed"]
+[connection signal="timeout" from="refresh_position" to="." method="_on_refresh_position_timeout"]

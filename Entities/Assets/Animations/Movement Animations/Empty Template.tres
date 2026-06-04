@@ -1,0 +1,64 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://mg2t1pih2v8q"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Idle Down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Idle Side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Idle Up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Sprint Down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Sprint Side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Sprint Up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Squat Down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Squat Side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Squat Up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walk Down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walk Side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Walk Up",
+"speed": 5.0
+}]

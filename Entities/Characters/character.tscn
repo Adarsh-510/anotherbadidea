@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ck7etv02qnjn8"]
+
+[ext_resource type="Script" uid="uid://cqpe8dwoo08ci" path="res://Entities/Characters/character.gd" id="1_cubfa"]
+[ext_resource type="PackedScene" uid="uid://bo0s0nnprv64n" path="res://Entities/LEGO SHIT/Movement Animation/movement_animation.tscn" id="2_lsypd"]
+[ext_resource type="SpriteFrames" uid="uid://cb7s74gvscyxi" path="res://Entities/Assets/Animations/Movement Animations/Andy.tres" id="3_8vfmt"]
+[ext_resource type="PackedScene" uid="uid://dn8iiuuetopd0" path="res://Entities/LEGO SHIT/Footsteps/footsteps.tscn" id="4_8vfmt"]
+[ext_resource type="PackedScene" uid="uid://cbvtewrk8owi3" path="res://Entities/LEGO SHIT/Pathfind/pathfind.tscn" id="5_tcrw0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vfmt"]
+radius = 18.0
+height = 46.0
+
+[node name="Character" type="CharacterBody2D" unique_id=1092893584]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_cubfa")
+
+[node name="movement animation" parent="." unique_id=651574507 instance=ExtResource("2_lsypd")]
+sprite_frames = ExtResource("3_8vfmt")
+animation = &"Idle Down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=788239340]
+position = Vector2(0, 12)
+shape = SubResource("CapsuleShape2D_8vfmt")
+
+[node name="footsteps" parent="." unique_id=601221903 instance=ExtResource("4_8vfmt")]
+
+[node name="Pathfind" parent="." unique_id=649794201 instance=ExtResource("5_tcrw0")]

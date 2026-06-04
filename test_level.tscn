@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bw7ffyy1b3c8g"]
+
+[ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="1_gbhdq"]
+[ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="2_y646j"]
+[ext_resource type="PackedScene" uid="uid://8s0r14sj1pw3" path="res://Entities/LEGO SHIT/Sound Area/sound_area.tscn" id="3_lnbra"]
+[ext_resource type="SpriteFrames" uid="uid://pkhgprsjt4qm" path="res://Entities/Assets/Animations/Movement Animations/Rudy.tres" id="4_6emce"]
+[ext_resource type="SpriteFrames" uid="uid://ctyfrh2cdkh10" path="res://Entities/Assets/Animations/Movement Animations/Owen.tres" id="5_lowby"]
+[ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/enemy.tscn" id="6_58smv"]
+
+[sub_resource type="Curve2D" id="Curve2D_gbhdq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 613, 309, 0, 0, 0, 0, 613, 968, 0, 0, 0, 0, 187, 977)
+}
+point_count = 3
+
+[sub_resource type="Curve2D" id="Curve2D_y646j"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1254, 175, 0, 0, 0, 0, 1264, 881, 0, 0, 0, 0, 1622, 873, 0, 0, 0, 0, 1631, 1182, 0, 0, 0, 0, 1255, 1173, 0, 0, 0, 0, 1267, 879)
+}
+point_count = 6
+
+[sub_resource type="Curve2D" id="Curve2D_lnbra"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 443, -57, 0, 0, 0, 0, -33, -73, 0, 0, 0, 0, -92, 700)
+}
+point_count = 3
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_gbhdq"]
+vertices = PackedVector2Array(2561.8594, 1615.3281, 3016.6719, 1864.6172, -1053.3438, 1972.3906, -510.17188, 1700.8438, 2904.3672, -1006.25, 2528.0469, -699.40625, -1069.6563, -887.77344, -504.45313, -433.60156, -532.3594, -366.46875, -486.53125, -311.53906, -532.97656, -292.60156, -862.46094, 1236.2969, 1927.1484, 333, 2279.5078, -366.04688, 2266.4297, 1423.6875, 1895.5078, 716.97656, 1093.2734, 1417.7266, 1278.9297, 751.5781, 1178.8516, 41, 1310.9531, -246.88281, 466.07813, 369.9922, 454.71094, 207.34375, 836.89844, 237.79688, -270.65625, -126.671875, 565.1406, -205.13281, 567.3125, -7.8125, 29.09375, -23.710938, -474.04688, 1227.4922, -21.15625, 955, -392.0703, 1410.1875, 1617.7891, 333, 1652.6719, -236, 813.6719, 1416.3125, 444.85938, 955, 875.6406, 41, 852.3594, -232.09375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 1, 0, 5), PackedInt32Array(6, 4, 5, 7), PackedInt32Array(8, 9, 10, 6), PackedInt32Array(11, 3, 2), PackedInt32Array(11, 2, 6, 10), PackedInt32Array(6, 7, 8), PackedInt32Array(12, 13, 14, 15), PackedInt32Array(15, 14, 16, 17), PackedInt32Array(17, 16, 18, 19), PackedInt32Array(20, 21, 22), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(27, 23, 26, 28, 29), PackedInt32Array(12, 30, 31, 13), PackedInt32Array(32, 29, 28, 33), PackedInt32Array(33, 20, 22, 32), PackedInt32Array(34, 32, 22, 35), PackedInt32Array(18, 34, 35, 19), PackedInt32Array(19, 35, 13), PackedInt32Array(19, 13, 31)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1130, -946, 2962, -1068, 3079, 1923, -1113, 2034)])
+agent_radius = 60.0
+
+[node name="Test Level" type="Node2D" unique_id=2101091609]
+
+[node name="Characters" type="Node2D" parent="." unique_id=81425201]
+
+[node name="Andy" parent="Characters" unique_id=1092893584 instance=ExtResource("1_gbhdq")]
+position = Vector2(1712, 175)
+
+[node name="Control_Movement" type="Node2D" parent="Characters/Andy" unique_id=763754299]
+script = ExtResource("2_y646j")
+metadata/_custom_type_script = "uid://fy8tratxjwal"
+
+[node name="Sound area" parent="Characters/Andy" unique_id=1083916841 instance=ExtResource("3_lnbra")]
+
+[node name="Camera2D" type="Camera2D" parent="Characters/Andy" unique_id=497299074]
+position = Vector2(-414, 10)
+
+[node name="Rudy" parent="Characters" unique_id=1999048940 instance=ExtResource("1_gbhdq")]
+position = Vector2(1812, 75)
+Name = 1
+
+[node name="movement animation" parent="Characters/Rudy" index="0" unique_id=651574507]
+sprite_frames = ExtResource("4_6emce")
+
+[node name="Pathfind" parent="Characters/Rudy" index="3" unique_id=649794201 node_paths=PackedStringArray("target")]
+target = NodePath("../../Andy")
+
+[node name="Owen" parent="Characters" unique_id=298753141 instance=ExtResource("1_gbhdq")]
+position = Vector2(1712, 75)
+Name = 2
+
+[node name="movement animation" parent="Characters/Owen" index="0" unique_id=651574507]
+sprite_frames = ExtResource("5_lowby")
+
+[node name="Pathfind" parent="Characters/Owen" index="3" unique_id=649794201 node_paths=PackedStringArray("target")]
+target = NodePath("../../Andy")
+
+[node name="Bullies" type="Node2D" parent="." unique_id=1043221540]
+
+[node name="enemy" parent="Bullies" unique_id=887445839 instance=ExtResource("6_58smv")]
+position = Vector2(616, 286)
+
+[node name="Path2D" type="Path2D" parent="Bullies/enemy/Pathfind" parent_id_path=PackedInt32Array(887445839, 649794201) index="1" unique_id=1349806271]
+curve = SubResource("Curve2D_gbhdq")
+
+[node name="enemy2" parent="Bullies" unique_id=213133308 instance=ExtResource("6_58smv")]
+position = Vector2(1253, 161)
+
+[node name="Path2D" type="Path2D" parent="Bullies/enemy2/Pathfind" parent_id_path=PackedInt32Array(213133308, 649794201) index="1" unique_id=2003032463]
+curve = SubResource("Curve2D_y646j")
+
+[node name="enemy3" parent="Bullies" unique_id=1983470131 instance=ExtResource("6_58smv")]
+position = Vector2(446, -67)
+
+[node name="Path2D" type="Path2D" parent="Bullies/enemy3/Pathfind" parent_id_path=PackedInt32Array(1983470131, 649794201) index="1" unique_id=1317309477]
+curve = SubResource("Curve2D_lnbra")
+
+[node name="Navigation" type="Node2D" parent="." unique_id=196577173]
+z_index = -5
+z_as_relative = false
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Navigation" unique_id=1193626785]
+navigation_polygon = SubResource("NavigationPolygon_gbhdq")
+
+[node name="Polygon2D" type="Polygon2D" parent="Navigation/NavigationRegion2D" unique_id=1067306812]
+polygon = PackedVector2Array(1369, -185, 1589, -178, 1554, 393, 1862, 393, 1840, 660, 1341, 688)
+
+[node name="Polygon2D2" type="Polygon2D" parent="Navigation/NavigationRegion2D" unique_id=1533391267]
+polygon = PackedVector2Array(933, 101, 876, 1366, 1036, 1372, 1115, 101)
+
+[node name="Polygon2D3" type="Polygon2D" parent="Navigation/NavigationRegion2D" unique_id=677460404]
+polygon = PackedVector2Array(406, 371, 387, 895, 42, 895, 86, 38, 628, 54, 625, -219, 792, -222, 779, 173, 390, 142)
+
+[node name="Polygon2D4" type="Polygon2D" parent="Navigation/NavigationRegion2D" unique_id=1179549281]
+polygon = PackedVector2Array(-302, -322, -536, 1236, -431, 1470, 2326, 1484, 2340, -432, -302, -184, -463, -377, 2469, -634, 2501, 1557, -481, 1640, -798, 1222, -481, -249)
+
+[editable path="Characters/Andy"]
+[editable path="Characters/Rudy"]
+[editable path="Characters/Owen"]
+[editable path="Bullies/enemy"]
+[editable path="Bullies/enemy2"]
+[editable path="Bullies/enemy3"]

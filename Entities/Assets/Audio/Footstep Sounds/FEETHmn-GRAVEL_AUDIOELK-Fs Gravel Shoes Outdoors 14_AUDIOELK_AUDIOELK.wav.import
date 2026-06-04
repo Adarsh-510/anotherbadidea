@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://84krbfxa7n6t"
+path="res://.godot/imported/FEETHmn-GRAVEL_AUDIOELK-Fs Gravel Shoes Outdoors 14_AUDIOELK_AUDIOELK.wav-5b5c1c482b1f8c84db4cf7fcf793b957.sample"
+
+[deps]
+
+source_file="res://Entities/Assets/Audio/Footstep Sounds/FEETHmn-GRAVEL_AUDIOELK-Fs Gravel Shoes Outdoors 14_AUDIOELK_AUDIOELK.wav"
+dest_files=["res://.godot/imported/FEETHmn-GRAVEL_AUDIOELK-Fs Gravel Shoes Outdoors 14_AUDIOELK_AUDIOELK.wav-5b5c1c482b1f8c84db4cf7fcf793b957.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -16,7 +16,7 @@ var actions_array = []
 func _ready() -> void:
 	active_state = STATE.SELECTION
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	current_entity = entity_array[iterator]
 
 func next_turn(prev_turn_damage, prev_turn_name):

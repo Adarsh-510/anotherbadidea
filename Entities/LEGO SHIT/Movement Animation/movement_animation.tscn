@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bo0s0nnprv64n"]
+
+[ext_resource type="Script" uid="uid://b3787x0pbyx72" path="res://Entities/LEGO SHIT/Movement Animation/movement animation.gd" id="2_jgncd"]
+
+[node name="movement animation" type="AnimatedSprite2D" unique_id=651574507]
+scale = Vector2(2, 2)
+animation = &""
+autoplay = "Idle Down"
+script = ExtResource("2_jgncd")
