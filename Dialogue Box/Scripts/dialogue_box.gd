@@ -27,7 +27,6 @@ var tween
 
 func _ready() -> void:
 	tween = get_tree().create_tween()
-	setup("Hello there, this is a test for the textbox", "Andy", "Scared")
 
 func _process(delta: float) -> void:
 	

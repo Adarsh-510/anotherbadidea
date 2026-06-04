@@ -1,0 +1,246 @@
+[gd_scene load_steps=12 format=3 uid="uid://te507g2q7e6p"]
+
+[ext_resource type="Texture2D" uid="uid://j352qnr3sv8t" path="res://Intro Scene (House)/Assets/House_grass.png" id="1_v25tx"]
+[ext_resource type="Texture2D" uid="uid://bvkc1mhi81kh1" path="res://Intro Scene (House)/Assets/House_house.png" id="2_cjdqh"]
+[ext_resource type="Texture2D" uid="uid://dbjcyimpkqvkm" path="res://Intro Scene (House)/Assets/House_driveway.png" id="3_21pxa"]
+[ext_resource type="Texture2D" uid="uid://csnlkfghlcvil" path="res://Intro Scene (House)/Assets/House_tree1.png" id="4_2kf80"]
+[ext_resource type="Texture2D" uid="uid://dyoa1jh8nj15i" path="res://Intro Scene (House)/Assets/House_tree2.png" id="5_eq1pk"]
+[ext_resource type="Texture2D" uid="uid://bsysit4t8d2jq" path="res://Intro Scene (House)/Assets/House_fence.png" id="6_vjrab"]
+[ext_resource type="Texture2D" uid="uid://bd5jk8xmbm1rq" path="res://Intro Scene (House)/Assets/Shadow Overlay.png" id="7_eq1pk"]
+[ext_resource type="Texture2D" uid="uid://c5s8p4ey0rh65" path="res://Intro Scene (House)/Assets/Highlight Overlay.png" id="8_vjrab"]
+[ext_resource type="Texture2D" uid="uid://d05x2bxshybba" path="res://Intro Scene (House)/Assets/Light Overlay.png" id="9_4hu2w"]
+[ext_resource type="Script" uid="uid://l0oqjda61cj1" path="res://Intro Scene (House)/Scripts/scene1_dialogues.gd" id="10_eq1pk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v25tx"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D"]
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Grass" type="Sprite2D" parent="Map"]
+position = Vector2(450.49997, 320)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass2" type="Sprite2D" parent="Map"]
+position = Vector2(1363, 320.00003)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass3" type="Sprite2D" parent="Map"]
+position = Vector2(450.99997, 944)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass4" type="Sprite2D" parent="Map"]
+position = Vector2(1363, 944)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass5" type="Sprite2D" parent="Map"]
+position = Vector2(2269, 320)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass6" type="Sprite2D" parent="Map"]
+position = Vector2(2270, 939)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass7" type="Sprite2D" parent="Map"]
+position = Vector2(452.49997, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass8" type="Sprite2D" parent="Map"]
+position = Vector2(1365, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass9" type="Sprite2D" parent="Map"]
+position = Vector2(452.99997, 2187)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass10" type="Sprite2D" parent="Map"]
+position = Vector2(1365, 2187)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass11" type="Sprite2D" parent="Map"]
+position = Vector2(2271, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass12" type="Sprite2D" parent="Map"]
+position = Vector2(2272, 2182)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass13" type="Sprite2D" parent="Map"]
+position = Vector2(-464.0002, 309)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass14" type="Sprite2D" parent="Map"]
+position = Vector2(-463.00006, 929.9999)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass15" type="Sprite2D" parent="Map"]
+position = Vector2(-459.0001, 1551.9995)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass16" type="Sprite2D" parent="Map"]
+position = Vector2(-465.00003, 2169)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass17" type="Sprite2D" parent="Map"]
+position = Vector2(3166.27, 316)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass18" type="Sprite2D" parent="Map"]
+position = Vector2(3170, 935)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass19" type="Sprite2D" parent="Map"]
+position = Vector2(3170, 1554)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="Grass20" type="Sprite2D" parent="Map"]
+position = Vector2(3170, 2169)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_v25tx")
+
+[node name="House" type="Sprite2D" parent="Map"]
+position = Vector2(1366, 471)
+texture = ExtResource("2_cjdqh")
+
+[node name="Driveway" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1061)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_21pxa")
+
+[node name="Driveway2" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1404)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_21pxa")
+
+[node name="Driveway3" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1747)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_21pxa")
+
+[node name="Driveway4" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1977)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_21pxa")
+
+[node name="Driveway5" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 2318)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_21pxa")
+
+[node name="Tree" type="Sprite2D" parent="Map"]
+position = Vector2(1541, 979)
+texture = ExtResource("4_2kf80")
+
+[node name="Tree2" type="Sprite2D" parent="Map"]
+position = Vector2(2536, 1872)
+texture = ExtResource("5_eq1pk")
+
+[node name="Tree3" type="Sprite2D" parent="Map"]
+position = Vector2(124, 1491)
+texture = ExtResource("5_eq1pk")
+
+[node name="Tree4" type="Sprite2D" parent="Map"]
+position = Vector2(-116, 256)
+texture = ExtResource("4_2kf80")
+
+[node name="Fence" type="Sprite2D" parent="Map"]
+position = Vector2(2530, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence2" type="Sprite2D" parent="Map"]
+position = Vector2(2128, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence3" type="Sprite2D" parent="Map"]
+position = Vector2(1726, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence4" type="Sprite2D" parent="Map"]
+position = Vector2(1325, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence5" type="Sprite2D" parent="Map"]
+position = Vector2(1018, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence6" type="Sprite2D" parent="Map"]
+position = Vector2(197, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence7" type="Sprite2D" parent="Map"]
+position = Vector2(-202, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence8" type="Sprite2D" parent="Map"]
+position = Vector2(-518, 2050)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence9" type="Sprite2D" parent="Map"]
+position = Vector2(2925, 2055)
+texture = ExtResource("6_vjrab")
+
+[node name="Fence10" type="Sprite2D" parent="Map"]
+position = Vector2(3325, 2054)
+texture = ExtResource("6_vjrab")
+
+[node name="Shadow Overlay" type="Sprite2D" parent="Map"]
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(1446, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("7_eq1pk")
+
+[node name="Highlight Overlay" type="Sprite2D" parent="Map"]
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(1451, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("8_vjrab")
+
+[node name="Light Overlay" type="Sprite2D" parent="Map"]
+self_modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(1456, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("9_4hu2w")
+
+[node name="Boundary Left" type="Panel" parent="Map"]
+offset_left = -456.0
+offset_right = -121.0
+offset_bottom = 2197.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v25tx")
+
+[node name="Boundary Right" type="Panel" parent="Map"]
+offset_left = 3052.0
+offset_right = 3387.0
+offset_bottom = 2197.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v25tx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1463, 1087)
+zoom = Vector2(0.5, 0.5)
+limit_enabled = false
+limit_left = 3537
+limit_top = 0
+limit_right = -258
+limit_bottom = 2490
+
+[node name="DialogueBox Container" type="CanvasLayer" parent="."]
+script = ExtResource("10_eq1pk")
