@@ -14,16 +14,15 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	if DataBase.curr_enemy["hp"] <= 0:
-		clear_arrays()
+		clear()
 		DataBase.curr_enemy["hp"] = 100
 		Interface.reset()
-		FightSystem.active_state = FightSystem.STATE.SELECTION
 		get_tree().change_scene_to_file("res://Misc/testing.tscn")
 	if DataBase.Player1["hp"] <= 0 or DataBase.Player2["hp"] <= 0 or DataBase.Player3["hp"] <= 0:
-		clear_arrays()
+		clear()
 		Interface.reset()
-		FightSystem.active_state = FightSystem.STATE.SELECTION
 		get_tree().change_scene_to_file("res://Misc/testing.tscn")
+		
 
 
 func enemy_turn():
@@ -49,7 +48,7 @@ func show_turns():
 	p1_tween.tween_property(turns, "visible_ratio",  1.0, typing_duration)
 	await p1_tween.finished
 	
-	DataBase.curr_enemy["hp"] -= FightSystem.damage_array[iterator] 
+	DataBase.curr_enemy["hp"] -= FightSystem.damage_array[iterator]
 	
 	await get_tree().create_timer(sleep_duration).timeout
 	
@@ -183,10 +182,7 @@ func show_turns():
 	
 	iterator += 1
 	
-	turns.text = " "
-	FightSystem.active_state = FightSystem.STATE.SELECTION
-	Interface.show_menu()
-	clear_arrays()
+	clear()
 	
 
 func visual_feedback():
@@ -194,7 +190,11 @@ func visual_feedback():
 	#activated after every "player used that" frame
 	#pass 2 arguements, entity attacked and attack names, also store the position of all player panels and enemy
 
-func clear_arrays():
+func clear():
+	turns.text = " "
+	FightSystem.active_state = FightSystem.STATE.SELECTION
+	Interface.show_menu()
+	
 	FightSystem.actions_array.clear()
 	FightSystem.damage_array.clear()
 	FightSystem.accuracy_array.clear()
