@@ -37,8 +37,15 @@ func start_battle():
 	dead_sprite.z_index = -10
 	get_parent().add_child(dead_sprite)
 	
-	# call battle scene HERE IDK HOW TO DO TATSVABDCASODNSCAOSC
+	# ADD DIALOGUE HERE
+	# WHEN ENTER PRESSED ON DIALOGUE -> CHANGE SCENE
 	
+	match Name:
+		NAME.Boxer: DataBase.curr_enemy = DataBase.Bully1
+		NAME.Tall: DataBase.curr_enemy = DataBase.Bully2
+		NAME.Fat: DataBase.curr_enemy = DataBase.Bully3
+	get_tree().change_scene_to_file("res://Combat System/Scenes/Main_Battle.tscn")
+
 	queue_free()
 
 func confusion(player):
