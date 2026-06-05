@@ -1,11 +1,12 @@
 extends NavigationAgent2D
 
-@export var target: CharacterBody2D
 @export var look_around: bool = true
 @export var randomize_path: bool = false
 
 @onready var parent: CharacterBody2D = get_parent()
 @onready var refresh_position: Timer = $refresh_position
+
+var target: CharacterBody2D
 
 var path_positions: Array[Vector2] = []
 var position_index: int = 0
@@ -15,12 +16,14 @@ var is_looking: bool = false
 const look_around_angle: float = 40
 
 func _ready() -> void:
+	target = parent.target
+	
 	if target:
 		has_target = true
 		refresh_position.start()
 	else:
 		target_desired_distance = 10
-		var path: Path2D = get_child(1)
+		var path: Path2D = get_parent().find_child("Path2D")
 		if path:
 			get_positions(path)
 			if not path_positions.is_empty(): has_target = true

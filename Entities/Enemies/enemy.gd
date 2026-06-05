@@ -11,6 +11,9 @@ enum NAME { Boxer, Tall, Fat }
 @export var time_before_battle: float = 2
 @export var confusion_time = 0.75
 
+@export_category("Pathfinding")
+@export var target: CharacterBody2D
+
 var can_hear_player: bool = false
 var can_see_player: bool = false
 
@@ -22,12 +25,14 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
+var sound_lost
 func heard_player(player: Character):
 	can_hear_player = true
+	sound_lost = false
 	confusion(player)
 
 func player_noise_lost():
-	can_hear_player = false
+	sound_lost = true
 
 func start_battle():
 	var dead_sprite = Sprite2D.new()
@@ -55,6 +60,8 @@ func confusion(player):
 		await get_tree().create_timer(confusion_time).timeout
 		direction = (player.global_position - global_position).normalized()
 		emotion_animation.visible = false
+		await get_tree().create_timer(1).timeout
+		if sound_lost: can_hear_player = false
 
 func anger():
 	emotion_animation.visible = true
