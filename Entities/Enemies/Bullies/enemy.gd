@@ -2,8 +2,10 @@
 extends CharacterBody2D
 class_name Enemy
 
-@onready var anger_sprite: Sprite2D = $Anger
-@onready var confusion_sprite: Sprite2D = $Confusion
+@onready var anger_sprite: Sprite2D = $"anger indicator"
+@onready var confusion_sprite: Sprite2D = $"confusion indicator"
+@onready var anger_sound: AudioStreamPlayer2D = $"anger sound"
+@onready var confusion_sound: AudioStreamPlayer2D = $"confusion sound"
 
 var sprites = [
 	preload("res://Entities/Assets/Animations/Movement Animations/Andy.tres"),
@@ -29,7 +31,9 @@ var NAMES = ["Boxer", "Tall", "Fat"]
 var Name: String
 
 var can_hear_player: bool = false
+
 var can_see_player: bool = false
+var player_in_vision: Character = null
 
 var direction: Vector2 = Vector2.RIGHT
 
@@ -80,11 +84,13 @@ func start_battle():
 
 func confusion(player):
 	while can_hear_player and not can_see_player:
+		confusion_sound.playing = true
 		await get_tree().create_timer(confusion_time).timeout
 		direction = (player.global_position - global_position).normalized()
 		await get_tree().create_timer(1).timeout
 		if sound_lost: can_hear_player = false
 
 func anger():
+	anger_sound.playing = true
 	await get_tree().create_timer(time_before_battle).timeout
 	if can_see_player: start_battle()

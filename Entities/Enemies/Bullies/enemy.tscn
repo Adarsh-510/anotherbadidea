@@ -7,7 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c370pl2xeh5ks" path="res://Entities/LEGO SHIT/Vision/vision.tscn" id="4_o1grr"]
 [ext_resource type="Texture2D" uid="uid://d16h3k75ieepq" path="res://Entities/Assets/Animations/Emotion/anger.png" id="7_ckmex"]
 [ext_resource type="Texture2D" uid="uid://ciaeqh2chugwj" path="res://Entities/Assets/Animations/Emotion/confusion.png" id="8_q5716"]
+[ext_resource type="AudioStream" uid="uid://blee4npahtsjo" path="res://All Audios/Alert.wav" id="9_q5716"]
 [ext_resource type="PackedScene" uid="uid://cbvtewrk8owi3" path="res://Entities/LEGO SHIT/Pathfind/pathfind.tscn" id="9_sawca"]
+[ext_resource type="AudioStream" uid="uid://dhcndx3gcc42" path="res://All Audios/Surprised.wav" id="10_gcam1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gcam1"]
 radius = 11.0
@@ -33,15 +35,28 @@ shape = SubResource("CapsuleShape2D_gcam1")
 [node name="footsteps" parent="." unique_id=601221903 instance=ExtResource("3_ihd1f")]
 
 [node name="Pathfind" parent="." unique_id=649794201 instance=ExtResource("9_sawca")]
+look_around = null
+randomize_path = null
 
-[node name="Anger" type="Sprite2D" parent="." unique_id=1976945375]
+[node name="anger indicator" type="Sprite2D" parent="." unique_id=1976945375]
+visible = false
 z_index = 100
 position = Vector2(1, -84.66668)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("7_ckmex")
 
-[node name="Confusion" type="Sprite2D" parent="." unique_id=1535234509]
+[node name="confusion indicator" type="Sprite2D" parent="." unique_id=1535234509]
+visible = false
 z_index = 100
 position = Vector2(2.6666641, -84.666664)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("8_q5716")
+
+[node name="anger sound" type="AudioStreamPlayer2D" parent="." unique_id=1235684486]
+position = Vector2(0, -2.9802322e-08)
+stream = ExtResource("9_q5716")
+pitch_scale = 0.85
+
+[node name="confusion sound" type="AudioStreamPlayer2D" parent="." unique_id=518925625]
+stream = ExtResource("10_gcam1")
+pitch_scale = 0.9

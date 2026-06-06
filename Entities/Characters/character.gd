@@ -34,8 +34,17 @@ func _ready() -> void:
 func update_sprite():
 	$"movement animation".sprite_frames = sprites[_name]
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if Engine.is_editor_hint(): return
 	
 	if velocity: direction = velocity.normalized()
 	move_and_slide()
+	
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		
+		if _name == 0 and collider is Character:
+			var push_direction = (collider.global_position - global_position).normalized()
+			var push_force = 150.0 
+			collider.global_position += push_direction * push_force * delta

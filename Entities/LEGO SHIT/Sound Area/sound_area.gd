@@ -5,7 +5,7 @@ extends Area2D
 @export var radius_modifier_sprinting: float = 1.3
 @export var radius_modifier_squatting: float = 0.4
 @export var radius_modifier_standing: float = 0.2
-@export var scaling_speed: float = 0.05
+@export var scaling_speed: float = 0.1
 
 var defaut_radius
 

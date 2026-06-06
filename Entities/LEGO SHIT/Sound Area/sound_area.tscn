@@ -8,13 +8,15 @@ radius = 125.0
 [node name="Sound area" type="Area2D" unique_id=1083916841]
 script = ExtResource("1_o0iy5")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2130933301]
-shape = SubResource("CircleShape2D_su4ue")
-
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1322778369]
 modulate = Color(1, 1, 1, 0.3137255)
 z_index = -1
+color = Color(1, 1, 1, 0.5058824)
 polygon = PackedVector2Array(0, -125, 32, -120, 63, -108, 89, -88, 108, -63, 121, -32, 125, 0, 121, 32, 108, 63, 88, 89, 63, 108, 32, 121, 0, 125, -32, 121, -63, 108, -89, 88, -108, 63, -121, 32, -125, 0, -121, -32, -108, -63, -88, -89, -63, -108, -32, -121)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2130933301]
+visible = false
+shape = SubResource("CircleShape2D_su4ue")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
