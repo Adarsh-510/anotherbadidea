@@ -14,8 +14,10 @@ scale = Vector2(2, 2)
 sprite_frames = ExtResource("2_kqhgp")
 animation = &"Idle Down"
 autoplay = "Idle Down"
+offset = Vector2(0, -15)
 
 [node name="vision" type="Area2D" parent="." unique_id=1170359591]
+position = Vector2(0, -24)
 scale = Vector2(3, 1.5)
 script = ExtResource("3_6sm4w")
 

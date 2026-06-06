@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://rhbo0tbkvb2b"]
+
+[ext_resource type="Texture2D" uid="uid://cx6ch3tad0o1v" path="res://Summoning Scene/Assets/House_fence.png" id="1_3ytjq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcuxv"]
+size = Vector2(407, 26)
+
+[node name="fence" type="StaticBody2D" unique_id=1394113920]
+y_sort_enabled = true
+
+[node name="HouseFence" type="Sprite2D" parent="." unique_id=1298189348]
+texture = ExtResource("1_3ytjq")
+offset = Vector2(0, -134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2126844805]
+position = Vector2(0.5, -9)
+shape = SubResource("RectangleShape2D_dcuxv")

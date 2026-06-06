@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bd5jk8xmbm1rq" path="res://Intro Scene (House)/Assets/Shadow Overlay.png" id="7_4d1jj"]
 [ext_resource type="Texture2D" uid="uid://c5s8p4ey0rh65" path="res://Intro Scene (House)/Assets/Highlight Overlay.png" id="8_myndk"]
 [ext_resource type="Texture2D" uid="uid://d05x2bxshybba" path="res://Intro Scene (House)/Assets/Light Overlay.png" id="9_hinrq"]
-[ext_resource type="PackedScene" uid="uid://cc8vthn85bgb4" path="res://Summoning Circle/summoning_circle.tscn" id="10_lpnah"]
+[ext_resource type="PackedScene" uid="uid://cc8vthn85bgb4" path="res://Summoning Scene/Summoning Circle/summoning_circle.tscn" id="10_lpnah"]
 [ext_resource type="PackedScene" uid="uid://dxxlcrefes768" path="res://Entities/Enemies/Sister/sister.tscn" id="11_wxinp"]
 [ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="12_hpvf6"]
 [ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="13_pxg7u"]

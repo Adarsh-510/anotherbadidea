@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://bo0s0nnprv64n"]
 
+[ext_resource type="SpriteFrames" uid="uid://pkhgprsjt4qm" path="res://Entities/Assets/Animations/Movement Animations/Rudy.tres" id="1_de7ox"]
 [ext_resource type="Script" uid="uid://b3787x0pbyx72" path="res://Entities/LEGO SHIT/Movement Animation/movement animation.gd" id="2_jgncd"]
 
 [node name="movement animation" type="AnimatedSprite2D" unique_id=651574507]
-scale = Vector2(2, 2)
+sprite_frames = ExtResource("1_de7ox")
 animation = &"Idle Down"
 autoplay = "Idle Down"
-centered = false
-offset = Vector2(-32, -47)
+offset = Vector2(25, -519)
 script = ExtResource("2_jgncd")
