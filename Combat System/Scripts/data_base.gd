@@ -202,3 +202,11 @@ var BullyLeader = {
 	"attack2_damage": 40,
 	"attack2_miss_chance": 25
 }
+
+var CollectedItems = {
+	"Spindal": false,
+	"Lemonade": false, 
+	"Pickle": false,
+	"Flute": false,
+	"Mask": false
+}

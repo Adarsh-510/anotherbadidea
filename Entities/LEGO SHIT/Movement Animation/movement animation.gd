@@ -1,6 +1,27 @@
 extends AnimatedSprite2D
 
-@onready var parent = get_parent()
+@onready var parent: CharacterBody2D = get_parent()
+
+const animations = [
+	"res://Entities/Assets/Animations/Movement Animations/Andy.tres",
+	"res://Entities/Assets/Animations/Movement Animations/Rudy.tres",
+	"res://Entities/Assets/Animations/Movement Animations/Owen.tres",
+	"res://Entities/Assets/Animations/Movement Animations/Andy.tres",
+	"res://Entities/Assets/Animations/Movement Animations/Rudy.tres",
+	"res://Entities/Assets/Animations/Movement Animations/Owen.tres"
+]
+
+func _ready() -> void:
+	if parent is Character:
+		match parent.Name:
+			parent.NAME.Andy: sprite_frames = load(animations[0])
+			parent.NAME.Rudy: sprite_frames = load(animations[1])
+			parent.NAME.Owen: sprite_frames = load(animations[2])
+	if parent is Enemy:
+		match parent.Name:
+			parent.NAME.Boxer: sprite_frames = load(animations[3])
+			parent.NAME.Tall: sprite_frames = load(animations[4])
+			parent.NAME.Fat: sprite_frames = load(animations[5])
 
 func _process(_delta: float) -> void:
 	animate()

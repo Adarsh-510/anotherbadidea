@@ -7,6 +7,9 @@ enum NAME { Andy, Rudy, Owen }
 @export var Name: NAME
 @export var Speed: float = 250
 
+@export_category("Pathfinding")
+@export var target: CharacterBody2D
+
 var is_sprinting: bool = false
 var is_squatting: bool = false
 var direction: Vector2
