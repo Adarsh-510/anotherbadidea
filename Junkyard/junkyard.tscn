@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://cuve0jqala0et"]
+[gd_scene load_steps=90 format=3 uid="uid://cuve0jqala0et"]
 
 [ext_resource type="Texture2D" uid="uid://bu2hl421hpv7b" path="res://Junkyard/Assets/background.png" id="1_7d1lf"]
 [ext_resource type="PackedScene" uid="uid://cr3kcboe740fv" path="res://Junkyard/objects scenes/wire_wall_h.tscn" id="1_365wu"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ddhtg40ln2l" path="res://Junkyard/Assets/trash1.png" id="48_q0fog"]
 [ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://Pause Menu/Scenes/pause_menu.tscn" id="56_q0fog"]
 [ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/Bullies/enemy.tscn" id="57_ym6ig"]
+[ext_resource type="Script" uid="uid://blyg1qv8wkil1" path="res://Junkyard/instructions.gd" id="58_wiblk"]
 
 [sub_resource type="GDScript" id="GDScript_ym6ig"]
 script/source = "extends Node2D
@@ -1689,6 +1690,9 @@ affect_navigation_mesh = true
 [node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
 vertices = PackedVector2Array(807, -1624, 711, -1454, 729, -1401, 705, -1344, 721, -1320, 1095, -1314, 1155, -1387, 1107, -1431, 1109, -1463, 1149, -1487, 1156, -1551, 1089, -1617)
 affect_navigation_mesh = true
+
+[node name="instructions" type="CanvasLayer" parent="."]
+script = ExtResource("58_wiblk")
 
 [connection signal="body_entered" from="Items/item/pickup area" to="Items/item" method="_on_pickup_area_body_entered"]
 [connection signal="body_exited" from="Items/item/pickup area" to="Items/item" method="_on_pickup_area_body_exited"]

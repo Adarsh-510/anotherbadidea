@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6xgewupc04wy"]
+[gd_scene load_steps=18 format=3 uid="uid://c6xgewupc04wy"]
 
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="1_w1vtm"]
 [ext_resource type="Script" uid="uid://65klgwvh06a5" path="res://Dialogue Box/Scripts/dialogue_box.gd" id="1_wtubw"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bh3fmdff8cydk" path="res://Dialogue Box/Assets/Owen_inlove.png" id="9_rcxrg"]
 [ext_resource type="Texture2D" uid="uid://d2ey6eruqhq2t" path="res://Dialogue Box/Assets/Rudy_happy.png" id="10_rcxrg"]
 [ext_resource type="Texture2D" uid="uid://dewj61jaleg7w" path="res://Dialogue Box/Assets/Rudy_possesed.png" id="13_ad1w4"]
+[ext_resource type="Texture2D" uid="uid://dpekprnp434y0" path="res://Dialogue Box/Assets/God_default.png" id="14_0e7vu"]
+[ext_resource type="Texture2D" uid="uid://b3ch5h3gly3xl" path="res://Dialogue Box/Assets/God_angry.png" id="15_twvw3"]
+[ext_resource type="Texture2D" uid="uid://c3jq0r1a2oij8" path="res://Dialogue Box/Assets/God_happy.png" id="16_1grv4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8wed"]
 bg_color = Color(0, 0, 0, 1)
@@ -96,3 +99,18 @@ texture = ExtResource("10_rcxrg")
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("13_ad1w4")
+
+[node name="God_default" type="Sprite2D" parent="."]
+position = Vector2(1587, 526)
+scale = Vector2(1, 0.908)
+texture = ExtResource("14_0e7vu")
+
+[node name="God_angry" type="Sprite2D" parent="."]
+position = Vector2(1587, 526)
+scale = Vector2(1, 0.908)
+texture = ExtResource("15_twvw3")
+
+[node name="God_happy" type="Sprite2D" parent="."]
+position = Vector2(1587, 526)
+scale = Vector2(1, 0.908)
+texture = ExtResource("16_1grv4")

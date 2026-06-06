@@ -167,6 +167,7 @@ func _ready() -> void:
 	var cs2_tween = create_tween()
 	cs2_tween.tween_property(cs_2_text, "visible_ratio", 1, 6)
 	await cs2_tween.finished
+	await get_tree().create_timer(2).timeout
 	
 	cutscene_3.modulate.a = 1
 	cs_3_text.text = " We lived in fear, fear of their cruelty and greed..."
@@ -174,6 +175,7 @@ func _ready() -> void:
 	var cs3_tween = create_tween()
 	cs3_tween.tween_property(cs_3_text, "visible_ratio", 1, 6)
 	await cs3_tween.finished
+	await get_tree().create_timer(2).timeout
 
 	cutscene_1.modulate.a = 0
 	cutscene_2.modulate.a = 0
@@ -208,5 +210,7 @@ func _ready() -> void:
 	Dialogue22.setup("*gulp*", "Andy", "Bored")
 
 	await Dialogue22.finished
+	await get_tree().create_timer(2).timeout
 	Dialogue22.queue_free()
+	
 	get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn")
