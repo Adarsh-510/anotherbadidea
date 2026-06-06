@@ -19,6 +19,7 @@ script = ExtResource("1_cubfa")
 _name = 1
 
 [node name="movement animation" parent="." unique_id=651574507 instance=ExtResource("2_lsypd")]
+scale = Vector2(0.115, 0.115)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=788239340]
 position = Vector2(0, -8)

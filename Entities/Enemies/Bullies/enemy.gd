@@ -1,4 +1,4 @@
-@tool
+
 extends CharacterBody2D
 class_name Enemy
 
@@ -14,12 +14,12 @@ var sprites = [
 	preload("res://Entities/Assets/Animations/Movement Animations/Owen.tres")
 ]
 
-@export_enum("Boxer", "Tall", "Fat") var _name: int = 0:
-	set(value):
-		_name = value
-		if Engine.is_editor_hint():
-			$"movement animation".sprite_frames = sprites[_name]
-		Name = NAMES[_name]
+@export_enum("Boxer", "Tall", "Fat") var _name: int = 0
+	#set(value):
+		#_name = value
+		#if Engine.is_editor_hint():
+			#$"movement animation".sprite_frames = sprites[_name]
+		#Name = NAMES[_name]
 
 @export var Speed: float = 150
 @export var time_before_battle: float = 1.5
@@ -42,10 +42,10 @@ func _ready() -> void:
 	anger_sprite.visible = false
 	confusion_sprite.visible = false
 	if _name == 0: set_collision_layer_value(1, true)
-	update_sprite()
-
-func update_sprite():
-	$"movement animation".sprite_frames = sprites[_name]
+	#update_sprite()
+#
+#func update_sprite():
+	#$"movement animation".sprite_frames = sprites[_name]
 
 func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint(): return

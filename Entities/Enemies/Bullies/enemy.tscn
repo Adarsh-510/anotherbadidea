@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://3allg21j8i63" path="res://Entities/Enemies/Bullies/enemy.gd" id="1_7o3vr"]
 [ext_resource type="PackedScene" uid="uid://bo0s0nnprv64n" path="res://Entities/LEGO SHIT/Movement Animation/movement_animation.tscn" id="2_o1grr"]
-[ext_resource type="SpriteFrames" uid="uid://pkhgprsjt4qm" path="res://Entities/Assets/Animations/Movement Animations/Rudy.tres" id="3_2thbc"]
 [ext_resource type="PackedScene" uid="uid://dn8iiuuetopd0" path="res://Entities/LEGO SHIT/Footsteps/footsteps.tscn" id="3_ihd1f"]
 [ext_resource type="PackedScene" uid="uid://c370pl2xeh5ks" path="res://Entities/LEGO SHIT/Vision/vision.tscn" id="4_o1grr"]
 [ext_resource type="Texture2D" uid="uid://d16h3k75ieepq" path="res://Entities/Assets/Animations/Emotion/anger.png" id="7_ckmex"]
@@ -23,7 +22,7 @@ script = ExtResource("1_7o3vr")
 _name = 1
 
 [node name="movement animation" parent="." unique_id=651574507 instance=ExtResource("2_o1grr")]
-sprite_frames = ExtResource("3_2thbc")
+scale = Vector2(0.115, 0.115)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1005426062]
 position = Vector2(0, -8)
