@@ -73,7 +73,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Character and body._name == 0:
 		#start battle
 		DataBase.curr_enemy = DataBase.BullyLeader
-		owner.get_parent().swap_scene(\"res://Combat System/Scenes/Main_Battle.tscn\", true, false)
+		get_tree().change_scene_to_file(\"res://Combat System/Scenes/Main_Battle.tscn\")
 "
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0fog"]

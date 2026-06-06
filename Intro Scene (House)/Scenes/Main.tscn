@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://c0jepr6wr17on" path="res://Intro Scene (House)/Assets/1000007216.jpg" id="13_l3n7k"]
 [ext_resource type="Texture2D" uid="uid://derqx7ycd13km" path="res://Intro Scene (House)/Assets/1000007217.png" id="14_otc3k"]
 [ext_resource type="Texture2D" uid="uid://cdtx3hljndp4n" path="res://Intro Scene (House)/Assets/1000007141.png" id="15_w3yfe"]
+[ext_resource type="AudioStream" uid="uid://by4e0g4vlwmfi" path="res://All Audios/Gameplay_Theme.wav" id="17_w3yfe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v25tx"]
 bg_color = Color(0, 0, 0, 1)
@@ -334,3 +335,7 @@ texture = ExtResource("15_w3yfe")
 position = Vector2(1546, 1195)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_8fjwj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1883274436]
+stream = ExtResource("17_w3yfe")
+autoplay = true

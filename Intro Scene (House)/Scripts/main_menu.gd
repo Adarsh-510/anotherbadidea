@@ -155,7 +155,7 @@ func _on_sound_pressed() -> void:
 		
 
 func _on_play_pressed() -> void:
-	owner.get_parent().swap_scene("res://Intro Scene (House)/Scenes/Main.tscn", false, false)
+	get_tree().change_scene_to_file("res://Intro Scene (House)/Scenes/Main.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

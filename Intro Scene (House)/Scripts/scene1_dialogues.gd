@@ -213,4 +213,4 @@ func _ready() -> void:
 	await get_tree().create_timer(2).timeout
 	Dialogue22.queue_free()
 	
-	owner.get_parent().swap_scene("res://Junkyard/junkyard.tscn", false, false)
+	get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn")

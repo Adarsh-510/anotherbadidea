@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ip8ubdba0rd7" path="res://Intro Scene (House)/Assets/sound off.png" id="5_qvfqd"]
 [ext_resource type="Texture2D" uid="uid://dy57ywhphyhid" path="res://Intro Scene (House)/Assets/exit.png" id="6_bw8x1"]
 [ext_resource type="Texture2D" uid="uid://c2svc18pq6sdn" path="res://Intro Scene (House)/Assets/1000007214.png" id="7_cqhbb"]
+[ext_resource type="AudioStream" uid="uid://diw4uaq0ckh2y" path="res://All Audios/Title_music.wav" id="8_ln2b5"]
 
 [node name="MainMenu" type="Node2D" unique_id=1542410642]
 script = ExtResource("1_rq4lm")
@@ -81,6 +82,11 @@ z_index = -1
 position = Vector2(499, 146)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_cqhbb")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=769590575]
+stream = ExtResource("8_ln2b5")
+autoplay = true
+stream_paused = true
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="sound" to="." method="_on_sound_pressed"]

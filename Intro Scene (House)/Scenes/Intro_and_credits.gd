@@ -33,4 +33,4 @@ func _ready() -> void:
 
 		await tween.finished
 	
-	owner.get_parent().swap_scene("res://Intro Scene (House)/Scenes/Main Menu.tscn", false, false)
+	get_tree().change_scene_to_file("res://Intro Scene (House)/Scenes/Main Menu.tscn")

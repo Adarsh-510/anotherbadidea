@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://6qve5astct1m" path="res://Intro Scene (House)/Scenes/Intro_and_credits.gd" id="1_020sj"]
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="2_y7j6d"]
+[ext_resource type="AudioStream" uid="uid://diw4uaq0ckh2y" path="res://All Audios/Title_music.wav" id="3_y7j6d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txvy0"]
 bg_color = Color(0, 0, 0, 1)
@@ -66,3 +67,7 @@ text = "Music-
 Samarth Kodape"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=550971229]
+stream = ExtResource("3_y7j6d")
+autoplay = true

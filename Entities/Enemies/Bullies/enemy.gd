@@ -77,7 +77,7 @@ func start_battle():
 		1: DataBase.curr_enemy = DataBase.Bully2
 		2: DataBase.curr_enemy = DataBase.Bully3
 
-	owner.get_parent().swap_scene("res://Combat System/Scenes/Main_Battle.tscn", false, false)
+	get_tree().change_scene_to_file("res://Combat System/Scenes/Main_Battle.tscn")
 
 func confusion(player):
 	while can_hear_player and not can_see_player:

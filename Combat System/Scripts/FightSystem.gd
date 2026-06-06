@@ -31,3 +31,9 @@ func next_turn(prev_turn_damage, prev_turn_name):
 		
 		Interface.hide_menu()
 		TurnsHandler.enemy_turn()    
+
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
+func _on_audio_stream_player_finished() -> void:
+	audio_stream_player.stream = load("res://All Audios/Battle_loop.wav")
+	audio_stream_player.playing = true
