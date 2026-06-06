@@ -12,7 +12,7 @@
 [ext_resource type="Script" uid="uid://l0oqjda61cj1" path="res://Intro Scene (House)/Scripts/scene1_dialogues.gd" id="10_eq1pk"]
 [ext_resource type="Texture2D" uid="uid://7h5adlm2yexs" path="res://Intro Scene (House)/Assets/Book.png" id="11_4hu2w"]
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="12_8fjwj"]
-[ext_resource type="Texture2D" uid="uid://dlmwujut3q1kn" path="res://Misc/sitting sprites.png" id="13_8fjwj"]
+[ext_resource type="Texture2D" uid="uid://nwgd6a6ch3o0" path="res://Intro Scene (House)/Assets/sitting sprites.png" id="13_8fjwj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v25tx"]
 bg_color = Color(0, 0, 0, 1)
@@ -249,10 +249,10 @@ limit_right = -258
 limit_bottom = 2490
 
 [node name="DialogueBox Container" type="CanvasLayer" parent="."]
-visible = false
 script = ExtResource("10_eq1pk")
 
 [node name="Book_Panel" type="Panel" parent="DialogueBox Container"]
+visible = false
 offset_right = 1917.0
 offset_bottom = 1082.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_l3n7k")

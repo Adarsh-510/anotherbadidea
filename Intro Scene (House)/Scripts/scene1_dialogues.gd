@@ -8,6 +8,8 @@ extends CanvasLayer
 func _ready() -> void:
 	book_panel.modulate.a = 0
 
+	await get_tree().create_timer(4.0).timeout
+
 	var Dialogue1 = DialogueBox.instantiate()
 	add_child(Dialogue1)
 	Dialogue1.setup("Well....this is boring.", "Rudy", "Bored")

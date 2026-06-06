@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dcdb6n4hcp8xv"]
+[gd_scene load_steps=43 format=3 uid="uid://dcdb6n4hcp8xv"]
 
 [ext_resource type="Script" uid="uid://b455ccp0ty5nk" path="res://Combat System/Scripts/FightSystem.gd" id="1_m5e66"]
 [ext_resource type="Script" uid="uid://cqe560ehscjuy" path="res://Combat System/Scripts/main_ui.gd" id="2_ee3ch"]
@@ -7,14 +7,26 @@
 [ext_resource type="Script" uid="uid://fnxtnt8oaimo" path="res://Combat System/Scripts/visuals.gd" id="4_whf4a"]
 [ext_resource type="Texture2D" uid="uid://bwpqshb6ms372" path="res://Combat System/Assets/Mr White.png" id="5_etnwf"]
 [ext_resource type="Texture2D" uid="uid://qygat123m3hv" path="res://Combat System/Assets/Mr Green.png" id="6_yj703"]
+[ext_resource type="Texture2D" uid="uid://cni02nl2vwj3" path="res://Animations/explosion/1.png" id="7_6kk1d"]
 [ext_resource type="Texture2D" uid="uid://cll2pfpgmpixb" path="res://Combat System/Assets/Mr Orange.png" id="7_diypt"]
 [ext_resource type="Script" uid="uid://bgp1g5ix68l8o" path="res://Combat System/Scripts/data_base.gd" id="7_etnwf"]
+[ext_resource type="Texture2D" uid="uid://bywbc2j6e83o1" path="res://Animations/explosion/2.png" id="8_h0bhx"]
 [ext_resource type="Texture2D" uid="uid://d4fsy13p5ervp" path="res://Combat System/Assets/Bully Leader.png" id="8_jbu2x"]
 [ext_resource type="Script" uid="uid://bj1ltxixeygi6" path="res://Combat System/Scripts/turns_handler.gd" id="8_yj703"]
+[ext_resource type="Texture2D" uid="uid://ctdqfqq2ai3c0" path="res://Animations/explosion/3.png" id="9_2qpd5"]
 [ext_resource type="Texture2D" uid="uid://byj3m2hm5ydd0" path="res://Combat System/Assets/Bully 1.png" id="9_sa1l6"]
 [ext_resource type="Texture2D" uid="uid://ddbngllqckwdq" path="res://Combat System/Assets/Bully 2.png" id="10_hrp83"]
+[ext_resource type="Texture2D" uid="uid://clkxrtw454asi" path="res://Animations/explosion/4.png" id="10_oj2vp"]
+[ext_resource type="Texture2D" uid="uid://c3xoguiobt4mn" path="res://Animations/explosion/5.png" id="11_1h1rn"]
 [ext_resource type="Texture2D" uid="uid://byht1p2akn8ts" path="res://Combat System/Assets/Bully 3.png" id="11_15u7x"]
 [ext_resource type="Texture2D" uid="uid://c45tknkav5kkg" path="res://Combat System/Assets/Junkyard BG.png" id="12_if0dm"]
+[ext_resource type="Texture2D" uid="uid://kouclhsp26oo" path="res://Animations/explosion/6.png" id="12_volx2"]
+[ext_resource type="Texture2D" uid="uid://cvtd3x0ik3u7s" path="res://Animations/explosion/7.png" id="13_6exq7"]
+[ext_resource type="Texture2D" uid="uid://b61j6dnlihy1n" path="res://Animations/explosion/8.png" id="14_hakyq"]
+[ext_resource type="Texture2D" uid="uid://c6djqi1o4w101" path="res://Animations/explosion/9.png" id="15_pjg5d"]
+[ext_resource type="Texture2D" uid="uid://ph8rhko82a7g" path="res://Animations/explosion/10.png" id="16_yvwol"]
+[ext_resource type="Texture2D" uid="uid://bj1saa10rp3h7" path="res://Animations/explosion/11.png" id="17_ns2ii"]
+[ext_resource type="Texture2D" uid="uid://cy4df6o74y721" path="res://Animations/explosion/12.png" id="18_lpifd"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0, 0, 0, 1)
@@ -29,6 +41,70 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
+
+[sub_resource type="Animation" id="Animation_6kk1d"]
+resource_name = "Trans_in"
+length = 1.55
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Trans_in_animation/Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.3, 0.44, 0.58, 0.72, 0.85, 0.96, 1.07, 1.18, 1.31, 1.42, 1.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1921, 540), Vector2(1921, 504), Vector2(1921, 444), Vector2(1921, 395), Vector2(1921, 325), Vector2(1921, 268), Vector2(1921, 214), Vector2(1921, 178), Vector2(1921, 137), Vector2(1921, 88), Vector2(1921, 54), Vector2(1921, 25), Vector2(1921, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Trans_in_animation/Panel2:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.16, 0.3, 0.44, 0.58, 0.72, 0.85, 0.96, 1.07, 1.18, 1.31, 1.42, 1.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1921, 544), Vector2(1921, 482), Vector2(1921, 430), Vector2(1921, 386), Vector2(1921, 337), Vector2(1921, 290), Vector2(1921, 246), Vector2(1921, 186), Vector2(1921, 129), Vector2(1921, 100), Vector2(1921, 69), Vector2(1921, 35), Vector2(1921, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h0bhx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Trans_in_animation/Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1921, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Trans_in_animation/Panel2:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1921, 544)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2qpd5"]
+_data = {
+&"RESET": SubResource("Animation_h0bhx"),
+&"Trans_in": SubResource("Animation_6kk1d")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oj2vp"]
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yj703"]
 bg_color = Color(0, 0, 0, 0)
@@ -47,6 +123,50 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_moemh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_6kk1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_h0bhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2qpd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_oj2vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1h1rn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_volx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_6exq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_hakyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_pjg5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_yvwol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_ns2ii")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_lpifd")
+}],
+"loop": false,
+"name": &"explosion",
+"speed": 12.0
+}]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_diypt"]
 bg_color = Color(0, 0, 0, 0)
@@ -133,6 +253,25 @@ autowrap_mode = 3
 [node name="Marker2D" type="Marker2D" parent="InterFace"]
 position = Vector2(981, 747)
 
+[node name="Trans_in_animation" type="AnimationPlayer" parent="InterFace"]
+libraries = {
+&"": SubResource("AnimationLibrary_2qpd5")
+}
+autoplay = "Trans_in"
+
+[node name="Panel" type="Panel" parent="InterFace/Trans_in_animation"]
+offset_right = 1921.0
+offset_bottom = 540.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_oj2vp")
+
+[node name="Panel2" type="Panel" parent="InterFace/Trans_in_animation"]
+offset_left = 1927.0
+offset_top = 1080.0
+offset_right = 3848.0
+offset_bottom = 1624.0
+scale = Vector2(-1, -1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_oj2vp")
+
 [node name="Visuals" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
@@ -164,6 +303,14 @@ position = Vector2(197, 194)
 scale = Vector2(0.75, 0.689)
 texture = ExtResource("5_etnwf")
 
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player1"]
+position = Vector2(184, 179)
+scale = Vector2(0.4, 0.39752385)
+sprite_frames = SubResource("SpriteFrames_moemh")
+animation = &"explosion"
+frame = 11
+frame_progress = 1.0
+
 [node name="player2" type="Panel" parent="Visuals"]
 layout_mode = 0
 offset_left = 35.0
@@ -188,6 +335,14 @@ position = Vector2(197, 194)
 scale = Vector2(0.75, 0.689)
 texture = ExtResource("6_yj703")
 
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player2"]
+position = Vector2(184, 179)
+scale = Vector2(0.4, 0.39752385)
+sprite_frames = SubResource("SpriteFrames_moemh")
+animation = &"explosion"
+frame = 11
+frame_progress = 1.0
+
 [node name="player3" type="Panel" parent="Visuals"]
 layout_mode = 0
 offset_left = 1491.0
@@ -211,6 +366,14 @@ show_percentage = false
 position = Vector2(197, 194)
 scale = Vector2(0.75, 0.689)
 texture = ExtResource("7_diypt")
+
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player3"]
+position = Vector2(184, 179)
+scale = Vector2(0.4, 0.39752385)
+sprite_frames = SubResource("SpriteFrames_moemh")
+animation = &"explosion"
+frame = 11
+frame_progress = 1.0
 
 [node name="enemy" type="Control" parent="Visuals"]
 z_index = -1
@@ -273,6 +436,14 @@ theme_override_styles/background = SubResource("StyleBoxFlat_efxa6")
 theme_override_styles/fill = SubResource("StyleBoxFlat_dg77c")
 value = 50.0
 show_percentage = false
+
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/enemy"]
+position = Vector2(184, 179)
+scale = Vector2(0.4, 0.39752385)
+sprite_frames = SubResource("SpriteFrames_moemh")
+animation = &"explosion"
+frame = 11
+frame_progress = 1.0
 
 [node name="turns_info_panel" type="Label" parent="Visuals"]
 layout_mode = 0
