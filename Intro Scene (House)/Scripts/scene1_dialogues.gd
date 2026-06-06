@@ -2,7 +2,11 @@ extends CanvasLayer
 
 @onready var DialogueBox = preload("res://Dialogue Box/Scenes/DialogueBox.tscn")
 
+@onready var book_panel: Panel = $Book_Panel
+
+
 func _ready() -> void:
+	book_panel.modulate.a = 0
 
 	var Dialogue1 = DialogueBox.instantiate()
 	add_child(Dialogue1)
@@ -13,7 +17,7 @@ func _ready() -> void:
 
 	var Dialogue2 = DialogueBox.instantiate()
 	add_child(Dialogue2)
-	Dialogue2.setup("When I hear the words 'summer vacation', this is definitely not what I picture.", "Owen", "Sad")
+	Dialogue2.setup("You know when I hear the words 'summer vacation', this is definitely not what I picture.", "Owen", "Sad")
 
 	await Dialogue2.finished
 	Dialogue2.queue_free()
@@ -27,7 +31,7 @@ func _ready() -> void:
 
 	var Dialogue4 = DialogueBox.instantiate()
 	add_child(Dialogue4)
-	Dialogue4.setup("I just wanna go back to school at this point... with Cindy.", "Owen", "Sad")
+	Dialogue4.setup("I just wanna go back to school at this point... with Cindy.", "Owen", "InLove")
 
 	await Dialogue4.finished
 	Dialogue4.queue_free()
@@ -55,7 +59,7 @@ func _ready() -> void:
 
 	var Dialogue8 = DialogueBox.instantiate()
 	add_child(Dialogue8)
-	Dialogue8.setup("Time is but a mere illusion, crafted to distract the mortal mind from its inevitable demise.", "Rudy", "Happy")
+	Dialogue8.setup("Time is but a mere illusion, crafted to distract the mortal mind from its inevitable demise.", "Rudy", "Possessed")
 
 	await Dialogue8.finished
 	Dialogue8.queue_free()
@@ -73,13 +77,17 @@ func _ready() -> void:
 
 	await Dialogue10.finished
 	Dialogue10.queue_free()
+	
+	var Dialogue11_tween = create_tween()
+	Dialogue11_tween.tween_property(book_panel, "modulate:a", 1, 2)
 
-	var Dialogue11 = DialogueBox.instantiate()
-	add_child(Dialogue11)
-	Dialogue11.setup("THE BOOK TO SUMMON AN ANCIENT GOD OF INFINITE WISDOM", "Rudy", "Happy")
-
-	await Dialogue11.finished
-	Dialogue11.queue_free()
+	await Dialogue11_tween.finished
+	await get_tree().create_timer(1.0).timeout
+	var Dialogue11_tween1 = create_tween()
+	Dialogue11_tween1.tween_property(book_panel, "modulate:a", 0, 2)
+	
+	await Dialogue11_tween1.finished
+	book_panel.queue_free()
 
 	var Dialogue12 = DialogueBox.instantiate()
 	add_child(Dialogue12)

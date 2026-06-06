@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6xgewupc04wy"]
+[gd_scene load_steps=15 format=3 uid="uid://c6xgewupc04wy"]
 
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="1_w1vtm"]
 [ext_resource type="Script" uid="uid://65klgwvh06a5" path="res://Dialogue Box/Scripts/dialogue_box.gd" id="1_wtubw"]
@@ -10,7 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dhow6ertkeo2b" path="res://Dialogue Box/Assets/Owen_sad.png" id="7_q73cw"]
 [ext_resource type="Texture2D" uid="uid://b0xfs018d7px4" path="res://Dialogue Box/Assets/Rudy_bored.png" id="8_wtubw"]
 [ext_resource type="Texture2D" uid="uid://bof4lk31ji7g7" path="res://Dialogue Box/Assets/Rudy_default.png" id="9_6jejf"]
+[ext_resource type="Texture2D" uid="uid://bh3fmdff8cydk" path="res://Dialogue Box/Assets/Owen_inlove.png" id="9_rcxrg"]
 [ext_resource type="Texture2D" uid="uid://d2ey6eruqhq2t" path="res://Dialogue Box/Assets/Rudy_happy.png" id="10_rcxrg"]
+[ext_resource type="Texture2D" uid="uid://dewj61jaleg7w" path="res://Dialogue Box/Assets/Rudy_possesed.png" id="13_ad1w4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8wed"]
 bg_color = Color(0, 0, 0, 1)
@@ -70,6 +72,11 @@ position = Vector2(1587, 570)
 scale = Vector2(1, 0.908)
 texture = ExtResource("7_q73cw")
 
+[node name="Owen_inlove" type="Sprite2D" parent="."]
+position = Vector2(1587, 570)
+scale = Vector2(1, 0.908)
+texture = ExtResource("9_rcxrg")
+
 [node name="Rudy_bored" type="Sprite2D" parent="."]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
@@ -84,3 +91,8 @@ texture = ExtResource("9_6jejf")
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("10_rcxrg")
+
+[node name="Rudy_possesed" type="Sprite2D" parent="."]
+position = Vector2(1587, 566)
+scale = Vector2(1, 0.908)
+texture = ExtResource("13_ad1w4")

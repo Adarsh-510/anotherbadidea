@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://te507g2q7e6p"]
+[gd_scene load_steps=16 format=3 uid="uid://te507g2q7e6p"]
 
 [ext_resource type="Texture2D" uid="uid://j352qnr3sv8t" path="res://Intro Scene (House)/Assets/House_grass.png" id="1_v25tx"]
 [ext_resource type="Texture2D" uid="uid://bvkc1mhi81kh1" path="res://Intro Scene (House)/Assets/House_house.png" id="2_cjdqh"]
@@ -10,8 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://c5s8p4ey0rh65" path="res://Intro Scene (House)/Assets/Highlight Overlay.png" id="8_vjrab"]
 [ext_resource type="Texture2D" uid="uid://d05x2bxshybba" path="res://Intro Scene (House)/Assets/Light Overlay.png" id="9_4hu2w"]
 [ext_resource type="Script" uid="uid://l0oqjda61cj1" path="res://Intro Scene (House)/Scripts/scene1_dialogues.gd" id="10_eq1pk"]
+[ext_resource type="Texture2D" uid="uid://7h5adlm2yexs" path="res://Intro Scene (House)/Assets/Book.png" id="11_4hu2w"]
+[ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="12_8fjwj"]
+[ext_resource type="Texture2D" uid="uid://dlmwujut3q1kn" path="res://Misc/sitting sprites.png" id="13_8fjwj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v25tx"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3n7k"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
@@ -243,4 +249,31 @@ limit_right = -258
 limit_bottom = 2490
 
 [node name="DialogueBox Container" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("10_eq1pk")
+
+[node name="Book_Panel" type="Panel" parent="DialogueBox Container"]
+offset_right = 1917.0
+offset_bottom = 1082.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l3n7k")
+
+[node name="Sprite2D" type="Sprite2D" parent="DialogueBox Container/Book_Panel"]
+position = Vector2(957, 372)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_4hu2w")
+
+[node name="Label" type="Label" parent="DialogueBox Container/Book_Panel"]
+layout_mode = 0
+offset_top = 612.0
+offset_right = 1917.0
+offset_bottom = 751.0
+theme_override_fonts/font = ExtResource("12_8fjwj")
+theme_override_font_sizes/font_size = 80
+text = "A guide to summoning a god
+with infinte knowledge"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1546, 1195)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_8fjwj")
