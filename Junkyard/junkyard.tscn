@@ -67,6 +67,13 @@ script/source = "extends Node2D
 func _ready() -> void:
 	var tween = create_tween()
 	tween.tween_property(in_transition, \"modulate:a\", 0, 4)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body is Character and body._name == 0:
+		#start battle
+		DataBase.curr_enemy = DataBase.BullyLeader
+		owner.get_parent().swap_scene(\"res://Combat System/Scenes/Main_Battle.tscn\", true, false)
 "
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0fog"]
@@ -186,6 +193,9 @@ polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Arr
 outlines = Array[PackedVector2Array]([PackedVector2Array(111, -304, 107, -556, 285, -556, 272, -907, 192, -954, 106, -949, 102, -1131, 80, -1133, 84, -955, -220, -960, -264, -837, -266, -754, -141, -741, -129, -579, -245, -561, -419, -666, -557, -670, -598, -636, -598, -539, -722, -479, -762, -480, -786, -537, -883, -577, -890, -2302, -742, -2282, -638, -2313, -601, -2373, -251, -2380, -251, -2280, -217, -2255, -118, -2273, -99, -2216, -65, -2205, -37, -2104, -18, -2084, -231, -2079, -342, -2117, -344, -2179, -681, -2175, -707, -2027, -701, -1501, -665, -1497, -648, -1464, -549, -1436, -527, -1364, -486, -1368, -465, -1320, -452, -1274, -87, -1301, -79, -1402, -93, -1475, -169, -1512, -166, -1710, -481, -1709, -489, -1801, -456, -1788, -362, -1784, -308, -1818, -133, -1818, -110, -1787, -79, -1772, 61, -1778, 73, -1781, 67, -1411, 104, -1407, 106, -1519, 246, -1522, 253, -1591, 362, -1591, 468, -1632, 462, -1718, 460, -1704, 845, -1711, 889, -1752, 886, -1880, 819, -1975, 752, -2044, 701, -2049, 696, -2242, 666, -2243, 664, -2082, 610, -2079, 475, -2113, 404, -2125, 395, -2140, 264, -2139, 258, -2215, 443, -2226, 472, -2299, 653, -2308, 663, -2274, 835, -2279, 844, -2180, 1030, -2180, 1050, -2126, 1104, -2124, 1150, -2155, 1196, -2151, 1197, -1800, 1017, -1803, 1017, -1731, 1234, -1726, 1234, -2057, 1316, -2051, 1320, -2124, 1349, -2118, 1395, -2052, 1488, -2065, 1581, -2062, 1631, -1949, 1459, -1949, 1455, -1895, 1446, -1858, 1449, -1815, 1600, -1793, 1570, -1666, 1320, -1653, 1301, -1435, 1340, -1442, 1329, -1408, 1360, -1335, 1383, -1299, 1462, -1318, 1472, -1125, 1275, -1132, 1276, -1148, 476, -1144, 487, -847, 638, -835, 649, -793, 695, -762, 795, -762, 818, -784, 1070, -784, 1073, -829, 1033, -829, 1026, -872, 963, -885, 955, -990, 818, -993, 813, -1008, 759, -1016, 761, -1039, 834, -1038, 852, -1097, 959, -1099, 952, -1056, 1103, -1047, 1130, -972, 1218, -971, 1230, -923, 1248, -925, 1247, -606, 1121, -598, 1076, -624, 920, -619, 879, -602, 740, -606, 653, -531, 420, -439, 425, -306, 1661, -307, 1656, -10, -906, -1, -903, -301)])
 agent_radius = 30.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wiblk"]
+size = Vector2(256, 20)
+
 [node name="junkyard" type="Node2D" unique_id=1309658587]
 y_sort_enabled = true
 script = SubResource("GDScript_ym6ig")
@@ -205,8 +215,6 @@ stretch_mode = 1
 
 [node name="CanvasModulate" type="CanvasModulate" parent="background" unique_id=224056420]
 color = Color(0.85814106, 0.85814106, 0.85814106, 1)
-
-[node name="Pause Menu" parent="." unique_id=855049887 instance=ExtResource("56_q0fog")]
 
 [node name="Items" type="Node2D" parent="." unique_id=143967129]
 y_sort_enabled = true
@@ -1612,6 +1620,7 @@ y_sort_enabled = true
 
 [node name="Character" parent="characters" unique_id=1510794032 instance=ExtResource("2_6wfg4")]
 position = Vector2(428, -300)
+_name = 0
 Speed = 275.0
 
 [node name="Control_Movement" type="Node2D" parent="characters/Character" unique_id=707043814]
@@ -1693,6 +1702,14 @@ affect_navigation_mesh = true
 [node name="instructions" type="CanvasLayer" parent="." unique_id=531976540]
 script = ExtResource("58_wiblk")
 
+[node name="Pause Menu" parent="." unique_id=855049887 instance=ExtResource("56_q0fog")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=655948005]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=13476578]
+position = Vector2(953, -1792)
+shape = SubResource("RectangleShape2D_wiblk")
+
 [connection signal="body_entered" from="Items/item/pickup area" to="Items/item" method="_on_pickup_area_body_entered"]
 [connection signal="body_exited" from="Items/item/pickup area" to="Items/item" method="_on_pickup_area_body_exited"]
 [connection signal="body_entered" from="Items/item2/pickup area" to="Items/item2" method="_on_pickup_area_body_entered"]
@@ -1703,6 +1720,7 @@ script = ExtResource("58_wiblk")
 [connection signal="body_exited" from="Items/item4/pickup area" to="Items/item4" method="_on_pickup_area_body_exited"]
 [connection signal="body_entered" from="Items/item5/pickup area" to="Items/item5" method="_on_pickup_area_body_entered"]
 [connection signal="body_exited" from="Items/item5/pickup area" to="Items/item5" method="_on_pickup_area_body_exited"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 
 [editable path="map/cars/car h7"]
 [editable path="map/cars/car h14"]

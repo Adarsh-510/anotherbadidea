@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjw7g2gdgfnkl"]
+[gd_scene format=3 uid="uid://bjw7g2gdgfnkl"]
 
 [ext_resource type="Texture2D" uid="uid://v2huc0cgpkgg" path="res://Intro Scene (House)/Assets/main menu.png" id="1_3qd5b"]
 [ext_resource type="Script" uid="uid://4kkyq65jxvrf" path="res://Intro Scene (House)/Scripts/main_menu.gd" id="1_rq4lm"]
@@ -8,15 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://dy57ywhphyhid" path="res://Intro Scene (House)/Assets/exit.png" id="6_bw8x1"]
 [ext_resource type="Texture2D" uid="uid://c2svc18pq6sdn" path="res://Intro Scene (House)/Assets/1000007214.png" id="7_cqhbb"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="Node2D" unique_id=1542410642]
 script = ExtResource("1_rq4lm")
 
-[node name="art" type="Sprite2D" parent="."]
+[node name="art" type="Sprite2D" parent="." unique_id=1642761370]
 z_index = -1
 position = Vector2(960, 540)
 texture = ExtResource("1_3qd5b")
 
-[node name="play" type="TextureButton" parent="."]
+[node name="play" type="TextureButton" parent="." unique_id=470576687]
 z_index = 1
 offset_left = 1266.0
 offset_top = 232.00003
@@ -25,7 +25,7 @@ offset_bottom = 1312.0
 scale = Vector2(0.23752487, 0.24208546)
 texture_normal = ExtResource("3_bi36m")
 
-[node name="sound" type="TextureButton" parent="."]
+[node name="sound" type="TextureButton" parent="." unique_id=2099071366]
 z_index = 1
 offset_left = 1229.0
 offset_top = 393.99997
@@ -35,7 +35,7 @@ scale = Vector2(0.2734844, 0.27086005)
 texture_normal = ExtResource("4_b5faq")
 texture_disabled = ExtResource("5_qvfqd")
 
-[node name="exit" type="TextureButton" parent="."]
+[node name="exit" type="TextureButton" parent="." unique_id=1492183899]
 z_index = 1
 offset_left = 1246.0
 offset_top = 602.0
@@ -44,38 +44,38 @@ offset_bottom = 1682.0
 scale = Vector2(0.23752487, 0.24208546)
 texture_normal = ExtResource("6_bw8x1")
 
-[node name="sound_disabled" type="Sprite2D" parent="."]
+[node name="sound_disabled" type="Sprite2D" parent="." unique_id=1439480802]
 z_index = 1
 position = Vector2(1493.545, 541.26434)
 scale = Vector2(0.2734844, 0.27086005)
 texture = ExtResource("5_qvfqd")
 
-[node name="play_shadow" type="Sprite2D" parent="."]
+[node name="play_shadow" type="Sprite2D" parent="." unique_id=1943452325]
 modulate = Color(0.118800126, 0.022000134, 0.5499999, 0.39215687)
 z_index = -1
 position = Vector2(1511.0239, 377.72617)
 scale = Vector2(0.23752487, 0.24208546)
 texture = ExtResource("3_bi36m")
 
-[node name="sound_shadow" type="Sprite2D" parent="."]
+[node name="sound_shadow" type="Sprite2D" parent="." unique_id=14806685]
 modulate = Color(0.11764706, 0.023529412, 0.54901963, 0.39215687)
 position = Vector2(1503.5452, 557.26434)
 scale = Vector2(0.2734844, 0.27086005)
 texture = ExtResource("4_b5faq")
 
-[node name="exit_shadow" type="Sprite2D" parent="."]
+[node name="exit_shadow" type="Sprite2D" parent="." unique_id=1755348391]
 modulate = Color(0.11764706, 0.023529412, 0.54901963, 0.39215687)
 z_index = -1
 position = Vector2(1489.0238, 747.72614)
 scale = Vector2(0.23752487, 0.24208546)
 texture = ExtResource("6_bw8x1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=830173020]
 position = Vector2(491, 135)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_cqhbb")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1201187346]
 modulate = Color(0.2846667, 0, 0.61, 0.39215687)
 z_index = -1
 position = Vector2(499, 146)

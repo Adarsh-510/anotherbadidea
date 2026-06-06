@@ -54,8 +54,7 @@ func _process(delta: float) -> void:
 		DataBase.curr_enemy["hp"] = 100
 		Interface.reset()
 		await get_tree().create_timer(death_duration).timeout
-		get_tree().change_scene_to_file("res://Game Over/Game_over_player_died.tscn") 
-		
+		owner.get_parent().swap_scene("res://Game Over/Game_over_player_died.tscn", false, false) 
 
 
 func enemy_turn():

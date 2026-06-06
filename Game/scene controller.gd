@@ -2,7 +2,7 @@ extends Node
 
 var frozen_scenes: Dictionary = {}
 
-@onready var current_active_scene: Node = $junkyard
+@onready var current_active_scene: Node = $Node2D
 
 func swap_scene(target_scene_path: String, delete_current: bool, keep_current_running: bool) -> void:
 	var old_scene = current_active_scene
