@@ -73,9 +73,8 @@ func _physics_process(_delta: float) -> void:
 	set_velocity(intended_velocity) 
 
 func _on_velocity_computed(safe_velocity: Vector2) -> void:
-	parent.velocity = parent.velocity.move_toward(safe_velocity, 10)
+	parent.velocity = parent.velocity.move_toward(safe_velocity, 15)
 	if parent is Enemy and parent.velocity: parent.direction = parent.velocity.normalized()
-
 
 func _on_refresh_position_timeout() -> void:
 	if target: target_position = target.global_position
@@ -117,13 +116,13 @@ func look_around_direction(next_target):
 	difference_in_angle = difference_in_angle if difference_in_angle >= 0 else difference_in_angle + TAU
 	var offset_angle = (1 if difference_in_angle >= PI else -1) * deg_to_rad(look_around_angle)
 	
-	await get_tree().create_timer(1).timeout
+	if get_tree(): await get_tree().create_timer(1).timeout
 	if is_looking: parent.direction = direction_to_next_target
-	await get_tree().create_timer(0.2).timeout
+	if get_tree(): await get_tree().create_timer(0.2).timeout
 	if is_looking: parent.direction = Vector2.from_angle(direction_to_next_target.angle() + offset_angle).normalized()
-	await get_tree().create_timer(1).timeout
+	if get_tree(): await get_tree().create_timer(1).timeout
 	if is_looking: parent.direction = Vector2.from_angle(direction_to_next_target.angle() - offset_angle).normalized()
-	await get_tree().create_timer(1).timeout
+	if get_tree(): await get_tree().create_timer(1).timeout
 	
 	is_looking = false
 

@@ -2,7 +2,8 @@
 extends CharacterBody2D
 class_name Enemy
 
-@onready var emotion_animation: AnimatedSprite2D = $"emotion animation"
+@onready var anger_sprite: Sprite2D = $Anger
+@onready var confusion_sprite: Sprite2D = $Confusion
 
 var sprites = [
 	preload("res://Entities/Assets/Animations/Movement Animations/Andy.tres"),
@@ -33,8 +34,9 @@ var can_see_player: bool = false
 var direction: Vector2 = Vector2.RIGHT
 
 func _ready() -> void:
+	anger_sprite.visible = false
+	confusion_sprite.visible = false
 	if _name == 0: set_collision_layer_value(1, true)
-	emotion_animation.visible = false
 	update_sprite()
 
 func update_sprite():
@@ -42,6 +44,9 @@ func update_sprite():
 
 func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint(): return
+	
+	if can_see_player != anger_sprite.visible: anger_sprite.visible = not anger_sprite.visible
+	elif can_hear_player != confusion_sprite.visible: confusion_sprite.visible = not confusion_sprite.visible
 	
 	move_and_slide()
 
@@ -75,16 +80,11 @@ func start_battle():
 
 func confusion(player):
 	while can_hear_player and not can_see_player:
-		emotion_animation.visible = true
-		emotion_animation.play("Confusion")
 		await get_tree().create_timer(confusion_time).timeout
 		direction = (player.global_position - global_position).normalized()
-		emotion_animation.visible = false
 		await get_tree().create_timer(1).timeout
 		if sound_lost: can_hear_player = false
 
 func anger():
-	emotion_animation.visible = true
-	emotion_animation.play("Anger")
 	await get_tree().create_timer(time_before_battle).timeout
 	if can_see_player: start_battle()

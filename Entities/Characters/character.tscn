@@ -13,7 +13,7 @@ height = 44.0
 [node name="Character" type="CharacterBody2D" unique_id=1092893584]
 y_sort_enabled = true
 texture_filter = 1
-scale = Vector2(3, 3)
+scale = Vector2(1.6, 1.6)
 collision_layer = 3
 motion_mode = 1
 script = ExtResource("1_cubfa")

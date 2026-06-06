@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://btsgxf6upjahh" path="res://Entities/LEGO SHIT/Pathfind/pathfind.gd" id="1_x0r5b"]
 
 [node name="Pathfind" type="NavigationAgent2D" unique_id=649794201]
-path_desired_distance = 100.0
 target_desired_distance = 100.0
 path_max_distance = 50.0
 avoidance_enabled = true
