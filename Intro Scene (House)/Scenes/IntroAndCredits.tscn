@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=3 uid="uid://dl3jebiasvhno"]
+
+[ext_resource type="Script" uid="uid://6qve5astct1m" path="res://Intro Scene (House)/Scenes/Intro_and_credits.gd" id="1_020sj"]
+[ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="2_y7j6d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txvy0"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_020sj")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1951.0
+offset_bottom = 1110.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_txvy0")
+
+[node name="A_Game_by" type="Label" parent="."]
+offset_right = 1929.0
+offset_bottom = 1090.0
+theme_override_fonts/font = ExtResource("2_y7j6d")
+theme_override_font_sizes/font_size = 100
+text = "A Game by Team Potato
+Use headphones for better experience"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Art Direction" type="Label" parent="."]
+offset_right = 1929.0
+offset_bottom = 886.0
+theme_override_fonts/font = ExtResource("2_y7j6d")
+theme_override_font_sizes/font_size = 100
+text = "Art and Art Direction-
+Akshat Vyas"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Animation" type="Label" parent="."]
+offset_top = -29.0
+offset_right = 1929.0
+offset_bottom = 983.0
+theme_override_fonts/font = ExtResource("2_y7j6d")
+theme_override_font_sizes/font_size = 100
+text = "Animation-
+Parshwa Nathwani"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Programming" type="Label" parent="."]
+offset_top = 187.0
+offset_right = 1929.0
+offset_bottom = 835.0
+theme_override_fonts/font = ExtResource("2_y7j6d")
+theme_override_font_sizes/font_size = 100
+text = "Programming-
+Akshat Vyas and Aadarsh Jain"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="Label" parent="."]
+offset_top = 326.0
+offset_right = 1929.0
+offset_bottom = 835.0
+theme_override_fonts/font = ExtResource("2_y7j6d")
+theme_override_font_sizes/font_size = 100
+text = "Music-
+Samarth Kodape"
+horizontal_alignment = 1
+vertical_alignment = 1

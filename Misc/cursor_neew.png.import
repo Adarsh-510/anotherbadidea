@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nwgd6a6ch3o0"
-path="res://.godot/imported/sitting sprites.png-5a345d70fa24e406f4302aa3e7ee5eea.ctex"
+uid="uid://cdbedwxmplp6m"
+path="res://.godot/imported/cursor_neew.png-5cbce35488ee6044b544ab136140f4c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Intro Scene (House)/Assets/sitting sprites.png"
-dest_files=["res://.godot/imported/sitting sprites.png-5a345d70fa24e406f4302aa3e7ee5eea.ctex"]
+source_file="res://Misc/cursor_neew.png"
+dest_files=["res://.godot/imported/cursor_neew.png-5cbce35488ee6044b544ab136140f4c1.ctex"]
 
 [params]
 

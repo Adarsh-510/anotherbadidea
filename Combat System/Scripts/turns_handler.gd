@@ -57,7 +57,7 @@ func _process(delta: float) -> void:
 
 func enemy_turn():
 	iterator = 0
-	if randf_range(0,1) > 0.5:
+	if randf() > 0.3:
 		FightSystem.actions_array.append(DataBase.curr_enemy["attack1"])
 		FightSystem.damage_array.append(DataBase.curr_enemy["attack1_damage"])
 	else:

@@ -11,7 +11,6 @@ var damage_array = []
 var actions_array = []
 
 func _ready() -> void:
-	Engine.time_scale = 2.0
 	active_state = STATE.SELECTION
 
 func _process(_delta: float) -> void:
