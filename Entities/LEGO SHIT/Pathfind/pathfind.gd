@@ -5,6 +5,7 @@ extends NavigationAgent2D
 
 @onready var parent: CharacterBody2D = get_parent()
 @onready var refresh_position: Timer = $refresh_position
+@onready var follow_player_for: Timer = $"follow player for"
 
 var target
 
@@ -19,10 +20,9 @@ const look_around_angle: float = 40
 func _ready() -> void:
 	default_target_distance = target_desired_distance
 	
-	if parent is Character:
-		if parent._name == 0: avoidance_priority = 1
-		else: avoidance_priority = 0.5
-		
+	if parent is Character and parent._name != 0:
+		avoidance_priority = 0
+	
 	setup()
 
 func setup():
@@ -49,11 +49,13 @@ func _physics_process(_delta: float) -> void:
 	elif target != parent.target: setup()
 	
 	if parent is Character: check_movement_type()
+	var speed_modifier = (0.25 if parent.is_squatting else (1.75 if parent.is_sprinting else 1.0)) if parent is Character else (1.0 if follow_player_for.is_stopped() else 1.25)
 	
 	if parent is Enemy:
 		if parent.can_see_player:
+			follow_player_for.start()
 			is_looking = false
-			set_velocity(parent.direction * parent.Speed * 1.25)
+			parent.target = parent.player_in_vision
 			return
 		if parent.can_hear_player:
 			is_looking = false
@@ -68,12 +70,11 @@ func _physics_process(_delta: float) -> void:
 		if target: return
 		navigate_to_next()
 	
-	var speed_modifier = (0.25 if parent.is_squatting else (1.75 if parent.is_sprinting else 1.0)) if parent is Character else 1.0
 	var intended_velocity = parent.global_position.direction_to(get_next_path_position()) * parent.Speed * speed_modifier
 	set_velocity(intended_velocity) 
 
 func _on_velocity_computed(safe_velocity: Vector2) -> void:
-	parent.velocity = parent.velocity.move_toward(safe_velocity, 15)
+	parent.velocity = parent.velocity.move_toward(safe_velocity, 50)
 	if parent is Enemy and parent.velocity: parent.direction = parent.velocity.normalized()
 
 func _on_refresh_position_timeout() -> void:
@@ -116,16 +117,19 @@ func look_around_direction(next_target):
 	difference_in_angle = difference_in_angle if difference_in_angle >= 0 else difference_in_angle + TAU
 	var offset_angle = (1 if difference_in_angle >= PI else -1) * deg_to_rad(look_around_angle)
 	
-	if get_tree(): await get_tree().create_timer(1).timeout
+	if is_looking and get_tree(): await get_tree().create_timer(1).timeout
 	if is_looking: parent.direction = direction_to_next_target
-	if get_tree(): await get_tree().create_timer(0.2).timeout
+	if is_looking and get_tree(): await get_tree().create_timer(0.2).timeout
 	if is_looking: parent.direction = Vector2.from_angle(direction_to_next_target.angle() + offset_angle).normalized()
-	if get_tree(): await get_tree().create_timer(1).timeout
+	if is_looking and get_tree(): await get_tree().create_timer(1).timeout
 	if is_looking: parent.direction = Vector2.from_angle(direction_to_next_target.angle() - offset_angle).normalized()
-	if get_tree(): await get_tree().create_timer(1).timeout
+	if is_looking and get_tree(): await get_tree().create_timer(1).timeout
 	
 	is_looking = false
 
 func get_positions(path: Path2D):
 	for i in range(path.curve.point_count - 1):
 		path_positions.push_back(path.global_position + path.curve.get_point_position(i))
+
+func _on_follow_player_for_timeout() -> void:
+	parent.target = null

@@ -7,6 +7,9 @@ extends Area2D
 var is_in_cone: bool = false
 var player_in_cone: Character
 
+func _ready() -> void:
+	sight.add_exception(parent)
+
 func _physics_process(delta: float) -> void:
 	if is_in_cone: is_player_visible()
 	
@@ -34,6 +37,7 @@ func is_player_visible():
 	if sight.is_colliding() and sight.get_collider() is Character and sight.get_collider()._name == 0:
 		if not parent.can_see_player:
 			parent.can_see_player = true
+			parent.player_in_vision = sight.get_collider()
 			parent.anger()
 		parent.direction = global_position.direction_to(player_in_cone.global_position)
 	elif parent.can_see_player: parent.can_see_player = false
