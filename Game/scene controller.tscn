@@ -16,3 +16,4 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Pause Menu" parent="GUI" unique_id=423058424 instance=ExtResource("3_oblg1")]
+follow_viewport_enabled = true

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://udebvubd3onn"]
+
+[ext_resource type="Texture2D" uid="uid://dmjcpyiu1wifw" path="res://Summoning Scene/Assets/House_tree1.png" id="1_eqvro"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fdn0u"]
+radius = 27.0
+height = 220.0
+
+[node name="tree1" type="StaticBody2D" unique_id=1394113920]
+y_sort_enabled = true
+
+[node name="HouseFence" type="Sprite2D" parent="." unique_id=1298189348]
+texture = ExtResource("1_eqvro")
+offset = Vector2(0, -185.21)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1626835675]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fdn0u")

@@ -1,79 +1,91 @@
 [gd_scene format=3 uid="uid://cc8vthn85bgb4"]
 
-[ext_resource type="Script" uid="uid://ci8rxyfn6nxte" path="res://Summoning Circle/summoning_circle.gd" id="1_4gp8i"]
-[ext_resource type="Texture2D" uid="uid://csdqgbgduw8w" path="res://Summoning Circle/Assets/circle.png" id="2_ovre3"]
-[ext_resource type="Texture2D" uid="uid://bh18vigkf7ojx" path="res://Items/Assets/spindal.png" id="3_0fi0a"]
-[ext_resource type="Texture2D" uid="uid://c8oticrjfvc5u" path="res://Items/Assets/lemonade.png" id="4_nnsnj"]
-[ext_resource type="Texture2D" uid="uid://cwdvalxtlao0o" path="res://Items/Assets/pickle.png" id="5_hpvra"]
-[ext_resource type="Texture2D" uid="uid://dtjglisbutkw1" path="res://Items/Assets/flute.png" id="6_b5ulp"]
+[ext_resource type="Script" uid="uid://ci8rxyfn6nxte" path="res://Summoning Scene/Summoning Circle/summoning_circle.gd" id="1_4gp8i"]
+[ext_resource type="Texture2D" uid="uid://blm3xnlqc4q18" path="res://Summoning Scene/Summoning Circle/Assets/summoning circle.png" id="2_lnen3"]
+[ext_resource type="Texture2D" uid="uid://v1epheqo3hvy" path="res://Items/Assets/spindal.png" id="3_0fi0a"]
+[ext_resource type="Texture2D" uid="uid://cbdsocp4c0fa3" path="res://Items/Assets/lemonade.png" id="4_nnsnj"]
+[ext_resource type="Texture2D" uid="uid://0nbj51u0d4y4" path="res://Items/Assets/pickle.png" id="5_hpvra"]
+[ext_resource type="Texture2D" uid="uid://vjjtlr65ayau" path="res://Items/Assets/flute.png" id="6_b5ulp"]
 [ext_resource type="Texture2D" uid="uid://cf55aw5fsbp04" path="res://Entities/Enemies/Sister/Assets/black.png" id="7_0fi0a"]
+[ext_resource type="Texture2D" uid="uid://cjxtfqcp6ui5c" path="res://Items/Assets/mask.png" id="7_pbncd"]
 [ext_resource type="Texture2D" uid="uid://dgjksojydyftk" path="res://Entities/Enemies/Sister/Assets/green.png" id="8_nnsnj"]
+[ext_resource type="Texture2D" uid="uid://cmtly3apou8bl" path="res://Summoning Scene/Assets/Book.png" id="8_yrksj"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8ui4"]
-radius = 251.0
-height = 912.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_e8xd8"]
+radius = 923.8187
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j74dn"]
-radius = 90.0
+radius = 195.74728
 
 [node name="summoning circle" type="StaticBody2D" unique_id=627597777]
 script = ExtResource("1_4gp8i")
 
-[node name="circle2" type="Sprite2D" parent="." unique_id=1727302303]
-texture = ExtResource("2_ovre3")
+[node name="SummoningCircle" type="Sprite2D" parent="." unique_id=539946796]
+texture = ExtResource("2_lnen3")
 
 [node name="items" type="Node2D" parent="." unique_id=68153046]
 
 [node name="item0" type="Sprite2D" parent="items" unique_id=673980751]
-position = Vector2(-271, 73.99997)
-scale = Vector2(0.6328125, 0.6484375)
+position = Vector2(-300, -243)
+scale = Vector2(0.30730483, 0.30730483)
 texture = ExtResource("3_0fi0a")
 
 [node name="item1" type="Sprite2D" parent="items" unique_id=1437871819]
-position = Vector2(86, -34)
-scale = Vector2(0.65625, 0.6484375)
+position = Vector2(84, -391)
+scale = Vector2(0.36956123, 0.36516166)
 texture = ExtResource("4_nnsnj")
 
 [node name="item2" type="Sprite2D" parent="items" unique_id=1973211039]
-position = Vector2(67.00006, 177)
-scale = Vector2(0.5859375, 0.6484375)
+position = Vector2(341.00003, -69)
+scale = Vector2(0.26426965, 0.29245847)
 texture = ExtResource("5_hpvra")
 
 [node name="item3" type="Sprite2D" parent="items" unique_id=524766599]
-position = Vector2(4.000122, 69)
-scale = Vector2(0.515625, 0.6328125)
+position = Vector2(79.00001, 351)
+scale = Vector2(0.375025, 0.46025795)
 texture = ExtResource("6_b5ulp")
+
+[node name="item4" type="Sprite2D" parent="items" unique_id=793435857]
+position = Vector2(-308, 158)
+scale = Vector2(0.33203128, 0.33203125)
+texture = ExtResource("7_pbncd")
+
+[node name="item5" type="Sprite2D" parent="items" unique_id=971712227]
+position = Vector2(-10.000004, -3.0000114)
+scale = Vector2(0.28129163, 0.28129166)
+texture = ExtResource("8_yrksj")
 
 [node name="circle" type="Area2D" parent="." unique_id=1346099415]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="circle" unique_id=1852708331]
-position = Vector2(0, 99)
 rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_k8ui4")
+shape = SubResource("CircleShape2D_e8xd8")
 
 [node name="player position" type="Area2D" parent="." unique_id=1393712320]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player position" unique_id=24571824]
-position = Vector2(263, 96)
+position = Vector2(639, 31)
 shape = SubResource("CircleShape2D_j74dn")
 
 [node name="positions" type="Node2D" parent="." unique_id=2081320843]
 
 [node name="Rudy Hide" type="Marker2D" parent="positions" unique_id=1661833647]
-position = Vector2(-853, 482)
+position = Vector2(-1616, -398)
 
 [node name="Owen Hide" type="Marker2D" parent="positions" unique_id=386889218]
-position = Vector2(-859, -381)
+position = Vector2(-1463, -402)
 
 [node name="Rudy Circle" type="Marker2D" parent="positions" unique_id=1895524738]
-position = Vector2(-163, 187)
+position = Vector2(-343, 571)
 
 [node name="Owen Circle" type="Marker2D" parent="positions" unique_id=1539541298]
-position = Vector2(-180, -4)
+position = Vector2(-315, -501)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1079166735]
+visible = false
 
 [node name="summoning progress" type="Control" parent="CanvasLayer" unique_id=376556024]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
