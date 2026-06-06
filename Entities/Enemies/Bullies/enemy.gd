@@ -6,6 +6,7 @@ class_name Enemy
 @onready var confusion_sprite: Sprite2D = $"confusion indicator"
 @onready var anger_sound: AudioStreamPlayer2D = $"anger sound"
 @onready var confusion_sound: AudioStreamPlayer2D = $"confusion sound"
+@onready var shock_effect: ColorRect = $"CanvasLayer/shock effect"
 
 var sprites = [
 	preload("res://Entities/Assets/Animations/Movement Animations/Andy.tres"),
@@ -64,23 +65,19 @@ func player_noise_lost():
 	sound_lost = true
 
 func start_battle():
-	var dead_sprite = Sprite2D.new()
-	dead_sprite.texture = load("res://Entities/Assets/Sprite Sheets/death.png")
-	dead_sprite.global_position = global_position
-	dead_sprite.scale *= 0.07
-	dead_sprite.z_index = -10
-	get_parent().add_child(dead_sprite)
+	await flash_screen()
 	
 	# ADD DIALOGUE HERE
 	# WHEN ENTER PRESSED ON DIALOGUE -> CHANGE SCENE
+	
+	kill_your_self()
 	
 	match _name:
 		0: DataBase.curr_enemy = DataBase.Bully1
 		1: DataBase.curr_enemy = DataBase.Bully2
 		2: DataBase.curr_enemy = DataBase.Bully3
-	get_tree().change_scene_to_file("res://Combat System/Scenes/Main_Battle.tscn")
 
-	queue_free()
+	owner.get_parent().swap_scene("res://Combat System/Scenes/Main_Battle.tscn", false, false)
 
 func confusion(player):
 	while can_hear_player and not can_see_player:
@@ -94,3 +91,29 @@ func anger():
 	anger_sound.playing = true
 	await get_tree().create_timer(time_before_battle).timeout
 	if can_see_player: start_battle()
+
+func kill_your_self(): 
+	var dead_sprite = Sprite2D.new()
+	dead_sprite.texture = load("res://Entities/Assets/Sprite Sheets/death.png")
+	dead_sprite.global_position = global_position
+	dead_sprite.scale *= 0.07
+	dead_sprite.z_index = -10
+	get_parent().add_child(dead_sprite)
+	queue_free()
+
+func flash_screen():
+	get_tree().paused = true
+	var tween = create_tween()
+	tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+	
+	tween.tween_property(shock_effect, "modulate:a", 0.9, 0.1)\
+		.set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_OUT)
+		
+	tween.tween_property(shock_effect, "modulate:a", 0, 0.6)\
+		.set_trans(Tween.TRANS_LINEAR)
+	
+	await tween.finished
+	
+	await get_tree().create_timer(1).timeout
+	
+	get_tree().paused = false

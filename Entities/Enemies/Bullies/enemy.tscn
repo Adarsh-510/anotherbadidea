@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c370pl2xeh5ks" path="res://Entities/LEGO SHIT/Vision/vision.tscn" id="4_o1grr"]
 [ext_resource type="Texture2D" uid="uid://d16h3k75ieepq" path="res://Entities/Assets/Animations/Emotion/anger.png" id="7_ckmex"]
 [ext_resource type="Texture2D" uid="uid://ciaeqh2chugwj" path="res://Entities/Assets/Animations/Emotion/confusion.png" id="8_q5716"]
-[ext_resource type="AudioStream" uid="uid://blee4npahtsjo" path="res://All Audios/Alert.wav" id="9_q5716"]
+[ext_resource type="AudioStream" uid="uid://b2j8dq33xi6ko" path="res://All Audios/Alert.wav" id="9_q5716"]
 [ext_resource type="PackedScene" uid="uid://cbvtewrk8owi3" path="res://Entities/LEGO SHIT/Pathfind/pathfind.tscn" id="9_sawca"]
-[ext_resource type="AudioStream" uid="uid://dhcndx3gcc42" path="res://All Audios/Surprised.wav" id="10_gcam1"]
+[ext_resource type="AudioStream" uid="uid://bcl2u5gf8swk8" path="res://All Audios/Surprised.wav" id="10_gcam1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gcam1"]
 radius = 11.0
@@ -31,12 +31,11 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_gcam1")
 
 [node name="vision" parent="." unique_id=1170359591 instance=ExtResource("4_o1grr")]
+position = Vector2(0, -28.124996)
 
 [node name="footsteps" parent="." unique_id=601221903 instance=ExtResource("3_ihd1f")]
 
 [node name="Pathfind" parent="." unique_id=649794201 instance=ExtResource("9_sawca")]
-look_around = null
-randomize_path = null
 
 [node name="anger indicator" type="Sprite2D" parent="." unique_id=1976945375]
 visible = false
@@ -60,3 +59,14 @@ pitch_scale = 0.85
 [node name="confusion sound" type="AudioStreamPlayer2D" parent="." unique_id=518925625]
 stream = ExtResource("10_gcam1")
 pitch_scale = 0.9
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2126020427]
+
+[node name="shock effect" type="ColorRect" parent="CanvasLayer" unique_id=264955972]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

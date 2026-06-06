@@ -74,7 +74,7 @@ func _physics_process(_delta: float) -> void:
 	set_velocity(intended_velocity) 
 
 func _on_velocity_computed(safe_velocity: Vector2) -> void:
-	parent.velocity = parent.velocity.move_toward(safe_velocity, 15)
+	parent.velocity = parent.velocity.move_toward(safe_velocity, 50)
 	if parent is Enemy and parent.velocity: parent.direction = parent.velocity.normalized()
 
 func _on_refresh_position_timeout() -> void:

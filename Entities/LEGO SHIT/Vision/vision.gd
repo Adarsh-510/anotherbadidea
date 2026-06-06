@@ -7,6 +7,9 @@ extends Area2D
 var is_in_cone: bool = false
 var player_in_cone: Character
 
+func _ready() -> void:
+	sight.add_exception(parent)
+
 func _physics_process(delta: float) -> void:
 	if is_in_cone: is_player_visible()
 	

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bkmfpcl8qiuiv"]
+
+[ext_resource type="Script" uid="uid://syen32tf6am2" path="res://Game/scene controller.gd" id="1_voppj"]
+[ext_resource type="PackedScene" uid="uid://cuve0jqala0et" path="res://Junkyard/junkyard.tscn" id="2_exnk2"]
+[ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://Pause Menu/Scenes/pause_menu.tscn" id="3_oblg1"]
+
+[node name="scene controller" type="Node" unique_id=1698623803]
+script = ExtResource("1_voppj")
+
+[node name="junkyard" parent="." unique_id=769790424 instance=ExtResource("2_exnk2")]
+
+[node name="GUI" type="Control" parent="." unique_id=2061619379]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Pause Menu" parent="GUI" unique_id=423058424 instance=ExtResource("3_oblg1")]
