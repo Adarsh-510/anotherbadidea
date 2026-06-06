@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://pkhgprsjt4qm"]
+[gd_resource type="SpriteFrames" load_steps=98 format=3 uid="uid://pkhgprsjt4qm"]
 
 [ext_resource type="Texture2D" uid="uid://c2v0w4xgu3q31" path="res://Entities/Assets/Sprite Sheets/mc2 all sprites/mc2 front/A.png" id="1_gqiqj"]
 [ext_resource type="Texture2D" uid="uid://c2fshwrrvpogd" path="res://Entities/Assets/Sprite Sheets/mc2 all sprites/mc2 side/1.png" id="2_7apxa"]

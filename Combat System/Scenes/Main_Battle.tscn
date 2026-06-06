@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dcdb6n4hcp8xv"]
+[gd_scene load_steps=44 format=3 uid="uid://dcdb6n4hcp8xv"]
 
 [ext_resource type="Script" uid="uid://b455ccp0ty5nk" path="res://Combat System/Scripts/FightSystem.gd" id="1_m5e66"]
 [ext_resource type="Script" uid="uid://cqe560ehscjuy" path="res://Combat System/Scripts/main_ui.gd" id="2_ee3ch"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://ph8rhko82a7g" path="res://Animations/explosion/10.png" id="16_yvwol"]
 [ext_resource type="Texture2D" uid="uid://bj1saa10rp3h7" path="res://Animations/explosion/11.png" id="17_ns2ii"]
 [ext_resource type="Texture2D" uid="uid://cy4df6o74y721" path="res://Animations/explosion/12.png" id="18_lpifd"]
+[ext_resource type="AudioStream" uid="uid://dv0rqbbxjr8q6" path="res://All Audios/Explosion (1).wav" id="28_h0bhx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0, 0, 0, 1)
@@ -197,17 +198,17 @@ border_width_top = 5
 border_width_right = 10
 border_width_bottom = 5
 
-[node name="FightSystem" type="Node2D" unique_id=1592991851]
+[node name="FightSystem" type="Node2D"]
 script = ExtResource("1_m5e66")
 
-[node name="InterFace" type="Control" parent="." unique_id=293228355 groups=["Interface"]]
+[node name="InterFace" type="Control" parent="." groups=["Interface"]]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1916.0
 offset_bottom = 1070.0
 script = ExtResource("2_ee3ch")
 
-[node name="description" type="Panel" parent="InterFace" unique_id=1117582105]
+[node name="description" type="Panel" parent="InterFace"]
 layout_mode = 0
 offset_left = 652.0
 offset_top = 748.0
@@ -215,7 +216,7 @@ offset_right = 936.0
 offset_bottom = 1002.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 
-[node name="desc_label" type="Label" parent="InterFace/description" unique_id=1170437634]
+[node name="desc_label" type="Label" parent="InterFace/description"]
 layout_mode = 0
 offset_left = 19.0
 offset_top = 18.0
@@ -228,7 +229,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="turn_indicator" type="Panel" parent="InterFace" unique_id=829659667]
+[node name="turn_indicator" type="Panel" parent="InterFace"]
 layout_mode = 0
 offset_left = 995.0
 offset_top = 678.0
@@ -237,7 +238,7 @@ offset_bottom = 733.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_etnwf")
 script = ExtResource("3_6e522")
 
-[node name="turn_label" type="Label" parent="InterFace/turn_indicator" unique_id=362705006]
+[node name="turn_label" type="Label" parent="InterFace/turn_indicator"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 7.0
@@ -250,19 +251,21 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Marker2D" type="Marker2D" parent="InterFace" unique_id=626646215]
+[node name="Marker2D" type="Marker2D" parent="InterFace"]
 position = Vector2(981, 747)
 
-[node name="Trans_in_animation" type="AnimationPlayer" parent="InterFace" unique_id=762242266]
-libraries/ = SubResource("AnimationLibrary_2qpd5")
-autoplay = &"Trans_in"
+[node name="Trans_in_animation" type="AnimationPlayer" parent="InterFace"]
+libraries = {
+&"": SubResource("AnimationLibrary_2qpd5")
+}
+autoplay = "Trans_in"
 
-[node name="Panel" type="Panel" parent="InterFace/Trans_in_animation" unique_id=808510580]
+[node name="Panel" type="Panel" parent="InterFace/Trans_in_animation"]
 offset_right = 1921.0
 offset_bottom = 540.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_oj2vp")
 
-[node name="Panel2" type="Panel" parent="InterFace/Trans_in_animation" unique_id=1808153969]
+[node name="Panel2" type="Panel" parent="InterFace/Trans_in_animation"]
 offset_left = 1927.0
 offset_top = 1080.0
 offset_right = 3848.0
@@ -270,14 +273,14 @@ offset_bottom = 1624.0
 scale = Vector2(-1, -1)
 theme_override_styles/panel = SubResource("StyleBoxFlat_oj2vp")
 
-[node name="Visuals" type="Control" parent="." unique_id=789955666]
+[node name="Visuals" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("4_whf4a")
 
-[node name="player1" type="Panel" parent="Visuals" unique_id=1933258750]
+[node name="player1" type="Panel" parent="Visuals"]
 layout_mode = 0
 offset_left = 35.0
 offset_top = 680.0
@@ -285,7 +288,7 @@ offset_right = 428.0
 offset_bottom = 1027.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_yj703")
 
-[node name="ProgressBar" type="ProgressBar" parent="Visuals/player1" unique_id=1993276714]
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/player1"]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 12.0
@@ -296,12 +299,12 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_4c57u")
 value = 50.0
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Visuals/player1" unique_id=254188825]
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/player1"]
 position = Vector2(197, 194)
 scale = Vector2(0.75, 0.689)
 texture = ExtResource("5_etnwf")
 
-[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player1" unique_id=481600121]
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player1"]
 position = Vector2(184, 179)
 scale = Vector2(0.4, 0.39752385)
 sprite_frames = SubResource("SpriteFrames_moemh")
@@ -309,7 +312,7 @@ animation = &"explosion"
 frame = 11
 frame_progress = 1.0
 
-[node name="player2" type="Panel" parent="Visuals" unique_id=440758548]
+[node name="player2" type="Panel" parent="Visuals"]
 layout_mode = 0
 offset_left = 35.0
 offset_top = 32.0
@@ -317,7 +320,7 @@ offset_right = 428.0
 offset_bottom = 379.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_diypt")
 
-[node name="ProgressBar" type="ProgressBar" parent="Visuals/player2" unique_id=995060562]
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/player2"]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 12.0
@@ -328,12 +331,12 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_4c57u")
 value = 50.0
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Visuals/player2" unique_id=1118877067]
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/player2"]
 position = Vector2(197, 194)
 scale = Vector2(0.75, 0.689)
 texture = ExtResource("6_yj703")
 
-[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player2" unique_id=1172278693]
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player2"]
 position = Vector2(184, 179)
 scale = Vector2(0.4, 0.39752385)
 sprite_frames = SubResource("SpriteFrames_moemh")
@@ -341,7 +344,7 @@ animation = &"explosion"
 frame = 11
 frame_progress = 1.0
 
-[node name="player3" type="Panel" parent="Visuals" unique_id=1400439526]
+[node name="player3" type="Panel" parent="Visuals"]
 layout_mode = 0
 offset_left = 1491.0
 offset_top = 32.0
@@ -349,7 +352,7 @@ offset_right = 1884.0
 offset_bottom = 379.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_jbu2x")
 
-[node name="ProgressBar" type="ProgressBar" parent="Visuals/player3" unique_id=473372891]
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/player3"]
 layout_mode = 0
 offset_left = 58.0
 offset_top = 12.0
@@ -360,12 +363,12 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_4c57u")
 value = 50.0
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="Visuals/player3" unique_id=269542909]
+[node name="Sprite2D" type="Sprite2D" parent="Visuals/player3"]
 position = Vector2(197, 194)
 scale = Vector2(0.75, 0.689)
 texture = ExtResource("7_diypt")
 
-[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player3" unique_id=124214659]
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/player3"]
 position = Vector2(184, 179)
 scale = Vector2(0.4, 0.39752385)
 sprite_frames = SubResource("SpriteFrames_moemh")
@@ -373,7 +376,7 @@ animation = &"explosion"
 frame = 11
 frame_progress = 1.0
 
-[node name="enemy" type="Control" parent="Visuals" unique_id=586534020]
+[node name="enemy" type="Control" parent="Visuals"]
 z_index = -1
 anchors_preset = 0
 offset_left = 728.0
@@ -382,43 +385,43 @@ offset_right = 948.0
 offset_bottom = 609.5
 scale = Vector2(2, 2)
 
-[node name="BullyLeader" type="Sprite2D" parent="Visuals/enemy" unique_id=139585113]
+[node name="BullyLeader" type="Sprite2D" parent="Visuals/enemy"]
 position = Vector2(103, 235)
 scale = Vector2(0.5, 0.489)
 texture = ExtResource("8_jbu2x")
 
-[node name="BullyLeader_Marker" type="Marker2D" parent="Visuals/enemy" unique_id=1106965253]
+[node name="BullyLeader_Marker" type="Marker2D" parent="Visuals/enemy"]
 position = Vector2(41.5, -15.5)
 scale = Vector2(0.8753296, 0.5452409)
 
-[node name="Bully1" type="Sprite2D" parent="Visuals/enemy" unique_id=579622514]
+[node name="Bully1" type="Sprite2D" parent="Visuals/enemy"]
 position = Vector2(117.5, 265.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_sa1l6")
 
-[node name="Bully1_Marker" type="Marker2D" parent="Visuals/enemy" unique_id=174639577]
+[node name="Bully1_Marker" type="Marker2D" parent="Visuals/enemy"]
 position = Vector2(52.49994, 44.5)
 scale = Vector2(0.8753296, 0.5452409)
 
-[node name="Bully2" type="Sprite2D" parent="Visuals/enemy" unique_id=1073321759]
+[node name="Bully2" type="Sprite2D" parent="Visuals/enemy"]
 position = Vector2(96, 328)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("10_hrp83")
 
-[node name="Bully2_Marker" type="Marker2D" parent="Visuals/enemy" unique_id=1528593977]
+[node name="Bully2_Marker" type="Marker2D" parent="Visuals/enemy"]
 position = Vector2(26, 182.50002)
 scale = Vector2(0.8753296, 0.5452409)
 
-[node name="Bully3" type="Sprite2D" parent="Visuals/enemy" unique_id=1450731526]
+[node name="Bully3" type="Sprite2D" parent="Visuals/enemy"]
 position = Vector2(106.5, 274.5)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_15u7x")
 
-[node name="Bully3_Marker" type="Marker2D" parent="Visuals/enemy" unique_id=1178544687]
+[node name="Bully3_Marker" type="Marker2D" parent="Visuals/enemy"]
 position = Vector2(59, 69.5)
 scale = Vector2(0.8753296, 0.5452409)
 
-[node name="ProgressBar" type="ProgressBar" parent="Visuals/enemy" unique_id=994033195]
+[node name="ProgressBar" type="ProgressBar" parent="Visuals/enemy"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.49100003
@@ -435,7 +438,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_dg77c")
 value = 50.0
 show_percentage = false
 
-[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/enemy" unique_id=565740041]
+[node name="damage_animation" type="AnimatedSprite2D" parent="Visuals/enemy"]
 position = Vector2(184, 179)
 scale = Vector2(0.4, 0.39752385)
 sprite_frames = SubResource("SpriteFrames_moemh")
@@ -443,7 +446,7 @@ animation = &"explosion"
 frame = 11
 frame_progress = 1.0
 
-[node name="turns_info_panel" type="Label" parent="Visuals" unique_id=1120177652]
+[node name="turns_info_panel" type="Label" parent="Visuals"]
 layout_mode = 0
 offset_left = 1064.0
 offset_top = 901.0
@@ -456,7 +459,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 
-[node name="Background" type="TextureRect" parent="Visuals" unique_id=53853371]
+[node name="Background" type="TextureRect" parent="Visuals"]
 self_modulate = Color(0.75, 0.75, 0.75, 1)
 z_index = -2
 layout_mode = 0
@@ -466,8 +469,11 @@ texture = ExtResource("12_if0dm")
 expand_mode = 2
 stretch_mode = 1
 
-[node name="DataBase" type="Node" parent="." unique_id=179305420]
+[node name="DataBase" type="Node" parent="."]
 script = ExtResource("7_etnwf")
 
-[node name="TurnsHandler" type="Node" parent="." unique_id=764209015 groups=["TurnsHandler"]]
+[node name="TurnsHandler" type="Node" parent="." groups=["TurnsHandler"]]
 script = ExtResource("8_yj703")
+
+[node name="damage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_h0bhx")

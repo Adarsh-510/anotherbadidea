@@ -16,9 +16,9 @@ func _ready() -> void:
 	element3_highlight = element3.get_theme_stylebox("normal") as StyleBoxFlat
 
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_up") and iterator > 1 and iterator <= 3:
+	if Input.is_action_just_pressed("Up") and iterator > 1 and iterator <= 3:
 		iterator -= 1
-	if Input.is_action_just_pressed("ui_down") and iterator >= 1 and iterator < 3:
+	if Input.is_action_just_pressed("Down") and iterator >= 1 and iterator < 3:
 		iterator += 1
 	
 	match iterator:
