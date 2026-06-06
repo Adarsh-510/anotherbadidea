@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://dkgbrjg5lusyo"
-path="res://.godot/imported/Battle_loop.wav-c1c6c4c6b47e8ab24bd0f8c37d25ec3d.sample"
+uid="uid://c8tdky15bjqk2"
+path="res://.godot/imported/Step-2.wav-e4fbc61ced2369a888408e8ab7b19f9f.sample"
 
 [deps]
 
-source_file="res://All Audios/Battle_loop.wav"
-dest_files=["res://.godot/imported/Battle_loop.wav-c1c6c4c6b47e8ab24bd0f8c37d25ec3d.sample"]
+source_file="res://All Audios/Footsteps/Step-2.wav"
+dest_files=["res://.godot/imported/Step-2.wav-e4fbc61ced2369a888408e8ab7b19f9f.sample"]
 
 [params]
 
