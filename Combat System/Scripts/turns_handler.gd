@@ -29,6 +29,8 @@ var enemy_damage_offset = Vector2(60,100)
 @onready var e_damage_animation: AnimatedSprite2D = $"../Visuals/enemy/damage_animation"
 @onready var trans_in_animation: AnimationPlayer = $"../InterFace/Trans_in_animation"
 
+@onready var damage: AudioStreamPlayer2D = $"../damage"
+
 
 func _ready() -> void:
 	add_to_group("TurnsHandler")
@@ -49,9 +51,10 @@ func _process(delta: float) -> void:
 	if DataBase.Player1["hp"] <= 0 or DataBase.Player2["hp"] <= 0 or DataBase.Player3["hp"] <= 0:
 		player_died = true
 		clear()
+		DataBase.curr_enemy["hp"] = 100
 		Interface.reset()
 		await get_tree().create_timer(death_duration).timeout
-		get_tree().change_scene_to_file("res://Misc/testing.tscn") #change to game over 
+		get_tree().change_scene_to_file("res://Game Over/Game_over_player_died.tscn") 
 		
 
 
@@ -216,6 +219,8 @@ func show_turns():
 	
 
 func visual_feedback(target):
+	damage.play()
+	
 	match target:
 		0:
 			e_damage_animation.play("explosion")

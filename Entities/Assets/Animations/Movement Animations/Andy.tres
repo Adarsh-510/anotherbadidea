@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://cb7s74gvscyxi"]
+[gd_resource type="SpriteFrames" load_steps=98 format=3 uid="uid://cb7s74gvscyxi"]
 
 [ext_resource type="Texture2D" uid="uid://bj1lxepiy52uk" path="res://Entities/Assets/Sprite Sheets/Andy.png" id="1_o3b0p"]
 

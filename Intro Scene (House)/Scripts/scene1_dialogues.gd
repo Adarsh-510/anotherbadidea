@@ -4,11 +4,25 @@ extends CanvasLayer
 
 @onready var book_panel: Panel = $Book_Panel
 
+@onready var cutscene_1: Panel = $"Cutscene 1"
+@onready var cs_1_text: Label = $"Cutscene 1/cs1_text"
+
+@onready var cutscene_2: Sprite2D = $"Cutscene 2"
+@onready var cs_2_text: Label = $"Cutscene 2/cs2_text"
+
+@onready var cutscene_3: Sprite2D = $"Cutscene 3"
+@onready var cs_3_text: Label = $"Cutscene 3/cs3_text"
+
+@onready var frank: Sprite2D = $Frank
 
 func _ready() -> void:
 	book_panel.modulate.a = 0
+	cutscene_1.modulate.a = 0
+	cutscene_2.modulate.a = 0
+	cutscene_3.modulate.a = 0
+	frank.modulate.a = 0
 
-	await get_tree().create_timer(2.5).timeout
+	await get_tree().create_timer(2).timeout
 
 	var Dialogue1 = DialogueBox.instantiate()
 	add_child(Dialogue1)
@@ -140,3 +154,59 @@ func _ready() -> void:
 
 	await Dialogue18.finished
 	Dialogue18.queue_free()
+
+	cutscene_1.modulate.a = 1
+	var cs1_tween = create_tween()
+	cs1_tween.tween_property(cs_1_text, "modulate:a", 0, 2)
+
+	await cs1_tween.finished
+
+	cutscene_2.modulate.a = 1
+	cs_2_text.text = " For decades, the Old Junkyard Gang has ruled these lands...."
+	cs_2_text.visible_ratio = 0
+	var cs2_tween = create_tween()
+	cs2_tween.tween_property(cs_2_text, "visible_ratio", 1, 6)
+	await cs2_tween.finished
+	
+	cutscene_3.modulate.a = 1
+	cs_3_text.text = " We lived in fear, fear of their cruelty and greed..."
+	cs_3_text.visible_ratio = 0
+	var cs3_tween = create_tween()
+	cs3_tween.tween_property(cs_3_text, "visible_ratio", 1, 6)
+	await cs3_tween.finished
+
+	cutscene_1.modulate.a = 0
+	cutscene_2.modulate.a = 0
+	cutscene_3.modulate.a = 0
+
+	
+	var Dialogue19 = DialogueBox.instantiate()
+	add_child(Dialogue19)
+	Dialogue19.setup("yea, we're not going", "Andy", "Default")
+
+	await Dialogue19.finished
+	Dialogue19.queue_free()
+
+	var Dialogue20 = DialogueBox.instantiate()
+	add_child(Dialogue20)
+	Dialogue20.setup("you remember what happened to Frank?", "Owen", "Sad")
+	frank.modulate.a = 1
+
+	await Dialogue20.finished
+	Dialogue20.queue_free()
+	
+	var Dialogue21 = DialogueBox.instantiate()
+	add_child(Dialogue21)
+	Dialogue21.setup("he got wayyy too bored last summer", "Owen", "Sad")
+
+	await Dialogue21.finished
+	Dialogue21.queue_free()
+	frank.modulate.a = 0
+
+	var Dialogue22 = DialogueBox.instantiate()
+	add_child(Dialogue22)
+	Dialogue22.setup("*gulp*", "Andy", "Bored")
+
+	await Dialogue22.finished
+	Dialogue22.queue_free()
+	get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn")

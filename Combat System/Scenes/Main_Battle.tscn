@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dcdb6n4hcp8xv"]
+[gd_scene load_steps=44 format=3 uid="uid://dcdb6n4hcp8xv"]
 
 [ext_resource type="Script" uid="uid://b455ccp0ty5nk" path="res://Combat System/Scripts/FightSystem.gd" id="1_m5e66"]
 [ext_resource type="Script" uid="uid://cqe560ehscjuy" path="res://Combat System/Scripts/main_ui.gd" id="2_ee3ch"]
@@ -27,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://ph8rhko82a7g" path="res://Animations/explosion/10.png" id="16_yvwol"]
 [ext_resource type="Texture2D" uid="uid://bj1saa10rp3h7" path="res://Animations/explosion/11.png" id="17_ns2ii"]
 [ext_resource type="Texture2D" uid="uid://cy4df6o74y721" path="res://Animations/explosion/12.png" id="18_lpifd"]
+[ext_resource type="AudioStream" uid="uid://dv0rqbbxjr8q6" path="res://All Audios/Explosion (1).wav" id="28_h0bhx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0, 0, 0, 1)
@@ -41,6 +42,33 @@ border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
+
+[sub_resource type="Animation" id="Animation_h0bhx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Trans_in_animation/Panel:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1921, 540)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Trans_in_animation/Panel2:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1921, 544)]
+}
 
 [sub_resource type="Animation" id="Animation_6kk1d"]
 resource_name = "Trans_in"
@@ -68,33 +96,6 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [Vector2(1921, 544), Vector2(1921, 482), Vector2(1921, 430), Vector2(1921, 386), Vector2(1921, 337), Vector2(1921, 290), Vector2(1921, 246), Vector2(1921, 186), Vector2(1921, 129), Vector2(1921, 100), Vector2(1921, 69), Vector2(1921, 35), Vector2(1921, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_h0bhx"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Trans_in_animation/Panel:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1921, 540)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Trans_in_animation/Panel2:size")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1921, 544)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2qpd5"]
@@ -473,3 +474,6 @@ script = ExtResource("7_etnwf")
 
 [node name="TurnsHandler" type="Node" parent="." groups=["TurnsHandler"]]
 script = ExtResource("8_yj703")
+
+[node name="damage" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("28_h0bhx")
