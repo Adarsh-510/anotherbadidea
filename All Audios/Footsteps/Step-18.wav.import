@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl2lyshhov05t"
+path="res://.godot/imported/Step-18.wav-42757f8cf3a6c06d38c4e0c6ed9248ef.sample"
+
+[deps]
+
+source_file="res://All Audios/Footsteps/Step-18.wav"
+dest_files=["res://.godot/imported/Step-18.wav-42757f8cf3a6c06d38c4e0c6ed9248ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
