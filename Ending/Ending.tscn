@@ -1,5 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbtlgxn7x3nqe"]
+[gd_scene load_steps=16 format=3 uid="uid://cbtlgxn7x3nqe"]
 
+[ext_resource type="Script" uid="uid://djbvin7d38rsh" path="res://Ending/ending.gd" id="1_f4cf0"]
 [ext_resource type="Texture2D" uid="uid://j352qnr3sv8t" path="res://Intro Scene (House)/Assets/House_grass.png" id="1_nkkon"]
 [ext_resource type="Texture2D" uid="uid://bvkc1mhi81kh1" path="res://Intro Scene (House)/Assets/House_house.png" id="2_f4cf0"]
 [ext_resource type="Texture2D" uid="uid://dbjcyimpkqvkm" path="res://Intro Scene (House)/Assets/House_driveway.png" id="3_43171"]
@@ -9,8 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://bd5jk8xmbm1rq" path="res://Intro Scene (House)/Assets/Shadow Overlay.png" id="7_dlb8t"]
 [ext_resource type="Texture2D" uid="uid://c5s8p4ey0rh65" path="res://Intro Scene (House)/Assets/Highlight Overlay.png" id="8_16g43"]
 [ext_resource type="Texture2D" uid="uid://d05x2bxshybba" path="res://Intro Scene (House)/Assets/Light Overlay.png" id="9_5nvnh"]
+[ext_resource type="Texture2D" uid="uid://baf2o6tk1er7f" path="res://Ending/1000007218.png" id="11_3nj8a"]
+[ext_resource type="Texture2D" uid="uid://cxcko5mikw1cb" path="res://Ending/1000007219.png" id="12_6asdv"]
+[ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="13_6asdv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2resh"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nj8a"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D"]
@@ -242,3 +249,49 @@ limit_right = -258
 limit_bottom = 2490
 
 [node name="Dialogues" type="CanvasLayer" parent="."]
+script = ExtResource("1_f4cf0")
+
+[node name="cutscene 1" type="Sprite2D" parent="Dialogues"]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("11_3nj8a")
+
+[node name="cutscene 2" type="Sprite2D" parent="Dialogues"]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("12_6asdv")
+
+[node name="cutscene 0" type="Panel" parent="Dialogues"]
+offset_right = 1925.0
+offset_bottom = 1085.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3nj8a")
+
+[node name="Label" type="Label" parent="Dialogues/cutscene 0"]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1096.0
+theme_override_fonts/font = ExtResource("13_6asdv")
+theme_override_font_sizes/font_size = 128
+text = "A bit of summoning rituals later...."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cutscene 3" type="Panel" parent="Dialogues"]
+offset_right = 1925.0
+offset_bottom = 1085.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3nj8a")
+
+[node name="Label" type="Label" parent="Dialogues/cutscene 3"]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1096.0
+theme_override_fonts/font = ExtResource("13_6asdv")
+theme_override_font_sizes/font_size = 72
+text = "Owen was pelted with 327 water balloons that day, he left the scene bruised
+Number of water balloon crimes this year: 156,899 
+28 more as we speak 
+Keep you and your kids safe from water balloon crimes this summer 
+Stay safe. Stay dry. Thanks for playing"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
