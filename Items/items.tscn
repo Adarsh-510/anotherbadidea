@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dw44omkqemsx4"]
+
+[ext_resource type="Script" uid="uid://cn5oyi3a54acs" path="res://Items/items.gd" id="1_fsais"]
+[ext_resource type="Texture2D" uid="uid://dwedn08haspfp" path="res://Items/Assets/pickup hint.png" id="3_41tsn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7n7eo"]
+radius = 36.414177
+height = 181.42815
+
+[node name="item" type="StaticBody2D" unique_id=1385910317]
+y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_fsais")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1088405962]
+polygon = PackedVector2Array(-57, 41, -28, 48, 56, 26, 32, 18)
+
+[node name="pickup area" type="Area2D" parent="." unique_id=394385513]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup area" unique_id=1413976582]
+position = Vector2(0, 27.999996)
+rotation = 1.3089969
+shape = SubResource("CapsuleShape2D_7n7eo")
+
+[node name="hint overlay" type="TextureRect" parent="." unique_id=1281617973]
+z_index = 100
+custom_minimum_size = Vector2(60, 60)
+offset_left = -21.66
+offset_top = -243.535
+offset_right = 197.34
+offset_bottom = -29.535004
+pivot_offset_ratio = Vector2(0.1, 1)
+texture = ExtResource("3_41tsn")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="body_entered" from="pickup area" to="." method="_on_pickup_area_body_entered"]
+[connection signal="body_exited" from="pickup area" to="." method="_on_pickup_area_body_exited"]

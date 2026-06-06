@@ -20,16 +20,16 @@ var _expression
 
 var text_duration
 var sleep_duration = 0.5
-var text_speed = 0.07 #the lesser this is, the faster text is
+var text_speed = 0.07
 var text_finished = false
 
 var tween
 
 func _ready() -> void:
 	tween = get_tree().create_tween()
+	setup("Hello", "Andy", "Scared")
 
 func _process(delta: float) -> void:
-	
 	if text_finished:
 		if Input.is_action_just_pressed("ui_accept"):
 			finished.emit()

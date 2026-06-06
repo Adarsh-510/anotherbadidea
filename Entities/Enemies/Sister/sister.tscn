@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dxxlcrefes768"]
+
+[ext_resource type="Script" uid="uid://hkk5uwwl8odi" path="res://Entities/Enemies/Sister/sister.gd" id="1_kqhgp"]
+[ext_resource type="SpriteFrames" uid="uid://ctyfrh2cdkh10" path="res://Entities/Assets/Animations/Movement Animations/Owen.tres" id="2_kqhgp"]
+[ext_resource type="Script" uid="uid://d2ca0aj8b7nyq" path="res://Entities/Enemies/Sister/sister vision.gd" id="3_6sm4w"]
+[ext_resource type="Texture2D" uid="uid://cf55aw5fsbp04" path="res://Entities/Enemies/Sister/Assets/black.png" id="4_ny2hb"]
+[ext_resource type="Texture2D" uid="uid://dgjksojydyftk" path="res://Entities/Enemies/Sister/Assets/green.png" id="5_olgi4"]
+
+[node name="sister" type="CharacterBody2D" unique_id=237785608]
+script = ExtResource("1_kqhgp")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=2052355218]
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("2_kqhgp")
+animation = &"Idle Down"
+autoplay = "Idle Down"
+
+[node name="vision" type="Area2D" parent="." unique_id=1170359591]
+scale = Vector2(3, 1.5)
+script = ExtResource("3_6sm4w")
+
+[node name="Polygon2D" type="Polygon2D" parent="vision" unique_id=1752190532]
+modulate = Color(1, 1, 1, 0.3137255)
+z_index = -1
+scale = Vector2(1, 1.2)
+polygon = PackedVector2Array(0, 0, 192, -64, 208, -48, 216, -32, 224, -16, 224, 16, 216, 32, 208, 48, 192, 64)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vision" unique_id=1226454365]
+scale = Vector2(1, 1.2)
+polygon = PackedVector2Array(0, 0, 192, -64, 208, -48, 216, -32, 224, -16, 224, 0, 224, 16, 216, 32, 208, 48, 192, 64)
+
+[node name="RayCast2D" type="RayCast2D" parent="vision" unique_id=1719034941]
+target_position = Vector2(200, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1600074081]
+
+[node name="phone progress" type="Control" parent="CanvasLayer" unique_id=53235622]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/phone progress" unique_id=1301225302]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -595.0
+offset_top = 96.0
+offset_right = 605.0
+offset_bottom = 126.0
+grow_horizontal = 2
+nine_patch_stretch = true
+texture_under = ExtResource("4_ny2hb")
+texture_progress = ExtResource("5_olgi4")
+
+[node name="Label" type="Label" parent="CanvasLayer/phone progress" unique_id=1854436546]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_top = 96.0
+offset_right = 600.0
+offset_bottom = 126.0
+grow_horizontal = 2
+text = "TIME LEFT ON PHONE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="vision" to="vision" method="_on_body_entered"]
+[connection signal="body_exited" from="vision" to="vision" method="_on_body_exited"]

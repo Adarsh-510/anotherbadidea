@@ -8,9 +8,11 @@ script = ExtResource("1_ir1i1")
 [node name="Polygon2D" type="Polygon2D" parent="." unique_id=1752190532]
 modulate = Color(1, 1, 1, 0.3137255)
 z_index = -1
+scale = Vector2(1, 1.2)
 polygon = PackedVector2Array(0, 0, 192, -64, 208, -48, 216, -32, 224, -16, 224, 16, 216, 32, 208, 48, 192, 64)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1226454365]
+scale = Vector2(1, 1.2)
 polygon = PackedVector2Array(0, 0, 192, -64, 208, -48, 216, -32, 224, -16, 224, 0, 224, 16, 216, 32, 208, 48, 192, 64)
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1719034941]

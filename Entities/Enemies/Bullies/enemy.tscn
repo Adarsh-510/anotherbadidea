@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dgvwbi1luc4bl"]
 
-[ext_resource type="Script" uid="uid://3allg21j8i63" path="res://Entities/Enemies/enemy.gd" id="1_7o3vr"]
-[ext_resource type="SpriteFrames" uid="uid://pkhgprsjt4qm" path="res://Entities/Assets/Animations/Movement Animations/Rudy.tres" id="2_ihd1f"]
+[ext_resource type="Script" uid="uid://3allg21j8i63" path="res://Entities/Enemies/Bullies/enemy.gd" id="1_7o3vr"]
 [ext_resource type="PackedScene" uid="uid://bo0s0nnprv64n" path="res://Entities/LEGO SHIT/Movement Animation/movement_animation.tscn" id="2_o1grr"]
 [ext_resource type="PackedScene" uid="uid://dn8iiuuetopd0" path="res://Entities/LEGO SHIT/Footsteps/footsteps.tscn" id="3_ihd1f"]
+[ext_resource type="SpriteFrames" uid="uid://ctyfrh2cdkh10" path="res://Entities/Assets/Animations/Movement Animations/Owen.tres" id="3_sawca"]
 [ext_resource type="Texture2D" uid="uid://olnr5xx8u8i1" path="res://Entities/Assets/Sprite Sheets/anger.png" id="4_jk8g3"]
 [ext_resource type="PackedScene" uid="uid://c370pl2xeh5ks" path="res://Entities/LEGO SHIT/Vision/vision.tscn" id="4_o1grr"]
 [ext_resource type="Texture2D" uid="uid://bl1ydn4vxqy1l" path="res://Entities/Assets/Sprite Sheets/confusion.png" id="5_sawca"]
@@ -203,12 +203,14 @@ height = 46.0
 [node name="enemy" type="CharacterBody2D" unique_id=887445839]
 motion_mode = 1
 script = ExtResource("1_7o3vr")
+_name = 2
 
 [node name="movement animation" parent="." unique_id=651574507 instance=ExtResource("2_o1grr")]
-sprite_frames = ExtResource("2_ihd1f")
+sprite_frames = ExtResource("3_sawca")
 animation = &"Idle Down"
 
 [node name="emotion animation" type="AnimatedSprite2D" parent="." unique_id=542272087]
+visible = false
 position = Vector2(-2.3841858e-07, -54)
 scale = Vector2(0.1, 0.1)
 sprite_frames = SubResource("SpriteFrames_6bkdy")

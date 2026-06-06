@@ -1,0 +1,263 @@
+[gd_scene format=3 uid="uid://p6ryg2lj1ppk"]
+
+[ext_resource type="Texture2D" uid="uid://j352qnr3sv8t" path="res://Intro Scene (House)/Assets/House_grass.png" id="1_xddej"]
+[ext_resource type="Texture2D" uid="uid://bvkc1mhi81kh1" path="res://Intro Scene (House)/Assets/House_house.png" id="2_5qhub"]
+[ext_resource type="Texture2D" uid="uid://dbjcyimpkqvkm" path="res://Intro Scene (House)/Assets/House_driveway.png" id="3_hpvf6"]
+[ext_resource type="Texture2D" uid="uid://csnlkfghlcvil" path="res://Intro Scene (House)/Assets/House_tree1.png" id="4_pxg7u"]
+[ext_resource type="Texture2D" uid="uid://dyoa1jh8nj15i" path="res://Intro Scene (House)/Assets/House_tree2.png" id="5_gi4qp"]
+[ext_resource type="Texture2D" uid="uid://bsysit4t8d2jq" path="res://Intro Scene (House)/Assets/House_fence.png" id="6_8ul1d"]
+[ext_resource type="Texture2D" uid="uid://bd5jk8xmbm1rq" path="res://Intro Scene (House)/Assets/Shadow Overlay.png" id="7_4d1jj"]
+[ext_resource type="Texture2D" uid="uid://c5s8p4ey0rh65" path="res://Intro Scene (House)/Assets/Highlight Overlay.png" id="8_myndk"]
+[ext_resource type="Texture2D" uid="uid://d05x2bxshybba" path="res://Intro Scene (House)/Assets/Light Overlay.png" id="9_hinrq"]
+[ext_resource type="PackedScene" uid="uid://cc8vthn85bgb4" path="res://Summoning Circle/summoning_circle.tscn" id="10_lpnah"]
+[ext_resource type="PackedScene" uid="uid://dxxlcrefes768" path="res://Entities/Enemies/Sister/sister.tscn" id="11_wxinp"]
+[ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="12_hpvf6"]
+[ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="13_pxg7u"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_hpvf6"]
+vertices = PackedVector2Array(2534, 932.9531, 2673.5938, 1829.7734, 2366.6172, 1836.2578, 299.5625, 1726.1016, 1671.4063, 1227.6563, 1619.1406, 937.84375, 1638.9375, 1082.6875, 192.35156, 293.59375, 206.21094, 944.0469, 12.453125, 491.45313, 3.8984375, 288.96094, 2427.461, 2113.5469, 867.1797, 2058, 754.1328, 2058, 1416.1016, 1092.3828, 2534, -324.32813, 3808.6016, -367.64063, 3714.3672, 2141.8984, 3725.4766, 2575.0078, -1069.75, 2580.9766, -1096.1797, 2244.9219, 465, 2233.9297, 771.22656, 2250.9766, -984.78125, -374, 227.5625, -400.7578, 198.42188, 293.7422, -247.96094, 282.78125, 2656.5703, 2131.1016, 1398.6719, 1235.3203, -1079.3594, 1651.6484, -1086.1328, 1651.7891, -1113.8594, -368.42188, -269.07813, 479.53906, 465, 2074.8594, -1075.0938, 2096.8516, -6.5390625, 1762.4375, 1619.1172, 937.03906, 238.57813, 1624.8828, 10.453125, 1629.5234, 3709.4766, 2255.9766, 783.78906, 2174.4297)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 0, 4, 6), PackedInt32Array(7, 8, 9, 10), PackedInt32Array(2, 11, 12, 3), PackedInt32Array(3, 12, 13), PackedInt32Array(5, 6, 14, 8), PackedInt32Array(0, 15, 16, 17, 1), PackedInt32Array(18, 19, 20, 21, 22), PackedInt32Array(23, 24, 25, 7, 10), PackedInt32Array(23, 10, 26), PackedInt32Array(17, 27, 1), PackedInt32Array(28, 4, 3), PackedInt32Array(29, 30, 31, 23, 26, 32), PackedInt32Array(33, 34, 29, 35), PackedInt32Array(8, 36, 5), PackedInt32Array(8, 14, 28, 3, 37), PackedInt32Array(8, 37, 38, 32, 9), PackedInt32Array(22, 39, 18), PackedInt32Array(40, 22, 21, 33, 13), PackedInt32Array(3, 13, 33, 35), PackedInt32Array(35, 29, 32, 38)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-985, -384, 238, -411, 208, 304, -239, 293, -258, 470, 2, 481, -7, 268, 202, 277, 216, 934, 1629, 927, 1632, 1093, 1425, 1102, 1410, 1225, 1659, 1218, 1631, 1093, 1591, 928, 2524, 923, 2524, -334, 3819, -378, 3724, 2152, 2646, 2141, 2663, 1840, 2379, 1846, 2440, 2124, 867, 2068, 767, 2068, 794, 2174, 783, 2241, 3719, 2246, 3736, 2585, -1079, 2591, -1107, 2235, 455, 2224, 455, 2085, -1085, 2107, -1090, 1585, 27, 1579, 5, 1751, 283, 1718, 233, 1635, -1096, 1662, -1124, -378)])
+
+[node name="test_summon" type="Node2D" unique_id=586433200]
+y_sort_enabled = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1642725346]
+navigation_polygon = SubResource("NavigationPolygon_hpvf6")
+
+[node name="Map" type="Node2D" parent="." unique_id=811200439]
+
+[node name="Grass" type="Sprite2D" parent="Map" unique_id=1021474925]
+position = Vector2(450.49997, 320)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass2" type="Sprite2D" parent="Map" unique_id=1277134751]
+position = Vector2(1363, 320.00003)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass3" type="Sprite2D" parent="Map" unique_id=254722088]
+position = Vector2(450.99997, 944)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass4" type="Sprite2D" parent="Map" unique_id=161554854]
+position = Vector2(1363, 944)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass5" type="Sprite2D" parent="Map" unique_id=645434000]
+position = Vector2(2269, 320)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass6" type="Sprite2D" parent="Map" unique_id=2029321514]
+position = Vector2(2270, 939)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass7" type="Sprite2D" parent="Map" unique_id=1092902709]
+position = Vector2(452.49997, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass8" type="Sprite2D" parent="Map" unique_id=976664932]
+position = Vector2(1365, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass9" type="Sprite2D" parent="Map" unique_id=1811801941]
+position = Vector2(452.99997, 2187)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass10" type="Sprite2D" parent="Map" unique_id=1315556609]
+position = Vector2(1365, 2187)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass11" type="Sprite2D" parent="Map" unique_id=323100431]
+position = Vector2(2271, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass12" type="Sprite2D" parent="Map" unique_id=1175433183]
+position = Vector2(2272, 2182)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass13" type="Sprite2D" parent="Map" unique_id=127747052]
+position = Vector2(-464.0002, 309)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass14" type="Sprite2D" parent="Map" unique_id=94248370]
+position = Vector2(-463.00006, 929.9999)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass15" type="Sprite2D" parent="Map" unique_id=1074438749]
+position = Vector2(-459.0001, 1551.9995)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass16" type="Sprite2D" parent="Map" unique_id=576646666]
+position = Vector2(-465.00003, 2169)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass17" type="Sprite2D" parent="Map" unique_id=219637442]
+position = Vector2(3166.27, 316)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass18" type="Sprite2D" parent="Map" unique_id=2054803964]
+position = Vector2(3170, 935)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass19" type="Sprite2D" parent="Map" unique_id=487627348]
+position = Vector2(3170, 1554)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="Grass20" type="Sprite2D" parent="Map" unique_id=1980497680]
+position = Vector2(3170, 2169)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_xddej")
+
+[node name="House" type="Sprite2D" parent="Map" unique_id=1748843448]
+position = Vector2(1366, 471)
+texture = ExtResource("2_5qhub")
+
+[node name="Driveway" type="Sprite2D" parent="Map" unique_id=354802931]
+position = Vector2(609.25, 1061)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_hpvf6")
+
+[node name="Driveway2" type="Sprite2D" parent="Map" unique_id=899185137]
+position = Vector2(609.25, 1404)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_hpvf6")
+
+[node name="Driveway3" type="Sprite2D" parent="Map" unique_id=420272177]
+position = Vector2(609.25, 1747)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_hpvf6")
+
+[node name="Driveway4" type="Sprite2D" parent="Map" unique_id=221159525]
+position = Vector2(609.25, 1977)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_hpvf6")
+
+[node name="Driveway5" type="Sprite2D" parent="Map" unique_id=760035523]
+position = Vector2(609.25, 2318)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_hpvf6")
+
+[node name="Tree" type="Sprite2D" parent="Map" unique_id=1215264168]
+position = Vector2(1541, 979)
+texture = ExtResource("4_pxg7u")
+
+[node name="Tree2" type="Sprite2D" parent="Map" unique_id=238646391]
+position = Vector2(2536, 1872)
+texture = ExtResource("5_gi4qp")
+
+[node name="Tree3" type="Sprite2D" parent="Map" unique_id=1770335704]
+position = Vector2(124, 1491)
+texture = ExtResource("5_gi4qp")
+
+[node name="Tree4" type="Sprite2D" parent="Map" unique_id=383770759]
+position = Vector2(-116, 256)
+texture = ExtResource("4_pxg7u")
+
+[node name="Fence" type="Sprite2D" parent="Map" unique_id=193621737]
+position = Vector2(2530, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence2" type="Sprite2D" parent="Map" unique_id=1886710297]
+position = Vector2(2128, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence3" type="Sprite2D" parent="Map" unique_id=1950043028]
+position = Vector2(1726, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence4" type="Sprite2D" parent="Map" unique_id=1502696969]
+position = Vector2(1325, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence5" type="Sprite2D" parent="Map" unique_id=334315822]
+position = Vector2(1018, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence6" type="Sprite2D" parent="Map" unique_id=273630967]
+position = Vector2(197, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence7" type="Sprite2D" parent="Map" unique_id=124776345]
+position = Vector2(-202, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence8" type="Sprite2D" parent="Map" unique_id=752021725]
+position = Vector2(-518, 2050)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence9" type="Sprite2D" parent="Map" unique_id=845079743]
+position = Vector2(2925, 2055)
+texture = ExtResource("6_8ul1d")
+
+[node name="Fence10" type="Sprite2D" parent="Map" unique_id=1821948955]
+position = Vector2(3325, 2054)
+texture = ExtResource("6_8ul1d")
+
+[node name="Shadow Overlay" type="Sprite2D" parent="Map" unique_id=1502822828]
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(1446, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("7_4d1jj")
+
+[node name="Highlight Overlay" type="Sprite2D" parent="Map" unique_id=1435860252]
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(1451, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("8_myndk")
+
+[node name="Light Overlay" type="Sprite2D" parent="Map" unique_id=469577981]
+self_modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(1456, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("9_hinrq")
+
+[node name="summoning circle" parent="." unique_id=627597777 node_paths=PackedStringArray("Rudy", "Owen") instance=ExtResource("10_lpnah")]
+position = Vector2(1808, 1466)
+Rudy = NodePath("../Character2")
+Owen = NodePath("../Character3")
+
+[node name="Character" parent="." unique_id=1092893584 instance=ExtResource("12_hpvf6")]
+position = Vector2(651.99994, 2289.9998)
+scale = Vector2(3.5, 3.5)
+
+[node name="Control_Movement" type="Node2D" parent="Character" unique_id=923638035]
+script = ExtResource("13_pxg7u")
+metadata/_custom_type_script = "uid://fy8tratxjwal"
+
+[node name="Camera2D" type="Camera2D" parent="Character" unique_id=748587915]
+
+[node name="Character2" parent="." unique_id=91246493 node_paths=PackedStringArray("target") instance=ExtResource("12_hpvf6")]
+position = Vector2(-700.99994, 340.99997)
+scale = Vector2(3.5, 3.5)
+_name = 1
+target = NodePath("../Character")
+
+[node name="Character3" parent="." unique_id=1460734689 node_paths=PackedStringArray("target") instance=ExtResource("12_hpvf6")]
+position = Vector2(-471.99997, 131.99998)
+scale = Vector2(3.5, 3.5)
+_name = 2
+target = NodePath("../Character")
+
+[node name="sister" parent="." unique_id=237785608 instance=ExtResource("11_wxinp")]
+z_index = 20
+position = Vector2(1770.0002, 783)
+scale = Vector2(3.5, 3.5)

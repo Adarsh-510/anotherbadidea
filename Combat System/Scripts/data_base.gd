@@ -132,8 +132,10 @@ var Player3 = {
 }
 
 var Bully1 = {
+	# change the name to an array, then instead of accessing the name like Database.Bully1["name"]
+	# access it like Database.Bully1["name].pick_random()
 	"name": "Bully 1",
-
+	
 	"max_hp": 100,
 	"hp": 100,
 
@@ -147,6 +149,8 @@ var Bully1 = {
 	"attack2": "Scratch",
 	"attack2_damage": 18,
 	"attack2_miss_chance": 20
+	
+	# add another kay called "lines", before the battle starts access a random line and display it
 }
 
 var Bully2 = {

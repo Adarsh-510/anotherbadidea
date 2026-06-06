@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5aygqx7c04uh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0leuq"]
+load_path = "res://.godot/imported/car v2.png-7c56169860a97d2bb81e1512944fe09a.ctex"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0leuq"]
+size = Vector2(398.75, 477.875)
+
+[node name="car v2" type="StaticBody2D" unique_id=2069354284]
+y_sort_enabled = true
+
+[node name="CarV2" type="Sprite2D" parent="." unique_id=2011234478]
+texture = SubResource("CompressedTexture2D_0leuq")
+centered = false
+offset = Vector2(-245, -573)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=161028758]
+position = Vector2(5.625, -240.0625)
+shape = SubResource("RectangleShape2D_0leuq")

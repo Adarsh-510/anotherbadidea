@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://cc8vthn85bgb4"]
+
+[ext_resource type="Script" uid="uid://ci8rxyfn6nxte" path="res://Summoning Circle/summoning_circle.gd" id="1_4gp8i"]
+[ext_resource type="Texture2D" uid="uid://csdqgbgduw8w" path="res://Summoning Circle/Assets/circle.png" id="2_ovre3"]
+[ext_resource type="Texture2D" uid="uid://bh18vigkf7ojx" path="res://Items/Assets/spindal.png" id="3_0fi0a"]
+[ext_resource type="Texture2D" uid="uid://c8oticrjfvc5u" path="res://Items/Assets/lemonade.png" id="4_nnsnj"]
+[ext_resource type="Texture2D" uid="uid://cwdvalxtlao0o" path="res://Items/Assets/pickle.png" id="5_hpvra"]
+[ext_resource type="Texture2D" uid="uid://dtjglisbutkw1" path="res://Items/Assets/flute.png" id="6_b5ulp"]
+[ext_resource type="Texture2D" uid="uid://cf55aw5fsbp04" path="res://Entities/Enemies/Sister/Assets/black.png" id="7_0fi0a"]
+[ext_resource type="Texture2D" uid="uid://dgjksojydyftk" path="res://Entities/Enemies/Sister/Assets/green.png" id="8_nnsnj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k8ui4"]
+radius = 251.0
+height = 912.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j74dn"]
+radius = 90.0
+
+[node name="summoning circle" type="StaticBody2D" unique_id=627597777]
+script = ExtResource("1_4gp8i")
+
+[node name="circle2" type="Sprite2D" parent="." unique_id=1727302303]
+texture = ExtResource("2_ovre3")
+
+[node name="items" type="Node2D" parent="." unique_id=68153046]
+
+[node name="item0" type="Sprite2D" parent="items" unique_id=673980751]
+position = Vector2(-271, 73.99997)
+scale = Vector2(0.6328125, 0.6484375)
+texture = ExtResource("3_0fi0a")
+
+[node name="item1" type="Sprite2D" parent="items" unique_id=1437871819]
+position = Vector2(86, -34)
+scale = Vector2(0.65625, 0.6484375)
+texture = ExtResource("4_nnsnj")
+
+[node name="item2" type="Sprite2D" parent="items" unique_id=1973211039]
+position = Vector2(67.00006, 177)
+scale = Vector2(0.5859375, 0.6484375)
+texture = ExtResource("5_hpvra")
+
+[node name="item3" type="Sprite2D" parent="items" unique_id=524766599]
+position = Vector2(4.000122, 69)
+scale = Vector2(0.515625, 0.6328125)
+texture = ExtResource("6_b5ulp")
+
+[node name="circle" type="Area2D" parent="." unique_id=1346099415]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="circle" unique_id=1852708331]
+position = Vector2(0, 99)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_k8ui4")
+
+[node name="player position" type="Area2D" parent="." unique_id=1393712320]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player position" unique_id=24571824]
+position = Vector2(263, 96)
+shape = SubResource("CircleShape2D_j74dn")
+
+[node name="positions" type="Node2D" parent="." unique_id=2081320843]
+
+[node name="Rudy Hide" type="Marker2D" parent="positions" unique_id=1661833647]
+position = Vector2(-853, 482)
+
+[node name="Owen Hide" type="Marker2D" parent="positions" unique_id=386889218]
+position = Vector2(-859, -381)
+
+[node name="Rudy Circle" type="Marker2D" parent="positions" unique_id=1895524738]
+position = Vector2(-163, 187)
+
+[node name="Owen Circle" type="Marker2D" parent="positions" unique_id=1539541298]
+position = Vector2(-180, -4)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1079166735]
+
+[node name="summoning progress" type="Control" parent="CanvasLayer" unique_id=376556024]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/summoning progress" unique_id=1369592925]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -595.0
+offset_top = 36.0
+offset_right = 605.0
+offset_bottom = 66.0
+grow_horizontal = 2
+max_value = 150.0
+nine_patch_stretch = true
+texture_under = ExtResource("7_0fi0a")
+texture_progress = ExtResource("8_nnsnj")
+
+[node name="Label" type="Label" parent="CanvasLayer/summoning progress" unique_id=2061633492]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_top = 36.0
+offset_right = 600.0
+offset_bottom = 66.0
+grow_horizontal = 2
+text = "SUMMON APOPHIS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="circle" to="." method="_on_circle_body_entered"]
+[connection signal="body_exited" from="circle" to="." method="_on_circle_body_exited"]
+[connection signal="body_entered" from="player position" to="." method="_on_player_position_body_entered"]
+[connection signal="body_exited" from="player position" to="." method="_on_player_position_body_exited"]

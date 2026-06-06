@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cthe5stkte1o2"]
+
+[ext_resource type="Texture2D" uid="uid://b1vndkyhrd70s" path="res://Junkyard/Assets/ladder.png" id="1_qgghh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fkspe"]
+radius = 41.0
+height = 148.0
+
+[node name="ladder" type="StaticBody2D" unique_id=1889677652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079771592]
+position = Vector2(4, -44)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fkspe")
+
+[node name="Ladder" type="Sprite2D" parent="." unique_id=645610708]
+position = Vector2(0, -296)
+texture = ExtResource("1_qgghh")

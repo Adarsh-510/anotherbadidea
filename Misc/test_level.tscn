@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bw7ffyy1b3c8g"]
+
+[ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="1_gbhdq"]
+[ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="2_y646j"]
+[ext_resource type="PackedScene" uid="uid://8s0r14sj1pw3" path="res://Entities/LEGO SHIT/Sound Area/sound_area.tscn" id="3_lnbra"]
+[ext_resource type="PackedScene" uid="uid://b0q2s5l823v2y" path="res://Junkyard/objects scenes/wire_wall_v.tscn" id="3_sioor"]
+[ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://Pause Menu/Scenes/pause_menu.tscn" id="5_sb12i"]
+[ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/Bullies/enemy.tscn" id="6_58smv"]
+[ext_resource type="PackedScene" uid="uid://dw44omkqemsx4" path="res://Items/items.tscn" id="6_mxo0x"]
+[ext_resource type="PackedScene" uid="uid://dxxlcrefes768" path="res://Entities/Enemies/Sister/sister.tscn" id="6_ysc0i"]
+[ext_resource type="PackedScene" uid="uid://cr3kcboe740fv" path="res://Junkyard/objects scenes/wire_wall_h.tscn" id="8_c2min"]
+
+[sub_resource type="Curve2D" id="Curve2D_mxo0x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -4, 168, 0, 0, 0, 0, 186, 164, 0, 0, 0, 0, 173, -100, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, -4, 168)
+}
+point_count = 5
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_gbhdq"]
+vertices = PackedVector2Array(3016.6719, 1864.6172, -1053.3438, 1972.3906, -1069.6563, -887.77344, 2904.3672, -1006.25)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-1130, -946, 2962, -1068, 3079, 1923, -1113, 2034)])
+agent_radius = 60.0
+
+[node name="Test Level" type="Node2D" unique_id=2101091609]
+y_sort_enabled = true
+
+[node name="Background" type="Node2D" parent="." unique_id=456044523]
+y_sort_enabled = true
+
+[node name="item5" parent="Background" unique_id=492642514 instance=ExtResource("6_mxo0x")]
+position = Vector2(1051, 452)
+item = 1
+
+[node name="wire wall h" parent="Background" unique_id=185656095 instance=ExtResource("8_c2min")]
+position = Vector2(254, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h2" parent="Background" unique_id=1629028693 instance=ExtResource("8_c2min")]
+position = Vector2(377, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h3" parent="Background" unique_id=1869528044 instance=ExtResource("8_c2min")]
+position = Vector2(500, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h4" parent="Background" unique_id=1674411643 instance=ExtResource("8_c2min")]
+position = Vector2(623, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h5" parent="Background" unique_id=855322882 instance=ExtResource("8_c2min")]
+position = Vector2(746, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h6" parent="Background" unique_id=1296899485 instance=ExtResource("8_c2min")]
+position = Vector2(869, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h7" parent="Background" unique_id=97431043 instance=ExtResource("8_c2min")]
+position = Vector2(992, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall h8" parent="Background" unique_id=1033542859 instance=ExtResource("8_c2min")]
+position = Vector2(1115, 911)
+scale = Vector2(0.25, 0.25)
+
+[node name="wire wall v" parent="Background" unique_id=2097269013 instance=ExtResource("3_sioor")]
+position = Vector2(194, 910)
+scale = Vector2(0.3, 0.3)
+
+[node name="Characters" type="Node2D" parent="." unique_id=588211070]
+y_sort_enabled = true
+
+[node name="Character" parent="Characters" unique_id=1092893584 instance=ExtResource("1_gbhdq")]
+position = Vector2(606, 446)
+
+[node name="Control_Movement" type="Node2D" parent="Characters/Character" unique_id=2005879502]
+script = ExtResource("2_y646j")
+metadata/_custom_type_script = "uid://fy8tratxjwal"
+
+[node name="Sound area" parent="Characters/Character" unique_id=1083916841 instance=ExtResource("3_lnbra")]
+
+[node name="Camera2D" type="Camera2D" parent="Characters/Character" unique_id=1317367563]
+position = Vector2(548, -20)
+position_smoothing_enabled = true
+
+[node name="Character2" parent="Characters" unique_id=1981301673 node_paths=PackedStringArray("target") instance=ExtResource("1_gbhdq")]
+position = Vector2(653, 207)
+_name = 1
+target = NodePath("../Marker2D")
+
+[node name="Character3" parent="Characters" unique_id=1038824272 node_paths=PackedStringArray("target") instance=ExtResource("1_gbhdq")]
+position = Vector2(862, 283)
+_name = 2
+target = NodePath("../Character")
+
+[node name="Marker2D" type="Marker2D" parent="Characters" unique_id=1578299066]
+position = Vector2(933, 550)
+
+[node name="Bullies" type="Node2D" parent="." unique_id=578080314]
+visible = false
+y_sort_enabled = true
+
+[node name="enemy" parent="Bullies" unique_id=887445839 instance=ExtResource("6_58smv")]
+position = Vector2(1426, 252)
+_name = 0
+
+[node name="Path2D" type="Path2D" parent="Bullies/enemy" unique_id=1306050631]
+position = Vector2(289, -70)
+curve = SubResource("Curve2D_mxo0x")
+
+[node name="sister" parent="Bullies" unique_id=237785608 instance=ExtResource("6_ysc0i")]
+position = Vector2(985, 182)
+
+[node name="Pause Menu" parent="." unique_id=423058424 instance=ExtResource("5_sb12i")]
+visible = false
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=1193626785]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_gbhdq")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=418765593]
+vertices = PackedVector2Array(191, 905, 1176, 906, 1175, 916, 191, 916)
+affect_navigation_mesh = true

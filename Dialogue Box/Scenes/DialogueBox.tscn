@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6xgewupc04wy"]
+[gd_scene format=3 uid="uid://c6xgewupc04wy"]
 
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="1_w1vtm"]
 [ext_resource type="Script" uid="uid://65klgwvh06a5" path="res://Dialogue Box/Scripts/dialogue_box.gd" id="1_wtubw"]
@@ -19,10 +19,10 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 
-[node name="DialogueBox" type="Node2D"]
+[node name="DialogueBox" type="Node2D" unique_id=1668324782]
 script = ExtResource("1_wtubw")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=390966742]
 z_index = 1
 offset_left = 69.0
 offset_top = 735.0
@@ -30,7 +30,7 @@ offset_right = 1845.0
 offset_bottom = 1008.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g8wed")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=540398105]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 37.0
@@ -40,47 +40,47 @@ theme_override_fonts/font = ExtResource("1_w1vtm")
 theme_override_font_sizes/font_size = 64
 autowrap_mode = 3
 
-[node name="Andy_bored" type="Sprite2D" parent="."]
+[node name="Andy_bored" type="Sprite2D" parent="." unique_id=649107217]
 position = Vector2(1586, 564)
 scale = Vector2(1, 0.908)
 texture = ExtResource("2_g8wed")
 
-[node name="Andy_default" type="Sprite2D" parent="."]
+[node name="Andy_default" type="Sprite2D" parent="." unique_id=1282965905]
 position = Vector2(1587, 563)
 scale = Vector2(1, 0.908)
 texture = ExtResource("3_mxav6")
 
-[node name="Andy_happy" type="Sprite2D" parent="."]
+[node name="Andy_happy" type="Sprite2D" parent="." unique_id=660567256]
 position = Vector2(1587, 563)
 scale = Vector2(1, 0.908)
 texture = ExtResource("4_7ir7q")
 
-[node name="Andy_scared" type="Sprite2D" parent="."]
+[node name="Andy_scared" type="Sprite2D" parent="." unique_id=399478187]
 position = Vector2(1587, 560)
 scale = Vector2(1, 0.908)
 texture = ExtResource("5_fos01")
 
-[node name="Owen_happy" type="Sprite2D" parent="."]
+[node name="Owen_happy" type="Sprite2D" parent="." unique_id=1230404963]
 position = Vector2(1587, 570)
 scale = Vector2(1, 0.908)
 texture = ExtResource("6_s2lrg")
 
-[node name="Owen_sad" type="Sprite2D" parent="."]
+[node name="Owen_sad" type="Sprite2D" parent="." unique_id=202748201]
 position = Vector2(1587, 570)
 scale = Vector2(1, 0.908)
 texture = ExtResource("7_q73cw")
 
-[node name="Rudy_bored" type="Sprite2D" parent="."]
+[node name="Rudy_bored" type="Sprite2D" parent="." unique_id=764867435]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("8_wtubw")
 
-[node name="Rudy_default" type="Sprite2D" parent="."]
+[node name="Rudy_default" type="Sprite2D" parent="." unique_id=221388664]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("9_6jejf")
 
-[node name="Rudy_happy" type="Sprite2D" parent="."]
+[node name="Rudy_happy" type="Sprite2D" parent="." unique_id=1812406155]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("10_rcxrg")

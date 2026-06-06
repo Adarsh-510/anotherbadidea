@@ -4,6 +4,8 @@
 
 [node name="movement animation" type="AnimatedSprite2D" unique_id=651574507]
 scale = Vector2(2, 2)
-animation = &""
+animation = &"Idle Down"
 autoplay = "Idle Down"
+centered = false
+offset = Vector2(-32, -47)
 script = ExtResource("2_jgncd")

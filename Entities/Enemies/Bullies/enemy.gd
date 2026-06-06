@@ -1,18 +1,31 @@
+@tool
 extends CharacterBody2D
-
 class_name Enemy
-
-enum NAME { Boxer, Tall, Fat }
 
 @onready var emotion_animation: AnimatedSprite2D = $"emotion animation"
 
-@export var Name: NAME
+var sprites = [
+	preload("res://Entities/Assets/Animations/Movement Animations/Andy.tres"),
+	preload("res://Entities/Assets/Animations/Movement Animations/Rudy.tres"),
+	preload("res://Entities/Assets/Animations/Movement Animations/Owen.tres")
+]
+
+@export_enum("Boxer", "Tall", "Fat") var _name: int = 0:
+	set(value):
+		_name = value
+		if Engine.is_editor_hint():
+			$"movement animation".sprite_frames = sprites[_name]
+		Name = NAMES[_name]
+
 @export var Speed: float = 150
-@export var time_before_battle: float = 2
+@export var time_before_battle: float = 1.5
 @export var confusion_time = 0.75
 
 @export_category("Pathfinding")
 @export var target: CharacterBody2D
+
+var NAMES = ["Boxer", "Tall", "Fat"]
+var Name: String
 
 var can_hear_player: bool = false
 var can_see_player: bool = false
@@ -20,9 +33,16 @@ var can_see_player: bool = false
 var direction: Vector2 = Vector2.RIGHT
 
 func _ready() -> void:
+	if _name == 0: set_collision_layer_value(1, true)
 	emotion_animation.visible = false
+	update_sprite()
+
+func update_sprite():
+	$"movement animation".sprite_frames = sprites[_name]
 
 func _physics_process(_delta: float) -> void:
+	if Engine.is_editor_hint(): return
+	
 	move_and_slide()
 
 var sound_lost
@@ -45,10 +65,10 @@ func start_battle():
 	# ADD DIALOGUE HERE
 	# WHEN ENTER PRESSED ON DIALOGUE -> CHANGE SCENE
 	
-	match Name:
-		NAME.Boxer: DataBase.curr_enemy = DataBase.Bully1
-		NAME.Tall: DataBase.curr_enemy = DataBase.Bully2
-		NAME.Fat: DataBase.curr_enemy = DataBase.Bully3
+	match _name:
+		0: DataBase.curr_enemy = DataBase.Bully1
+		1: DataBase.curr_enemy = DataBase.Bully2
+		2: DataBase.curr_enemy = DataBase.Bully3
 	get_tree().change_scene_to_file("res://Combat System/Scenes/Main_Battle.tscn")
 
 	queue_free()
@@ -66,8 +86,5 @@ func confusion(player):
 func anger():
 	emotion_animation.visible = true
 	emotion_animation.play("Anger")
-	await get_tree().create_timer(0.5).timeout
-	emotion_animation.play("Loading")
 	await get_tree().create_timer(time_before_battle).timeout
-	emotion_animation.visible = false
 	if can_see_player: start_battle()

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cjux3i4thrvit"]
+
+[ext_resource type="Texture2D" uid="uid://dd37jul62n3y1" path="res://Junkyard/Assets/wheel1.png" id="1_yta14"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ihgoe"]
+radius = 72.0
+height = 218.0
+
+[node name="wheel1" type="StaticBody2D" unique_id=1889677652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1551245833]
+position = Vector2(0, -77)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ihgoe")
+
+[node name="Wheel1" type="Sprite2D" parent="." unique_id=836690422]
+texture = ExtResource("1_yta14")
+offset = Vector2(0, -106)
