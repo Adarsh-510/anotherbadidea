@@ -143,11 +143,11 @@ var Bully1 = {
 	"defense": 5,
 
 	"attack1": "Mean Stare",
-	"attack1_damage": 12,
+	"attack1_damage": 15,
 	"attack1_miss_chance": 10,
 
 	"attack2": "Scratch",
-	"attack2_damage": 18,
+	"attack2_damage": 35,
 	"attack2_miss_chance": 20
 	
 	# add another kay called "lines", before the battle starts access a random line and display it
@@ -156,19 +156,19 @@ var Bully1 = {
 var Bully2 = {
 	"name": "Bully 2",
 
-	"max_hp": 90,
-	"hp": 90,
+	"max_hp": 100,
+	"hp": 100,
 
 	"attack": 12,
 	"defense": 6,
 
-	"attack1": "Cigarette Burns",
-	"attack1_damage": 25,
-	"attack1_miss_chance": 50,
-
-	"attack2": "Harsh Insults",
-	"attack2_damage": 18,
-	"attack2_miss_chance": 20
+	"attack1": "Harsh Insults",
+	"attack1_damage": 20,
+	"attack1_miss_chance": 20,
+	
+	"attack2": "Cigarette Burns",
+	"attack2_damage": 45,
+	"attack2_miss_chance": 50
 }
 
 var Bully3 = {
@@ -180,13 +180,13 @@ var Bully3 = {
 	"attack": 15,
 	"defense": 8,
 
-	"attack1": "Heavy Punch",
-	"attack1_damage": 22,
-	"attack1_miss_chance": 20,
-
-	"attack2": "Flying Kick",
-	"attack2_damage": 28,
-	"attack2_miss_chance": 35
+	"attack1": "Flying Kick",
+	"attack1_damage": 25,
+	"attack1_miss_chance": 35,
+	
+	"attack2": "Heavy Punch",
+	"attack2_damage": 45,
+	"attack2_miss_chance": 20
 }
 
 var BullyLeader = {
@@ -199,11 +199,11 @@ var BullyLeader = {
 	"defense": 12,
 
 	"attack1": "Pipe Swing",
-	"attack1_damage": 25,
+	"attack1_damage": 35,
 	"attack1_miss_chance": 10,
 
 	"attack2": "Royal Beatdown",
-	"attack2_damage": 40,
+	"attack2_damage": 50,
 	"attack2_miss_chance": 25
 }
 

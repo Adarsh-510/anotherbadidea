@@ -66,11 +66,11 @@ func _process(delta: float) -> void:
 		elif Input.is_action_just_pressed("ui_accept") and current_UI == attack_menu:
 			match attack_menu.iterator:
 				1:
-					FightSystem.next_turn(player["attack1_damage"], player["attack1"], player["attack1_miss_chance"])
+					FightSystem.next_turn(player["attack1_damage"], player["attack1"])
 				2:
-					FightSystem.next_turn(player["attack2_damage"], player["attack2"], player["attack2_miss_chance"])
+					FightSystem.next_turn(player["attack2_damage"], player["attack2"])
 				3:
-					FightSystem.next_turn(player["attack3_damage"], player["attack3"], player["attack3_miss_chance"])
+					FightSystem.next_turn(player["attack3_damage"], player["attack3"])
 
 			remove_curr_menu()
 
@@ -78,17 +78,17 @@ func _process(delta: float) -> void:
 		elif Input.is_action_just_pressed("ui_accept") and current_UI == item_menu:
 			match item_menu.iterator:
 				1:
-					FightSystem.next_turn(player["item1_damage"], player["item1"], player["item_miss_chance"])
+					FightSystem.next_turn(player["item1_damage"], player["item1"])
 					player["item1"] = "Nothing"
 					player["item1_desc"] = "Wow, so empty"
 					player["item1_damage"] = "0"
 				2:
-					FightSystem.next_turn(player["item2_damage"], player["item2"], player["item_miss_chance"])
+					FightSystem.next_turn(player["item2_damage"], player["item2"])
 					player["item2"] = "Nothing"
 					player["item2_desc"] = "Wow, so empty"
 					player["item2_damage"] = "0"
 				3:
-					FightSystem.next_turn(player["item3_damage"], player["item3"], player["item_miss_chance"])
+					FightSystem.next_turn(player["item3_damage"], player["item3"])
 					player["item3"] = "Nothing"
 					player["item3_desc"] = "Wow, so empty"
 					player["item3_damage"] = "0"
