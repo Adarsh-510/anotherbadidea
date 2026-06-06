@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://te507g2q7e6p"]
+[gd_scene load_steps=21 format=3 uid="uid://te507g2q7e6p"]
 
 [ext_resource type="Texture2D" uid="uid://j352qnr3sv8t" path="res://Intro Scene (House)/Assets/House_grass.png" id="1_v25tx"]
 [ext_resource type="Texture2D" uid="uid://bvkc1mhi81kh1" path="res://Intro Scene (House)/Assets/House_house.png" id="2_cjdqh"]
@@ -13,11 +13,20 @@
 [ext_resource type="Texture2D" uid="uid://7h5adlm2yexs" path="res://Intro Scene (House)/Assets/Book.png" id="11_4hu2w"]
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="12_8fjwj"]
 [ext_resource type="Texture2D" uid="uid://jfsvtt578fjl" path="res://Intro Scene (House)/Assets/sitting sprites (1).png" id="13_8fjwj"]
+[ext_resource type="Texture2D" uid="uid://c0jepr6wr17on" path="res://Intro Scene (House)/Assets/1000007216.jpg" id="13_l3n7k"]
+[ext_resource type="Texture2D" uid="uid://derqx7ycd13km" path="res://Intro Scene (House)/Assets/1000007217.png" id="14_otc3k"]
+[ext_resource type="Texture2D" uid="uid://cdtx3hljndp4n" path="res://Intro Scene (House)/Assets/1000007141.png" id="15_w3yfe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v25tx"]
 bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l3n7k"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l2iue"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otc3k"]
 bg_color = Color(0, 0, 0, 1)
 
 [node name="Main" type="Node2D"]
@@ -272,7 +281,56 @@ text = "A guide to summoning a god
 with infinte knowledge"
 horizontal_alignment = 1
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Cutscene 1" type="Panel" parent="DialogueBox Container"]
+offset_right = 1925.0
+offset_bottom = 1080.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_l2iue")
+
+[node name="cs1_text" type="Label" parent="DialogueBox Container/Cutscene 1"]
+layout_mode = 0
+offset_left = 374.0
+offset_top = 17.0
+offset_right = 1591.0
+offset_bottom = 1093.0
+theme_override_fonts/font = ExtResource("12_8fjwj")
+theme_override_font_sizes/font_size = 128
+text = "I'll tell you whats wrong with that....."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Cutscene 2" type="Sprite2D" parent="DialogueBox Container"]
+position = Vector2(960, 540)
+texture = ExtResource("13_l3n7k")
+
+[node name="cs2_text" type="Label" parent="DialogueBox Container/Cutscene 2"]
+offset_left = -968.0
+offset_top = -439.0
+offset_right = 963.0
+offset_bottom = -332.0
+theme_override_fonts/font = ExtResource("12_8fjwj")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_otc3k")
+
+[node name="Cutscene 3" type="Sprite2D" parent="DialogueBox Container"]
+position = Vector2(960, 540)
+texture = ExtResource("14_otc3k")
+
+[node name="cs3_text" type="Label" parent="DialogueBox Container/Cutscene 3"]
+offset_left = -968.0
+offset_top = -439.0
+offset_right = 963.0
+offset_bottom = -332.0
+theme_override_fonts/font = ExtResource("12_8fjwj")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_otc3k")
+
+[node name="Frank" type="Sprite2D" parent="DialogueBox Container"]
+position = Vector2(178, 534)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_w3yfe")
+
+[node name="Kids Sitting" type="Sprite2D" parent="."]
 position = Vector2(1546, 1195)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_8fjwj")

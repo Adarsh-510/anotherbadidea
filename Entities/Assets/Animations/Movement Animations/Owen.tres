@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://ctyfrh2cdkh10"]
+[gd_resource type="SpriteFrames" load_steps=98 format=3 uid="uid://ctyfrh2cdkh10"]
 
 [ext_resource type="Texture2D" uid="uid://dpusmoj6c4wi4" path="res://Entities/Assets/Sprite Sheets/Owen.png" id="1_apa27"]
 

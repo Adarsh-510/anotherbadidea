@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjw7g2gdgfnkl"]
+[gd_scene load_steps=8 format=3 uid="uid://bjw7g2gdgfnkl"]
 
 [ext_resource type="Texture2D" uid="uid://v2huc0cgpkgg" path="res://Intro Scene (House)/Assets/main menu.png" id="1_3qd5b"]
 [ext_resource type="Script" uid="uid://4kkyq65jxvrf" path="res://Intro Scene (House)/Scripts/main_menu.gd" id="1_rq4lm"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dqgsrk7gv7fro" path="res://Intro Scene (House)/Assets/sound on.png" id="4_b5faq"]
 [ext_resource type="Texture2D" uid="uid://ip8ubdba0rd7" path="res://Intro Scene (House)/Assets/sound off.png" id="5_qvfqd"]
 [ext_resource type="Texture2D" uid="uid://dy57ywhphyhid" path="res://Intro Scene (House)/Assets/exit.png" id="6_bw8x1"]
+[ext_resource type="Texture2D" uid="uid://c2svc18pq6sdn" path="res://Intro Scene (House)/Assets/1000007214.png" id="7_cqhbb"]
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource("1_rq4lm")
@@ -68,6 +69,18 @@ z_index = -1
 position = Vector2(1489.0238, 747.72614)
 scale = Vector2(0.23752487, 0.24208546)
 texture = ExtResource("6_bw8x1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(491, 135)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_cqhbb")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0.2846667, 0, 0.61, 0.39215687)
+z_index = -1
+position = Vector2(499, 146)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_cqhbb")
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="sound" to="." method="_on_sound_pressed"]

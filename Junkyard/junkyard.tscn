@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://cuve0jqala0et"]
+[gd_scene load_steps=89 format=3 uid="uid://cuve0jqala0et"]
 
 [ext_resource type="Texture2D" uid="uid://bu2hl421hpv7b" path="res://Junkyard/Assets/background.png" id="1_7d1lf"]
 [ext_resource type="PackedScene" uid="uid://cr3kcboe740fv" path="res://Junkyard/objects scenes/wire_wall_h.tscn" id="1_365wu"]
@@ -55,15 +55,18 @@
 [ext_resource type="Texture2D" uid="uid://cfh3phsp562du" path="res://Junkyard/Assets/wheel4.png" id="45_fkspe"]
 [ext_resource type="Texture2D" uid="uid://cmt1icsj7br17" path="res://Junkyard/Assets/box1.png" id="47_8g2fq"]
 [ext_resource type="Texture2D" uid="uid://b2ddhtg40ln2l" path="res://Junkyard/Assets/trash1.png" id="48_q0fog"]
-[ext_resource type="PackedScene" uid="uid://8s0r14sj1pw3" path="res://Entities/LEGO SHIT/Sound Area/sound_area.tscn" id="57_wiblk"]
+[ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://Pause Menu/Scenes/pause_menu.tscn" id="56_q0fog"]
 [ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/Bullies/enemy.tscn" id="57_ym6ig"]
-[ext_resource type="AudioStream" uid="uid://by4e0g4vlwmfi" path="res://All Audios/Gameplay_Theme.wav" id="59_43dqk"]
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_p2u0y"]
-vertices = PackedVector2Array(291.71094, -2169.211, 290.3125, -2186.8594, 463.82813, -2197.1875, 411.90625, -2170.1328, 481.17188, -2142.3828, 422.60938, -2152.2734, 636.1875, -2258.8281, 634.34375, -2110.3906, 612.89844, -2109.2031, 492.75, -2269.9922, 630.8828, -2276.8594, 1344.2813, -2018.8516, 1346.9922, -2068.3984, 1380.9219, -2019.7422, 526.21875, -1310.5078, 671.09375, -1340.7813, 704.77344, -1290.2578, 523.21875, -1189.1563, -337.5703, -978.89844, -241, -990.35156, -293.8672, -842.5469, -342.78906, -874.46094, 1489.6172, -2034.9297, 1561.1875, -2032.6172, 1584.9219, -1979, 1431.1406, -1979, 226.64844, -1288.3438, 230.03906, -1289.0078, 223.86719, -1252.9766, -224.35156, -2223.1719, -122.65625, -2192.1328, -89.59375, -2181.4297, -70.5625, -2112.7734, -226.34375, -2109.1094, -312.6797, -2138.6719, -314.96094, -2209.3516, 1369.2266, -1264.8281, 1433.8984, -1280.3828, 1440.3438, -1156.1406, 1306.8594, -1160.8828, 1307.9375, -1178.1563, 874.3281, -1067.4063, 923.6094, -1068.3281, 917.0469, -1028.0313, 860.5, -1022.0703, 982.85156, -1019.39844, 1081.4688, -1018.21875, -558.3594, -751.5, -567.21094, -780.59375, -457.85156, -797.3594, -773.40625, -1150.8516, -853.0781, -597.1094, -859.8594, -2267.6484, -739.6172, -2251.4063, -737.03125, -2029.4531, -730.7031, -1474.1094, -453.5, -1739.0781, -455.1328, -1757.9297, -353.9297, -1753.6328, -135.53906, -1740.1016, -299.34375, -1788, -148.10156, -1788, -129.70313, -1763.2109, -138.71094, -1530.6094, -85.25781, -1741.7031, -66.36719, -1495.3984, 1207.25, -890.28906, 1217.8906, -891.46875, 1217.0781, -634.15625, 1128.1563, -628.5078, 1083.6016, -654.2578, 1098.0703, -754, 991.1875, -909.8125, 1108.8281, -942.2422, 1052.2891, -897.21094, 1420.7578, -1788.7969, 1563.2734, -1768.0313, 1545.9688, -1694.7891, 1292.3828, -1681.6016, 1264, -1695.2969, 1264, -2024.7188, 42.4375, -1747.1719, 36.5625, -1384.1172, -48.773438, -1403.6719, 499.46875, -1612.0078, 495.09375, -1674.6172, 857.03906, -1681.2109, 789.7422, -1654.4375, 49.25, -1165.9219, 53.296875, -985.5078, -59.132813, -1272.9766, 444.8672, -1173.8438, 199.35156, -984.47656, 135.29688, -980.75, 131.39844, -1158.4531, 245.15625, -1206.1563, -584.03906, -2343.3281, -281, -2349.3906, -281, -2264.8203, -618.46875, -2287.5234, 1157.9688, -2124.1875, 1166.0703, -2123.4766, 1166.9063, -1830.5, 987, -1833.5, 1112.6563, -2093.6563, 842.15625, -1994.2109, 1028.8438, -2096.7578, 915.78125, -1889.8281, 396.10938, -275.97656, 1630.4766, -276.96875, 1626.4922, -39.890625, -875.6875, -31.101563, 141.47656, -274.09375, 137.47656, -526, 316.1328, -526, 389.21875, -459.10156, 730.2969, -2076.2734, 725.90625, -2245.8125, 807.6719, -2248.1875, 816.60156, -2150, 765.8672, -2072.7813, -683.3125, -601.90625, -685.2422, -676.14844, -624.2031, -678.5078, -628, -650.10156, -873.28906, -271.07813, 133.40625, -1373.6484, 135.47656, -1489.6172, 273.17188, -1492.5781, 233.90625, -1438.3281, 157.10938, -1361.5391, -296.65625, -727.03125, -169.0625, -713.75, -160.96094, -604.39844, -238.82813, -592.3203, -410.25, -695.7578, 375.53125, -1446.0234, 280.10938, -1561, 367.60156, -1561, 493.54688, -1443.3438, -138.21875, -2238.8203, -706.2422, -2204.7031, 1105.0703, -859, 1058.5078, -859, 1194.5078, -941.2578, 1267.7109, -1398.5469, 1196.2188, -1389.9063, 1177.2031, -1468.9375, 1187.3984, -1562.1797, 1009.1172, -2150, 919.3125, -1739.2422, 987, -1701.6797, 1298.1016, -1404, 1333.3672, -1320.9609, -662.9219, -1001.34375, -692.4297, -1153.9688, -668.7031, -1438.6797, -548.52344, -1331.7578, -474.21094, -1242.2813, 1425.2578, -1899.6719, 1415.75, -1860.5625, -567.4375, -700.3203, -628, -557.7969, -728.5078, -509.17188, -765.52344, -590.7031, -741.8672, -509.5, -763.1406, -560.03125, -504.75, -1336.0234, -493.3203, -1309.9063, 458.0078, -819.21094, 614.3828, -806.77344, 622.85156, -774.4531, 637.25, -557.03125, 830.03906, -754, 913.5703, -648.8125, 807.03906, -732, 873.4531, -632.1719, 729.22656, -636.3203, 685.8281, -732, 301.3672, -924.53906, 696.9219, -1402.1328, 494.85938, -1359.0469, 678.28125, -1457.0625, 1108.9922, -1283.7734, -572.89844, -1411.5781, -684.28906, -1468.9531, 1137.8281, -1443.4219, 1137.9531, -1445.3906, 1101.6016, -1646.7031)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 3, 2, 6), PackedInt32Array(6, 7, 8, 4), PackedInt32Array(6, 2, 9, 10), PackedInt32Array(11, 12, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 23, 24, 25, 13), PackedInt32Array(26, 27, 28), PackedInt32Array(29, 30, 31, 32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(45, 44, 43, 46), PackedInt32Array(47, 48, 49), PackedInt32Array(50, 51, 52, 53, 54, 55), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(59, 58, 60, 61, 62), PackedInt32Array(63, 59, 62, 64, 65), PackedInt32Array(66, 67, 68, 69, 70, 71), PackedInt32Array(72, 45, 46, 73, 74), PackedInt32Array(75, 76, 77, 78, 79), PackedInt32Array(79, 80, 11), PackedInt32Array(65, 64, 81, 82, 83), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(88, 89, 19, 90), PackedInt32Array(91, 92, 93, 94, 95), PackedInt32Array(96, 97, 98, 35, 99), PackedInt32Array(100, 101, 102, 103, 104), PackedInt32Array(105, 106, 104, 103, 107), PackedInt32Array(108, 109, 110, 111, 112), PackedInt32Array(108, 112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119, 120), PackedInt32Array(121, 122, 123, 124), PackedInt32Array(111, 125, 112), PackedInt32Array(126, 127, 128, 129, 130), PackedInt32Array(131, 132, 133, 134, 135), PackedInt32Array(136, 128, 137, 138, 139), PackedInt32Array(29, 140, 30), PackedInt32Array(98, 29, 35), PackedInt32Array(99, 35, 141, 53), PackedInt32Array(142, 143, 74, 73, 144, 66), PackedInt32Array(90, 83, 82), PackedInt32Array(79, 78, 145, 146, 147, 148), PackedInt32Array(105, 120, 119, 149, 106), PackedInt32Array(150, 107, 103, 151), PackedInt32Array(145, 152, 153), PackedInt32Array(18, 154, 155, 156, 157, 158), PackedInt32Array(79, 11, 13, 25, 159, 160), PackedInt32Array(79, 160, 75), PackedInt32Array(49, 21, 20, 131, 135, 161), PackedInt32Array(123, 47, 49, 161, 124), PackedInt32Array(121, 124, 162, 163), PackedInt32Array(164, 121, 163, 165, 166), PackedInt32Array(164, 166, 51), PackedInt32Array(50, 164, 51), PackedInt32Array(86, 150, 151), PackedInt32Array(157, 167, 168, 158), PackedInt32Array(169, 170, 171, 172, 115, 114), PackedInt32Array(71, 142, 66), PackedInt32Array(173, 71, 70, 174), PackedInt32Array(175, 173, 174, 176, 177), PackedInt32Array(178, 175, 177, 172), PackedInt32Array(171, 178, 172), PackedInt32Array(169, 114, 179, 91), PackedInt32Array(91, 179, 92), PackedInt32Array(180, 15, 14, 181, 139, 182), PackedInt32Array(153, 36, 40, 183, 146, 145), PackedInt32Array(156, 184, 157), PackedInt32Array(183, 40, 91, 17), PackedInt32Array(50, 55, 185, 156, 155), PackedInt32Array(84, 87, 182, 139, 138), PackedInt32Array(90, 82, 126, 130, 26, 28), PackedInt32Array(186, 187, 147, 146), PackedInt32Array(79, 148, 188), PackedInt32Array(151, 79, 188, 87, 86), PackedInt32Array(128, 136, 129), PackedInt32Array(88, 90, 28, 95, 94), PackedInt32Array(53, 141, 54), PackedInt32Array(18, 158, 90, 19), PackedInt32Array(91, 95, 17), PackedInt32Array(183, 17, 16)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(111, -304, 107, -556, 285, -556, 272, -907, 192, -954, 106, -949, 102, -1131, 80, -1133, 84, -955, -220, -960, -264, -837, -266, -754, -141, -741, -129, -579, -245, -561, -419, -666, -557, -670, -598, -636, -598, -539, -722, -479, -762, -480, -786, -537, -883, -577, -890, -2302, -742, -2282, -638, -2313, -601, -2373, -251, -2380, -251, -2280, -217, -2255, -118, -2273, -99, -2216, -65, -2205, -37, -2104, -18, -2084, -231, -2079, -342, -2117, -344, -2179, -681, -2175, -707, -2027, -701, -1501, -665, -1497, -648, -1464, -549, -1436, -527, -1364, -486, -1368, -465, -1320, -452, -1274, -87, -1301, -79, -1402, -93, -1475, -169, -1512, -166, -1710, -481, -1709, -489, -1801, -456, -1788, -362, -1784, -308, -1818, -133, -1818, -110, -1787, -79, -1772, 61, -1778, 73, -1781, 67, -1411, 104, -1407, 106, -1519, 246, -1522, 253, -1591, 362, -1591, 468, -1632, 462, -1718, 460, -1704, 845, -1711, 889, -1752, 886, -1880, 819, -1975, 752, -2044, 701, -2049, 696, -2242, 666, -2243, 664, -2082, 610, -2079, 475, -2113, 404, -2125, 395, -2140, 264, -2139, 258, -2215, 443, -2226, 472, -2299, 653, -2308, 663, -2274, 835, -2279, 844, -2180, 1030, -2180, 1050, -2126, 1104, -2124, 1150, -2155, 1196, -2151, 1197, -1800, 1017, -1803, 1017, -1731, 1234, -1726, 1234, -2057, 1316, -2051, 1320, -2124, 1349, -2118, 1395, -2052, 1488, -2065, 1581, -2062, 1631, -1949, 1459, -1949, 1455, -1895, 1446, -1858, 1449, -1815, 1600, -1793, 1570, -1666, 1320, -1653, 1301, -1435, 1340, -1442, 1329, -1408, 1360, -1335, 1383, -1299, 1462, -1318, 1472, -1125, 1275, -1132, 1276, -1148, 476, -1144, 487, -847, 638, -835, 649, -793, 695, -762, 795, -762, 818, -784, 1070, -784, 1073, -829, 1033, -829, 1026, -872, 963, -885, 955, -990, 818, -993, 813, -1008, 759, -1016, 761, -1039, 834, -1038, 852, -1097, 959, -1099, 952, -1056, 1103, -1047, 1130, -972, 1218, -971, 1230, -923, 1248, -925, 1247, -606, 1121, -598, 1076, -624, 920, -619, 879, -602, 740, -606, 653, -531, 420, -439, 425, -306, 1661, -307, 1656, -10, -906, -1, -903, -301)])
-agent_radius = 30.0
+[sub_resource type="GDScript" id="GDScript_ym6ig"]
+script/source = "extends Node2D
+
+@onready var in_transition: Sprite2D = $In_transition
+
+func _ready() -> void:
+	var tween = create_tween()
+	tween.tween_property(in_transition, \"modulate:a\", 0, 4)
+"
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0fog"]
 light_mode = 1
@@ -146,9 +149,6 @@ radius = 126.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_74edn"]
 size = Vector2(553, 67)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wiblk"]
-size = Vector2(550.00024, 105)
-
 [sub_resource type="Curve2D" id="Curve2D_ym6ig"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 1.8751221, 0, 0, 0, 0, 0, -207.49988, 456.24994, 0, 0, 0, 0, -698.1248, 272.5, 0, 0, 0, 0, -845.6248, 414.37494, 0, 0, 0, 0, -615.6249, 517.49994, 0, 0, 0, 0, -459.37485, 210.625, 0, 0, 0, 0, 1.8751221, 0)
@@ -179,27 +179,19 @@ _data = {
 }
 point_count = 7
 
-[node name="junkyard" type="Node2D" unique_id=769790424]
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_p2u0y"]
+vertices = PackedVector2Array(291.71094, -2169.211, 290.3125, -2186.8594, 463.82813, -2197.1875, 411.90625, -2170.1328, 481.17188, -2142.3828, 422.60938, -2152.2734, 636.1875, -2258.8281, 634.34375, -2110.3906, 612.89844, -2109.2031, 492.75, -2269.9922, 630.8828, -2276.8594, 1344.2813, -2018.8516, 1346.9922, -2068.3984, 1380.9219, -2019.7422, 526.21875, -1310.5078, 671.09375, -1340.7813, 704.77344, -1290.2578, 523.21875, -1189.1563, -337.5703, -978.89844, -241, -990.35156, -293.8672, -842.5469, -342.78906, -874.46094, 1489.6172, -2034.9297, 1561.1875, -2032.6172, 1584.9219, -1979, 1431.1406, -1979, 226.64844, -1288.3438, 230.03906, -1289.0078, 223.86719, -1252.9766, -224.35156, -2223.1719, -122.65625, -2192.1328, -89.59375, -2181.4297, -70.5625, -2112.7734, -226.34375, -2109.1094, -312.6797, -2138.6719, -314.96094, -2209.3516, 1369.2266, -1264.8281, 1433.8984, -1280.3828, 1440.3438, -1156.1406, 1306.8594, -1160.8828, 1307.9375, -1178.1563, 874.3281, -1067.4063, 923.6094, -1068.3281, 917.0469, -1028.0313, 860.5, -1022.0703, 982.85156, -1019.39844, 1081.4688, -1018.21875, -558.3594, -751.5, -567.21094, -780.59375, -457.85156, -797.3594, -773.40625, -1150.8516, -853.0781, -597.1094, -859.8594, -2267.6484, -739.6172, -2251.4063, -737.03125, -2029.4531, -730.7031, -1474.1094, -453.5, -1739.0781, -455.1328, -1757.9297, -353.9297, -1753.6328, -135.53906, -1740.1016, -299.34375, -1788, -148.10156, -1788, -129.70313, -1763.2109, -138.71094, -1530.6094, -85.25781, -1741.7031, -66.36719, -1495.3984, 1207.25, -890.28906, 1217.8906, -891.46875, 1217.0781, -634.15625, 1128.1563, -628.5078, 1083.6016, -654.2578, 1098.0703, -754, 991.1875, -909.8125, 1108.8281, -942.2422, 1052.2891, -897.21094, 1420.7578, -1788.7969, 1563.2734, -1768.0313, 1545.9688, -1694.7891, 1292.3828, -1681.6016, 1264, -1695.2969, 1264, -2024.7188, 42.4375, -1747.1719, 36.5625, -1384.1172, -48.773438, -1403.6719, 499.46875, -1612.0078, 495.09375, -1674.6172, 857.03906, -1681.2109, 789.7422, -1654.4375, 49.25, -1165.9219, 53.296875, -985.5078, -59.132813, -1272.9766, 444.8672, -1173.8438, 199.35156, -984.47656, 135.29688, -980.75, 131.39844, -1158.4531, 245.15625, -1206.1563, -584.03906, -2343.3281, -281, -2349.3906, -281, -2264.8203, -618.46875, -2287.5234, 1157.9688, -2124.1875, 1166.0703, -2123.4766, 1166.9063, -1830.5, 987, -1833.5, 1112.6563, -2093.6563, 842.15625, -1994.2109, 1028.8438, -2096.7578, 915.78125, -1889.8281, 396.10938, -275.97656, 1630.4766, -276.96875, 1626.4922, -39.890625, -875.6875, -31.101563, 141.47656, -274.09375, 137.47656, -526, 316.1328, -526, 389.21875, -459.10156, 730.2969, -2076.2734, 725.90625, -2245.8125, 807.6719, -2248.1875, 816.60156, -2150, 765.8672, -2072.7813, -683.3125, -601.90625, -685.2422, -676.14844, -624.2031, -678.5078, -628, -650.10156, -873.28906, -271.07813, 133.40625, -1373.6484, 135.47656, -1489.6172, 273.17188, -1492.5781, 233.90625, -1438.3281, 157.10938, -1361.5391, -296.65625, -727.03125, -169.0625, -713.75, -160.96094, -604.39844, -238.82813, -592.3203, -410.25, -695.7578, 375.53125, -1446.0234, 280.10938, -1561, 367.60156, -1561, 493.54688, -1443.3438, -138.21875, -2238.8203, -706.2422, -2204.7031, 1105.0703, -859, 1058.5078, -859, 1194.5078, -941.2578, 1267.7109, -1398.5469, 1196.2188, -1389.9063, 1177.2031, -1468.9375, 1187.3984, -1562.1797, 1009.1172, -2150, 919.3125, -1739.2422, 987, -1701.6797, 1298.1016, -1404, 1333.3672, -1320.9609, -662.9219, -1001.34375, -692.4297, -1153.9688, -668.7031, -1438.6797, -548.52344, -1331.7578, -474.21094, -1242.2813, 1425.2578, -1899.6719, 1415.75, -1860.5625, -567.4375, -700.3203, -628, -557.7969, -728.5078, -509.17188, -765.52344, -590.7031, -741.8672, -509.5, -763.1406, -560.03125, -504.75, -1336.0234, -493.3203, -1309.9063, 458.0078, -819.21094, 614.3828, -806.77344, 622.85156, -774.4531, 637.25, -557.03125, 830.03906, -754, 913.5703, -648.8125, 807.03906, -732, 873.4531, -632.1719, 729.22656, -636.3203, 685.8281, -732, 301.3672, -924.53906, 696.9219, -1402.1328, 494.85938, -1359.0469, 678.28125, -1457.0625, 1108.9922, -1283.7734, -572.89844, -1411.5781, -684.28906, -1468.9531, 1137.8281, -1443.4219, 1137.9531, -1445.3906, 1101.6016, -1646.7031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 3, 2, 6), PackedInt32Array(6, 7, 8, 4), PackedInt32Array(6, 2, 9, 10), PackedInt32Array(11, 12, 13), PackedInt32Array(14, 15, 16, 17), PackedInt32Array(18, 19, 20, 21), PackedInt32Array(22, 23, 24, 25, 13), PackedInt32Array(26, 27, 28), PackedInt32Array(29, 30, 31, 32, 33, 34, 35), PackedInt32Array(36, 37, 38, 39, 40), PackedInt32Array(41, 42, 43, 44), PackedInt32Array(45, 44, 43, 46), PackedInt32Array(47, 48, 49), PackedInt32Array(50, 51, 52, 53, 54, 55), PackedInt32Array(56, 57, 58, 59), PackedInt32Array(59, 58, 60, 61, 62), PackedInt32Array(63, 59, 62, 64, 65), PackedInt32Array(66, 67, 68, 69, 70, 71), PackedInt32Array(72, 45, 46, 73, 74), PackedInt32Array(75, 76, 77, 78, 79), PackedInt32Array(79, 80, 11), PackedInt32Array(65, 64, 81, 82, 83), PackedInt32Array(84, 85, 86, 87), PackedInt32Array(88, 89, 19, 90), PackedInt32Array(91, 92, 93, 94, 95), PackedInt32Array(96, 97, 98, 35, 99), PackedInt32Array(100, 101, 102, 103, 104), PackedInt32Array(105, 106, 104, 103, 107), PackedInt32Array(108, 109, 110, 111, 112), PackedInt32Array(108, 112, 113, 114, 115), PackedInt32Array(116, 117, 118, 119, 120), PackedInt32Array(121, 122, 123, 124), PackedInt32Array(111, 125, 112), PackedInt32Array(126, 127, 128, 129, 130), PackedInt32Array(131, 132, 133, 134, 135), PackedInt32Array(136, 128, 137, 138, 139), PackedInt32Array(29, 140, 30), PackedInt32Array(98, 29, 35), PackedInt32Array(99, 35, 141, 53), PackedInt32Array(142, 143, 74, 73, 144, 66), PackedInt32Array(90, 83, 82), PackedInt32Array(79, 78, 145, 146, 147, 148), PackedInt32Array(105, 120, 119, 149, 106), PackedInt32Array(150, 107, 103, 151), PackedInt32Array(145, 152, 153), PackedInt32Array(18, 154, 155, 156, 157, 158), PackedInt32Array(79, 11, 13, 25, 159, 160), PackedInt32Array(79, 160, 75), PackedInt32Array(49, 21, 20, 131, 135, 161), PackedInt32Array(123, 47, 49, 161, 124), PackedInt32Array(121, 124, 162, 163), PackedInt32Array(164, 121, 163, 165, 166), PackedInt32Array(164, 166, 51), PackedInt32Array(50, 164, 51), PackedInt32Array(86, 150, 151), PackedInt32Array(157, 167, 168, 158), PackedInt32Array(169, 170, 171, 172, 115, 114), PackedInt32Array(71, 142, 66), PackedInt32Array(173, 71, 70, 174), PackedInt32Array(175, 173, 174, 176, 177), PackedInt32Array(178, 175, 177, 172), PackedInt32Array(171, 178, 172), PackedInt32Array(169, 114, 179, 91), PackedInt32Array(91, 179, 92), PackedInt32Array(180, 15, 14, 181, 139, 182), PackedInt32Array(153, 36, 40, 183, 146, 145), PackedInt32Array(156, 184, 157), PackedInt32Array(183, 40, 91, 17), PackedInt32Array(50, 55, 185, 156, 155), PackedInt32Array(84, 87, 182, 139, 138), PackedInt32Array(90, 82, 126, 130, 26, 28), PackedInt32Array(186, 187, 147, 146), PackedInt32Array(79, 148, 188), PackedInt32Array(151, 79, 188, 87, 86), PackedInt32Array(128, 136, 129), PackedInt32Array(88, 90, 28, 95, 94), PackedInt32Array(53, 141, 54), PackedInt32Array(18, 158, 90, 19), PackedInt32Array(91, 95, 17), PackedInt32Array(183, 17, 16)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(111, -304, 107, -556, 285, -556, 272, -907, 192, -954, 106, -949, 102, -1131, 80, -1133, 84, -955, -220, -960, -264, -837, -266, -754, -141, -741, -129, -579, -245, -561, -419, -666, -557, -670, -598, -636, -598, -539, -722, -479, -762, -480, -786, -537, -883, -577, -890, -2302, -742, -2282, -638, -2313, -601, -2373, -251, -2380, -251, -2280, -217, -2255, -118, -2273, -99, -2216, -65, -2205, -37, -2104, -18, -2084, -231, -2079, -342, -2117, -344, -2179, -681, -2175, -707, -2027, -701, -1501, -665, -1497, -648, -1464, -549, -1436, -527, -1364, -486, -1368, -465, -1320, -452, -1274, -87, -1301, -79, -1402, -93, -1475, -169, -1512, -166, -1710, -481, -1709, -489, -1801, -456, -1788, -362, -1784, -308, -1818, -133, -1818, -110, -1787, -79, -1772, 61, -1778, 73, -1781, 67, -1411, 104, -1407, 106, -1519, 246, -1522, 253, -1591, 362, -1591, 468, -1632, 462, -1718, 460, -1704, 845, -1711, 889, -1752, 886, -1880, 819, -1975, 752, -2044, 701, -2049, 696, -2242, 666, -2243, 664, -2082, 610, -2079, 475, -2113, 404, -2125, 395, -2140, 264, -2139, 258, -2215, 443, -2226, 472, -2299, 653, -2308, 663, -2274, 835, -2279, 844, -2180, 1030, -2180, 1050, -2126, 1104, -2124, 1150, -2155, 1196, -2151, 1197, -1800, 1017, -1803, 1017, -1731, 1234, -1726, 1234, -2057, 1316, -2051, 1320, -2124, 1349, -2118, 1395, -2052, 1488, -2065, 1581, -2062, 1631, -1949, 1459, -1949, 1455, -1895, 1446, -1858, 1449, -1815, 1600, -1793, 1570, -1666, 1320, -1653, 1301, -1435, 1340, -1442, 1329, -1408, 1360, -1335, 1383, -1299, 1462, -1318, 1472, -1125, 1275, -1132, 1276, -1148, 476, -1144, 487, -847, 638, -835, 649, -793, 695, -762, 795, -762, 818, -784, 1070, -784, 1073, -829, 1033, -829, 1026, -872, 963, -885, 955, -990, 818, -993, 813, -1008, 759, -1016, 761, -1039, 834, -1038, 852, -1097, 959, -1099, 952, -1056, 1103, -1047, 1130, -972, 1218, -971, 1230, -923, 1248, -925, 1247, -606, 1121, -598, 1076, -624, 920, -619, 879, -602, 740, -606, 653, -531, 420, -439, 425, -306, 1661, -307, 1656, -10, -906, -1, -903, -301)])
+agent_radius = 30.0
+
+[node name="junkyard" type="Node2D"]
 y_sort_enabled = true
+script = SubResource("GDScript_ym6ig")
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=200207171]
-navigation_polygon = SubResource("NavigationPolygon_p2u0y")
+[node name="background" type="Node2D" parent="."]
 
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1736537442]
-vertices = PackedVector2Array(-736, -625, -714, -628, -716, -705, -638, -708, -592, -759, -606, -805, -469, -826, -372, -891, -369, -951, -688, -973, -717, -1123, -743, -1122)
-affect_navigation_mesh = true
-
-[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=209971562]
-vertices = PackedVector2Array(247, -1409, 199, -1361, 237, -1321, 267, -1327, 255, -1257, 265, -1235, 494, -1221, 496, -1302, 465, -1350, 464, -1414, 376, -1416)
-affect_navigation_mesh = true
-
-[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=517508002]
-vertices = PackedVector2Array(807, -1624, 711, -1454, 729, -1401, 705, -1344, 721, -1320, 1095, -1314, 1155, -1387, 1107, -1431, 1109, -1463, 1149, -1487, 1156, -1551, 1089, -1617)
-affect_navigation_mesh = true
-
-[node name="background" type="Node2D" parent="." unique_id=665154000]
-
-[node name="TextureRect" type="TextureRect" parent="background" unique_id=1573100066]
+[node name="TextureRect" type="TextureRect" parent="background"]
 z_index = -100
 offset_left = -1815.0
 offset_top = -2950.9998
@@ -210,53 +202,54 @@ mouse_filter = 2
 texture = ExtResource("1_7d1lf")
 stretch_mode = 1
 
-[node name="CanvasModulate" type="CanvasModulate" parent="background" unique_id=966142769]
+[node name="CanvasModulate" type="CanvasModulate" parent="background"]
 color = Color(0.85814106, 0.85814106, 0.85814106, 1)
 
-[node name="Items" type="Node2D" parent="." unique_id=183804994]
+[node name="Pause Menu" parent="." instance=ExtResource("56_q0fog")]
+
+[node name="Items" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="item" type="StaticBody2D" parent="Items" unique_id=1385910317]
+[node name="item" type="StaticBody2D" parent="Items"]
 y_sort_enabled = true
 position = Vector2(-206, -2172)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("2_8g2fq")
 
-[node name="Spindal" type="Sprite2D" parent="Items/item" unique_id=1668579485]
+[node name="Spindal" type="Sprite2D" parent="Items/item"]
 material = SubResource("CanvasItemMaterial_q0fog")
 position = Vector2(0, 20)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("3_opqnl")
 offset = Vector2(0, -390)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/item" unique_id=126943260]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Items/item"]
 polygon = PackedVector2Array(-57, 13, -29, 20, 56, -2, 24, -9)
 
-[node name="pickup area" type="Area2D" parent="Items/item" unique_id=394385513]
+[node name="pickup area" type="Area2D" parent="Items/item"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item/pickup area" unique_id=1184420308]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item/pickup area"]
 position = Vector2(1, -21)
 shape = SubResource("CircleShape2D_hht8h")
 
-[node name="hint overlay" type="TextureRect" parent="Items/item" unique_id=1281617973]
+[node name="hint overlay" type="TextureRect" parent="Items/item"]
 z_index = 100
 custom_minimum_size = Vector2(60, 60)
 offset_left = -22.999996
 offset_top = -286.0001
 offset_right = 196.0
 offset_bottom = -72.00009
-pivot_offset_ratio = Vector2(0.1, 1)
 texture = ExtResource("4_q0fog")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="PointLight2D" type="PointLight2D" parent="Items/item" unique_id=1476514978]
+[node name="PointLight2D" type="PointLight2D" parent="Items/item"]
 position = Vector2(0, -2)
 scale = Vector2(6, 6)
 texture = SubResource("GradientTexture2D_q0fog")
 
-[node name="item2" type="StaticBody2D" parent="Items" unique_id=93060810]
+[node name="item2" type="StaticBody2D" parent="Items"]
 y_sort_enabled = true
 position = Vector2(853, -1621)
 collision_layer = 3
@@ -264,38 +257,37 @@ collision_mask = 3
 script = ExtResource("2_8g2fq")
 item = 3
 
-[node name="pickup area" type="Area2D" parent="Items/item2" unique_id=1338255386]
+[node name="pickup area" type="Area2D" parent="Items/item2"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item2/pickup area" unique_id=401068335]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item2/pickup area"]
 position = Vector2(5, 10)
 rotation = 1.3700835
 shape = SubResource("CapsuleShape2D_p2u0y")
 
-[node name="hint overlay" type="TextureRect" parent="Items/item2" unique_id=1481427973]
+[node name="hint overlay" type="TextureRect" parent="Items/item2"]
 z_index = 100
 custom_minimum_size = Vector2(60, 60)
 offset_left = -21.66
 offset_top = -243.535
 offset_right = 197.34
 offset_bottom = -29.535004
-pivot_offset_ratio = Vector2(0.1, 1)
 texture = ExtResource("4_q0fog")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Flute" type="Sprite2D" parent="Items/item2" unique_id=329594627]
+[node name="Flute" type="Sprite2D" parent="Items/item2"]
 material = SubResource("CanvasItemMaterial_ym6ig")
 position = Vector2(6.0000277, 123.99997)
 scale = Vector2(0.13339059, 0.13339058)
 texture = ExtResource("5_ym6ig")
 offset = Vector2(0, -850)
 
-[node name="PointLight2D" type="PointLight2D" parent="Items/item2" unique_id=1491802473]
+[node name="PointLight2D" type="PointLight2D" parent="Items/item2"]
 position = Vector2(0, -1)
 scale = Vector2(6, 6)
 texture = SubResource("GradientTexture2D_q0fog")
 
-[node name="item3" type="StaticBody2D" parent="Items" unique_id=904407070]
+[node name="item3" type="StaticBody2D" parent="Items"]
 y_sort_enabled = true
 position = Vector2(901.075, -1085.785)
 collision_layer = 3
@@ -303,41 +295,40 @@ collision_mask = 3
 script = ExtResource("2_8g2fq")
 item = 2
 
-[node name="pickup area" type="Area2D" parent="Items/item3" unique_id=699696550]
+[node name="pickup area" type="Area2D" parent="Items/item3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item3/pickup area" unique_id=1210028300]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item3/pickup area"]
 position = Vector2(2.5, 34)
 shape = SubResource("RectangleShape2D_q1hgp")
 
-[node name="hint overlay" type="TextureRect" parent="Items/item3" unique_id=1292672751]
+[node name="hint overlay" type="TextureRect" parent="Items/item3"]
 z_index = 100
 custom_minimum_size = Vector2(60, 60)
 offset_left = -21.66
 offset_top = -243.535
 offset_right = 197.34
 offset_bottom = -29.535004
-pivot_offset_ratio = Vector2(0.1, 1)
 texture = ExtResource("4_q0fog")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Pickle" type="Sprite2D" parent="Items/item3" unique_id=1141541708]
+[node name="Pickle" type="Sprite2D" parent="Items/item3"]
 material = SubResource("CanvasItemMaterial_wiblk")
 position = Vector2(2, 36)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("6_wiblk")
 offset = Vector2(0, -344.105)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item3" unique_id=1393510556]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item3"]
 position = Vector2(2, 29)
 shape = SubResource("CircleShape2D_0wx3d")
 
-[node name="PointLight2D" type="PointLight2D" parent="Items/item3" unique_id=2095050497]
+[node name="PointLight2D" type="PointLight2D" parent="Items/item3"]
 position = Vector2(1.9249878, 29.785034)
 scale = Vector2(6, 6)
 texture = SubResource("GradientTexture2D_q0fog")
 
-[node name="item4" type="StaticBody2D" parent="Items" unique_id=1336921044]
+[node name="item4" type="StaticBody2D" parent="Items"]
 y_sort_enabled = true
 position = Vector2(-277, -706)
 collision_layer = 3
@@ -345,41 +336,40 @@ collision_mask = 3
 script = ExtResource("2_8g2fq")
 item = 1
 
-[node name="pickup area" type="Area2D" parent="Items/item4" unique_id=1931901505]
+[node name="pickup area" type="Area2D" parent="Items/item4"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item4/pickup area" unique_id=1573821726]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item4/pickup area"]
 position = Vector2(9, 43)
 shape = SubResource("CircleShape2D_3n5kf")
 
-[node name="hint overlay" type="TextureRect" parent="Items/item4" unique_id=1702733367]
+[node name="hint overlay" type="TextureRect" parent="Items/item4"]
 z_index = 100
 custom_minimum_size = Vector2(60, 60)
 offset_left = -21.66
 offset_top = -243.535
 offset_right = 197.34
 offset_bottom = -29.535004
-pivot_offset_ratio = Vector2(0.1, 1)
 texture = ExtResource("4_q0fog")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Lemonade" type="Sprite2D" parent="Items/item4" unique_id=1473065374]
+[node name="Lemonade" type="Sprite2D" parent="Items/item4"]
 material = SubResource("CanvasItemMaterial_43dqk")
 position = Vector2(9.9999695, 45)
 scale = Vector2(0.15228201, 0.152282)
 texture = ExtResource("7_43dqk")
 offset = Vector2(52.24, -132.17)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item4" unique_id=1338699763]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item4"]
 position = Vector2(9, 43)
 shape = SubResource("CircleShape2D_qdwrf")
 
-[node name="PointLight2D" type="PointLight2D" parent="Items/item4" unique_id=1812628324]
+[node name="PointLight2D" type="PointLight2D" parent="Items/item4"]
 position = Vector2(10, 42)
 scale = Vector2(6, 6)
 texture = SubResource("GradientTexture2D_q0fog")
 
-[node name="item5" type="StaticBody2D" parent="Items" unique_id=1410090574]
+[node name="item5" type="StaticBody2D" parent="Items"]
 y_sort_enabled = true
 position = Vector2(346.645, -2224.43)
 collision_layer = 3
@@ -387,1254 +377,1248 @@ collision_mask = 3
 script = ExtResource("2_8g2fq")
 item = 4
 
-[node name="pickup area" type="Area2D" parent="Items/item5" unique_id=216673592]
+[node name="pickup area" type="Area2D" parent="Items/item5"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item5/pickup area" unique_id=774492092]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item5/pickup area"]
 position = Vector2(8, 36)
 shape = SubResource("CircleShape2D_e50mp")
 
-[node name="hint overlay" type="TextureRect" parent="Items/item5" unique_id=440188188]
+[node name="hint overlay" type="TextureRect" parent="Items/item5"]
 z_index = 100
 custom_minimum_size = Vector2(60, 60)
 offset_left = -21.66
 offset_top = -243.535
 offset_right = 197.34
 offset_bottom = -29.535004
-pivot_offset_ratio = Vector2(0.1, 1)
 texture = ExtResource("4_q0fog")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Mask" type="Sprite2D" parent="Items/item5" unique_id=1130035873]
+[node name="Mask" type="Sprite2D" parent="Items/item5"]
 material = SubResource("CanvasItemMaterial_0r54b")
 position = Vector2(7, 50)
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("8_0r54b")
 offset = Vector2(0, -140.085)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item5" unique_id=56090059]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Items/item5"]
 position = Vector2(8, 37)
 shape = SubResource("CircleShape2D_oxylk")
 
-[node name="PointLight2D" type="PointLight2D" parent="Items/item5" unique_id=1678021586]
+[node name="PointLight2D" type="PointLight2D" parent="Items/item5"]
 position = Vector2(7.355011, 35.42993)
 scale = Vector2(6, 6)
 texture = SubResource("GradientTexture2D_q0fog")
 
-[node name="map" type="Node2D" parent="." unique_id=702837998]
+[node name="map" type="Node2D" parent="."]
 y_sort_enabled = true
 scale = Vector2(0.4, 0.4)
 
-[node name="mesh walls" type="Node2D" parent="map" unique_id=765452409]
+[node name="mesh walls" type="Node2D" parent="map"]
 y_sort_enabled = true
 
-[node name="wire wall h" parent="map/mesh walls" unique_id=185656095 instance=ExtResource("1_365wu")]
+[node name="wire wall h" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(1432, -804)
 
-[node name="wire wall h2" parent="map/mesh walls" unique_id=2126262560 instance=ExtResource("1_365wu")]
+[node name="wire wall h2" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(1924, -804)
 
-[node name="wire wall h3" parent="map/mesh walls" unique_id=1918879886 instance=ExtResource("1_365wu")]
+[node name="wire wall h3" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2416, -804)
 
-[node name="wire wall h4" parent="map/mesh walls" unique_id=1679476708 instance=ExtResource("1_365wu")]
+[node name="wire wall h4" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2909, -804)
 
-[node name="wire wall h31" parent="map/mesh walls" unique_id=564011953 instance=ExtResource("1_365wu")]
+[node name="wire wall h31" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2407, -2793)
 
-[node name="wire wall h33" parent="map/mesh walls" unique_id=644218936 instance=ExtResource("1_365wu")]
+[node name="wire wall h33" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2409, -1996)
 
-[node name="wire wall h32" parent="map/mesh walls" unique_id=1047388699 instance=ExtResource("1_365wu")]
+[node name="wire wall h32" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2900, -2793)
 
-[node name="wire wall h5" parent="map/mesh walls" unique_id=96032412 instance=ExtResource("1_365wu")]
+[node name="wire wall h5" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(3402, -804)
 
-[node name="wire wall h6" parent="map/mesh walls" unique_id=1648931184 instance=ExtResource("1_365wu")]
+[node name="wire wall h6" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(3895, -804)
 
-[node name="wire wall h7" parent="map/mesh walls" unique_id=984327061 instance=ExtResource("1_365wu")]
+[node name="wire wall h7" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-1992, -781)
 
-[node name="wire wall h17" parent="map/mesh walls" unique_id=1828781870 instance=ExtResource("1_365wu")]
+[node name="wire wall h17" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-22, -4754)
 
-[node name="wire wall h18" parent="map/mesh walls" unique_id=1052738103 instance=ExtResource("1_365wu")]
+[node name="wire wall h18" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-513, -4754)
 
-[node name="wire wall h27" parent="map/mesh walls" unique_id=1598017016 instance=ExtResource("1_365wu")]
+[node name="wire wall h27" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-521, -3550)
 
-[node name="wire wall h30" parent="map/mesh walls" unique_id=897326296 instance=ExtResource("1_365wu")]
+[node name="wire wall h30" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(460, -4757)
 
-[node name="wire wall h34" parent="map/mesh walls" unique_id=805724061 instance=ExtResource("1_365wu")]
+[node name="wire wall h34" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(949, -4757)
 
-[node name="wire wall h29" parent="map/mesh walls" unique_id=1972221194 instance=ExtResource("1_365wu")]
+[node name="wire wall h29" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(3916, -4783)
 
-[node name="wire wall h8" parent="map/mesh walls" unique_id=1366351850 instance=ExtResource("1_365wu")]
+[node name="wire wall h8" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-1500, -781)
 
-[node name="wire wall h9" parent="map/mesh walls" unique_id=1098768718 instance=ExtResource("1_365wu")]
+[node name="wire wall h9" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-1008, -781)
 
-[node name="wire wall h10" parent="map/mesh walls" unique_id=955509173 instance=ExtResource("1_365wu")]
+[node name="wire wall h10" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-515, -781)
 
-[node name="wire wall h11" parent="map/mesh walls" unique_id=1982842523 instance=ExtResource("1_365wu")]
+[node name="wire wall h11" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-22, -781)
 
-[node name="wire wall h12" parent="map/mesh walls" unique_id=390086456 instance=ExtResource("1_365wu")]
+[node name="wire wall h12" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-1990, -5960)
 
-[node name="wire wall h13" parent="map/mesh walls" unique_id=232991917 instance=ExtResource("1_365wu")]
+[node name="wire wall h13" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-1498, -5960)
 
-[node name="wire wall h14" parent="map/mesh walls" unique_id=1841178649 instance=ExtResource("1_365wu")]
+[node name="wire wall h14" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-1006, -5960)
 
-[node name="wire wall h15" parent="map/mesh walls" unique_id=614234809 instance=ExtResource("1_365wu")]
+[node name="wire wall h15" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-513, -5960)
 
-[node name="wire wall h16" parent="map/mesh walls" unique_id=120548382 instance=ExtResource("1_365wu")]
+[node name="wire wall h16" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(-20, -5960)
 
-[node name="wire wall h20" parent="map/mesh walls" unique_id=1670820730 instance=ExtResource("1_365wu")]
+[node name="wire wall h20" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(456, -5959)
 
-[node name="wire wall h21" parent="map/mesh walls" unique_id=2123622032 instance=ExtResource("1_365wu")]
+[node name="wire wall h21" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(947, -5959)
 
-[node name="wire wall h22" parent="map/mesh walls" unique_id=1955853172 instance=ExtResource("1_365wu")]
+[node name="wire wall h22" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(1439, -5959)
 
-[node name="wire wall h23" parent="map/mesh walls" unique_id=277533786 instance=ExtResource("1_365wu")]
+[node name="wire wall h23" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(1931, -5959)
 
-[node name="wire wall h24" parent="map/mesh walls" unique_id=902856709 instance=ExtResource("1_365wu")]
+[node name="wire wall h24" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2423, -5959)
 
-[node name="wire wall h25" parent="map/mesh walls" unique_id=1119208198 instance=ExtResource("1_365wu")]
+[node name="wire wall h25" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(2914, -5959)
 
-[node name="wire wall h26" parent="map/mesh walls" unique_id=1453167858 instance=ExtResource("1_365wu")]
+[node name="wire wall h26" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(3405, -5959)
 
-[node name="wire wall h28" parent="map/mesh walls" unique_id=384700412 instance=ExtResource("1_365wu")]
+[node name="wire wall h28" parent="map/mesh walls" instance=ExtResource("1_365wu")]
 position = Vector2(3897, -5959)
 
-[node name="wire wall v" parent="map/mesh walls" unique_id=1771333704 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(232, -776)
 
-[node name="wire wall v2" parent="map/mesh walls" unique_id=1345548924 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v2" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(232, -1174)
 
-[node name="wire wall v3" parent="map/mesh walls" unique_id=205794992 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v3" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(232, -1568)
 
-[node name="wire wall v4" parent="map/mesh walls" unique_id=705316124 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v4" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(232, -1966)
 
-[node name="wire wall v60" type="StaticBody2D" parent="map/mesh walls" unique_id=1784556036]
+[node name="wire wall v60" type="StaticBody2D" parent="map/mesh walls"]
 y_sort_enabled = true
 position = Vector2(232, -2363)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/mesh walls/wire wall v60" unique_id=1869200135]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/mesh walls/wire wall v60"]
 position = Vector2(0, -223.5)
 shape = SubResource("RectangleShape2D_38ira")
 
-[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v60" unique_id=195969599]
+[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v60"]
 y_sort_enabled = true
 texture = ExtResource("3_st5wj")
 centered = false
 offset = Vector2(-29.085, -463.38)
 
-[node name="wire wall v20" parent="map/mesh walls" unique_id=1258015216 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v20" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -4761)
 
-[node name="wire wall v21" parent="map/mesh walls" unique_id=1896387648 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v21" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -5159)
 
-[node name="wire wall v61" parent="map/mesh walls" unique_id=1602673186 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v61" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(1683, -4358)
 
-[node name="wire wall v22" parent="map/mesh walls" unique_id=403056530 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v22" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -5553)
 
-[node name="wire wall v29" parent="map/mesh walls" unique_id=722176558 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v29" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -3962)
 
-[node name="wire wall v32" parent="map/mesh walls" unique_id=671521099 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v32" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -3565)
 
-[node name="wire wall v57" type="StaticBody2D" parent="map/mesh walls" unique_id=1921646916]
+[node name="wire wall v57" type="StaticBody2D" parent="map/mesh walls"]
 y_sort_enabled = true
 position = Vector2(1658, -2786)
 
-[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v57" unique_id=161479613]
+[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v57"]
 y_sort_enabled = true
 texture = ExtResource("3_st5wj")
 centered = false
 offset = Vector2(-29.085, -463.38)
 
-[node name="wire wall v58" parent="map/mesh walls" unique_id=191330604 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v58" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(1658, -2389)
 
-[node name="wire wall v59" parent="map/mesh walls" unique_id=1355700068 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v59" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(1657, -1991)
 
-[node name="wire wall v30" parent="map/mesh walls" unique_id=1798584848 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v30" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -4360)
 
-[node name="wire wall v31" parent="map/mesh walls" unique_id=972622210 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v31" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(214, -4754)
 
-[node name="wire wall v63" parent="map/mesh walls" unique_id=1940735234 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v63" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(1684, -4757)
 
-[node name="wire wall v33" parent="map/mesh walls" unique_id=968552865 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v33" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1251, -3961)
 
-[node name="wire wall v34" parent="map/mesh walls" unique_id=802823806 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v34" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1251, -3564)
 
-[node name="wire wall v35" parent="map/mesh walls" unique_id=2131040494 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v35" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1251, -4359)
 
-[node name="wire wall v36" parent="map/mesh walls" unique_id=1793839155 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v36" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1251, -4753)
 
-[node name="wire wall v23" type="StaticBody2D" parent="map/mesh walls" unique_id=1649024948]
+[node name="wire wall v23" type="StaticBody2D" parent="map/mesh walls"]
 y_sort_enabled = true
 position = Vector2(214, -5951)
 
-[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v23" unique_id=1740397208]
+[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v23"]
 y_sort_enabled = true
 texture = ExtResource("3_st5wj")
 centered = false
 offset = Vector2(-29.085, -463.38)
 
-[node name="wire wall v24" parent="map/mesh walls" unique_id=516020986 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v24" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2249, -4750)
 
-[node name="wire wall v25" parent="map/mesh walls" unique_id=1821037350 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v25" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2249, -5148)
 
-[node name="wire wall v26" parent="map/mesh walls" unique_id=1902776578 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v26" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2249, -5542)
 
-[node name="wire wall v27" type="StaticBody2D" parent="map/mesh walls" unique_id=114025435]
+[node name="wire wall v27" type="StaticBody2D" parent="map/mesh walls"]
 y_sort_enabled = true
 position = Vector2(-2249, -5940)
 
-[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v27" unique_id=929546143]
+[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v27"]
 y_sort_enabled = true
 texture = ExtResource("3_st5wj")
 centered = false
 offset = Vector2(-29.085, -463.38)
 
-[node name="wire wall v5" parent="map/mesh walls" unique_id=308607209 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v5" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1822, -1591)
 
-[node name="wire wall v16" parent="map/mesh walls" unique_id=1750275661 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v16" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1822, -1990)
 
-[node name="wire wall v17" parent="map/mesh walls" unique_id=2108366076 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v17" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-1822, -2383)
 
-[node name="wire wall v6" parent="map/mesh walls" unique_id=17108473 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v6" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -775)
 
-[node name="wire wall v7" parent="map/mesh walls" unique_id=109819864 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v7" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -1173)
 
-[node name="wire wall v8" parent="map/mesh walls" unique_id=1158325641 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v8" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -1567)
 
-[node name="wire wall v9" parent="map/mesh walls" unique_id=1924255879 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v9" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -1965)
 
-[node name="wire wall v10" parent="map/mesh walls" unique_id=839445091 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v10" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -2365)
 
-[node name="wire wall v11" parent="map/mesh walls" unique_id=601813624 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v11" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -2763)
 
-[node name="wire wall v12" parent="map/mesh walls" unique_id=1869743437 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v12" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -3161)
 
-[node name="wire wall v13" parent="map/mesh walls" unique_id=433132940 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v13" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -3555)
 
-[node name="wire wall v14" parent="map/mesh walls" unique_id=1322854131 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v14" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -3953)
 
-[node name="wire wall v15" parent="map/mesh walls" unique_id=1715379044 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v15" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(-2250, -4353)
 
-[node name="wire wall v37" parent="map/mesh walls" unique_id=957248911 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v37" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4152, -4376)
 
-[node name="wire wall v38" parent="map/mesh walls" unique_id=442737108 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v38" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4152, -4774)
 
-[node name="wire wall v39" parent="map/mesh walls" unique_id=276272037 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v39" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4152, -5168)
 
-[node name="wire wall v40" parent="map/mesh walls" unique_id=1644984474 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v40" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4152, -5566)
 
-[node name="wire wall v50" type="StaticBody2D" parent="map/mesh walls" unique_id=1569635808]
+[node name="wire wall v50" type="StaticBody2D" parent="map/mesh walls"]
 y_sort_enabled = true
 position = Vector2(4152, -5958)
 
-[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v50" unique_id=812001944]
+[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v50"]
 y_sort_enabled = true
 texture = ExtResource("3_st5wj")
 centered = false
 offset = Vector2(-29.085, -463.38)
 
-[node name="wire wall v41" parent="map/mesh walls" unique_id=181825564 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v41" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -799)
 
-[node name="wire wall v42" parent="map/mesh walls" unique_id=1887236662 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v42" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -1193)
 
-[node name="wire wall v43" parent="map/mesh walls" unique_id=833295886 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v43" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -1591)
 
-[node name="wire wall v44" parent="map/mesh walls" unique_id=873420481 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v44" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -1991)
 
-[node name="wire wall v45" parent="map/mesh walls" unique_id=1396901161 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v45" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -2389)
 
-[node name="wire wall v46" parent="map/mesh walls" unique_id=1575916118 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v46" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -2787)
 
-[node name="wire wall v47" parent="map/mesh walls" unique_id=2012899742 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v47" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -3181)
 
-[node name="wire wall v51" parent="map/mesh walls" unique_id=765562456 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v51" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3155, -801)
 
-[node name="wire wall v52" parent="map/mesh walls" unique_id=1780479514 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v52" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3155, -1199)
 
-[node name="wire wall v53" parent="map/mesh walls" unique_id=844693155 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v53" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3155, -1599)
 
-[node name="wire wall v54" parent="map/mesh walls" unique_id=323563415 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v54" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3155, -1997)
 
-[node name="wire wall v55" parent="map/mesh walls" unique_id=2123347558 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v55" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3155, -2395)
 
-[node name="wire wall v56" type="StaticBody2D" parent="map/mesh walls" unique_id=146590257]
+[node name="wire wall v56" type="StaticBody2D" parent="map/mesh walls"]
 y_sort_enabled = true
 position = Vector2(3155, -2789)
 
-[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v56" unique_id=1526355361]
+[node name="WireWallV" type="Sprite2D" parent="map/mesh walls/wire wall v56"]
 y_sort_enabled = true
 texture = ExtResource("3_st5wj")
 centered = false
 offset = Vector2(-29.085, -463.38)
 
-[node name="wire wall v48" parent="map/mesh walls" unique_id=1589226736 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v48" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -3579)
 
-[node name="wire wall v49" parent="map/mesh walls" unique_id=873383359 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v49" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(4151, -3979)
 
-[node name="wire wall v62" parent="map/mesh walls" unique_id=2138814074 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v62" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3047, -4359)
 
-[node name="wire wall v64" parent="map/mesh walls" unique_id=1287860776 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v64" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3047, -4757)
 
-[node name="wire wall v65" parent="map/mesh walls" unique_id=387445768 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v65" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3047, -5151)
 
-[node name="wire wall v66" parent="map/mesh walls" unique_id=1284042520 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v66" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3047, -5549)
 
-[node name="wire wall v68" parent="map/mesh walls" unique_id=326191594 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v68" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(1707, -4757)
 
-[node name="wire wall v69" parent="map/mesh walls" unique_id=1855125527 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v69" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(1707, -5155)
 
-[node name="wire wall v67" parent="map/mesh walls" unique_id=856142799 instance=ExtResource("2_ngkyk")]
+[node name="wire wall v67" parent="map/mesh walls" instance=ExtResource("2_ngkyk")]
 position = Vector2(3047, -5941)
 
-[node name="wire wall h bg" parent="map/mesh walls" unique_id=611192293 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(-1004, -4754)
 
-[node name="wire wall h bg4" parent="map/mesh walls" unique_id=1731799312 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg4" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(-1012, -3550)
 
-[node name="wire wall h bg3" parent="map/mesh walls" unique_id=792783188 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg3" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(-1492, -4754)
 
-[node name="wire wall h bg5" parent="map/mesh walls" unique_id=865591116 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg5" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(1915, -2791)
 
-[node name="wire wall h bg7" parent="map/mesh walls" unique_id=1682133489 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg7" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(1937, -4362)
 
-[node name="wire wall h bg9" parent="map/mesh walls" unique_id=1725358294 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg9" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(1441, -4758)
 
-[node name="wire wall h bg8" parent="map/mesh walls" unique_id=805825708 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg8" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(2801, -4362)
 
-[node name="wire wall h bg6" parent="map/mesh walls" unique_id=867576311 instance=ExtResource("3_s7qv7")]
+[node name="wire wall h bg6" parent="map/mesh walls" instance=ExtResource("3_s7qv7")]
 position = Vector2(1916, -1995)
 
-[node name="cars" type="Node2D" parent="map" unique_id=957845392]
+[node name="cars" type="Node2D" parent="map"]
 y_sort_enabled = true
 
-[node name="car h1" parent="map/cars" unique_id=1678754940 instance=ExtResource("3_tlx5m")]
+[node name="car h1" parent="map/cars" instance=ExtResource("3_tlx5m")]
 position = Vector2(-1401, -2214)
 
-[node name="car h6" parent="map/cars" unique_id=1182631747 instance=ExtResource("3_tlx5m")]
+[node name="car h6" parent="map/cars" instance=ExtResource("3_tlx5m")]
 position = Vector2(1476, -858)
 
-[node name="car h13" parent="map/cars" unique_id=1928481175 instance=ExtResource("3_tlx5m")]
+[node name="car h13" parent="map/cars" instance=ExtResource("3_tlx5m")]
 position = Vector2(3698, -3665)
 rotation = -0.05235988
 
-[node name="car h26" type="StaticBody2D" parent="map/cars" unique_id=947173828]
+[node name="car h26" type="StaticBody2D" parent="map/cars"]
 y_sort_enabled = true
 position = Vector2(2333, -3769)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/cars/car h26" unique_id=1806543960]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/cars/car h26"]
 position = Vector2(8, -73)
 shape = SubResource("RectangleShape2D_oryst")
 
-[node name="CarH1" type="Sprite2D" parent="map/cars/car h26" unique_id=1506724062]
+[node name="CarH1" type="Sprite2D" parent="map/cars/car h26"]
 texture = ExtResource("16_w3la1")
 centered = false
 offset = Vector2(-432.5, -393)
 flip_h = true
 
-[node name="car h7" parent="map/cars" unique_id=330755385 instance=ExtResource("3_tlx5m")]
+[node name="car h7" parent="map/cars" instance=ExtResource("3_tlx5m")]
 position = Vector2(-413, -4807)
 
-[node name="CarH1" parent="map/cars/car h7" index="1" unique_id=1506724062]
+[node name="CarH1" parent="map/cars/car h7" index="1"]
 position = Vector2(16, 0)
 flip_h = true
 
-[node name="car h14" parent="map/cars" unique_id=529296664 instance=ExtResource("4_fwnq6")]
+[node name="car h14" parent="map/cars" instance=ExtResource("4_fwnq6")]
 position = Vector2(3597, -2423)
 
-[node name="CarH2" parent="map/cars/car h14" index="0" unique_id=689170018]
+[node name="CarH2" parent="map/cars/car h14" index="0"]
 flip_h = true
 
-[node name="CollisionShape2D" parent="map/cars/car h14" index="1" unique_id=831434908]
+[node name="CollisionShape2D" parent="map/cars/car h14" index="1"]
 shape = SubResource("RectangleShape2D_7sljy")
 
-[node name="car h5" parent="map/cars" unique_id=1798216008 instance=ExtResource("4_fwnq6")]
+[node name="car h5" parent="map/cars" instance=ExtResource("4_fwnq6")]
 position = Vector2(-1845.0001, -842)
 scale = Vector2(0.9, 0.9)
 input_pickable = true
 
-[node name="CarH2" parent="map/cars/car h5" index="0" unique_id=689170018]
+[node name="CarH2" parent="map/cars/car h5" index="0"]
 flip_h = true
 
-[node name="CollisionShape2D" parent="map/cars/car h5" index="1" unique_id=831434908]
+[node name="CollisionShape2D" parent="map/cars/car h5" index="1"]
 shape = SubResource("RectangleShape2D_7sljy")
 
-[node name="car h4" parent="map/cars" unique_id=213201088 instance=ExtResource("4_fwnq6")]
+[node name="car h4" parent="map/cars" instance=ExtResource("4_fwnq6")]
 position = Vector2(-219, -1878)
 
-[node name="car v1" parent="map/cars" unique_id=365150522 instance=ExtResource("5_1mh4e")]
+[node name="car v1" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(-1505, -4277)
 
-[node name="car v13" parent="map/cars" unique_id=923612445 instance=ExtResource("5_1mh4e")]
+[node name="car v13" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(427, -4818)
 scale = Vector2(0.9, 0.9)
 
-[node name="car v29" parent="map/cars" unique_id=1677794910 instance=ExtResource("5_1mh4e")]
+[node name="car v29" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(1289, -4278)
 
-[node name="car v26" parent="map/cars" unique_id=1034082020 instance=ExtResource("5_1mh4e")]
+[node name="car v26" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(1446, -2316)
 
-[node name="car v17" parent="map/cars" unique_id=1154261870 instance=ExtResource("5_1mh4e")]
+[node name="car v17" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(3860, -1882)
 
-[node name="car v14" parent="map/cars" unique_id=486063027 instance=ExtResource("5_1mh4e")]
+[node name="car v14" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(3381, -871)
 
-[node name="car v10" parent="map/cars" unique_id=986186598 instance=ExtResource("5_1mh4e")]
+[node name="car v10" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(-1040, -3575)
 
-[node name="car v5" parent="map/cars" unique_id=2105387646 instance=ExtResource("5_1mh4e")]
+[node name="car v5" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(-25, -858)
 
-[node name="car v2" parent="map/cars" unique_id=2069354284 instance=ExtResource("6_s7qv7")]
+[node name="car v2" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(-1503, -4807)
 
-[node name="car v7" parent="map/cars" unique_id=1675096914 instance=ExtResource("6_s7qv7")]
+[node name="car v7" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(2355, -5455)
 scale = Vector2(1.2, 1.2)
 
-[node name="car v28" parent="map/cars" unique_id=1311030546 instance=ExtResource("6_s7qv7")]
+[node name="car v28" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(866, -4284)
 
-[node name="car v24" parent="map/cars" unique_id=1479252359 instance=ExtResource("6_s7qv7")]
+[node name="car v24" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(3484, -5440)
 
-[node name="car v16" parent="map/cars" unique_id=2000089912 instance=ExtResource("6_s7qv7")]
+[node name="car v16" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(3412, -1878)
 
-[node name="car v6" parent="map/cars" unique_id=399827995 instance=ExtResource("6_s7qv7")]
+[node name="car v6" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(-461, -865)
 
-[node name="car v20" parent="map/cars" unique_id=2034243964 instance=ExtResource("5_1mh4e")]
+[node name="car v20" parent="map/cars" instance=ExtResource("5_1mh4e")]
 position = Vector2(2206, -2036.9999)
 scale = Vector2(0.85, 0.85)
 
-[node name="car v21" parent="map/cars" unique_id=980761703 instance=ExtResource("6_s7qv7")]
+[node name="car v21" parent="map/cars" instance=ExtResource("6_s7qv7")]
 position = Vector2(1857, -2057)
 scale = Vector2(0.9, 0.9)
 
-[node name="car v3" parent="map/cars" unique_id=1758482316 instance=ExtResource("7_cb173")]
+[node name="car v3" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(434, -5233)
 scale = Vector2(0.9, 0.9)
 
-[node name="car v27" parent="map/cars" unique_id=2138830810 instance=ExtResource("7_cb173")]
+[node name="car v27" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(450, -4276)
 
-[node name="car v25" parent="map/cars" unique_id=1760528709 instance=ExtResource("7_cb173")]
+[node name="car v25" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(3939, -5433)
 
-[node name="car v22" parent="map/cars" unique_id=102761659 instance=ExtResource("7_cb173")]
+[node name="car v22" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(2932, -842)
 
-[node name="car v19" parent="map/cars" unique_id=1696907190 instance=ExtResource("7_cb173")]
+[node name="car v19" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(3918, -3158)
 
-[node name="car v15" parent="map/cars" unique_id=782287782 instance=ExtResource("7_cb173")]
+[node name="car v15" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(3864, -890)
 
-[node name="car v12" parent="map/cars" unique_id=667981921 instance=ExtResource("7_cb173")]
+[node name="car v12" parent="map/cars" instance=ExtResource("7_cb173")]
 position = Vector2(-1496, -3770)
 
-[node name="car v4" parent="map/cars" unique_id=1669273699 instance=ExtResource("8_sk5xu")]
+[node name="car v4" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(796, -4820)
 scale = Vector2(0.9, 1)
 
-[node name="car v23" parent="map/cars" unique_id=401683318 instance=ExtResource("8_sk5xu")]
+[node name="car v23" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(2520, -1039)
 
-[node name="car v30" parent="map/cars" unique_id=1515236568 instance=ExtResource("8_sk5xu")]
+[node name="car v30" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(449, -1664)
 
-[node name="car v18" parent="map/cars" unique_id=1383117103 instance=ExtResource("8_sk5xu")]
+[node name="car v18" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(3915, -2646)
 
-[node name="car v11" parent="map/cars" unique_id=630390513 instance=ExtResource("8_sk5xu")]
+[node name="car v11" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(-638, -3750)
 
-[node name="car v9" parent="map/cars" unique_id=1615885667 instance=ExtResource("8_sk5xu")]
+[node name="car v9" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(-1077, -4799)
 
-[node name="car v8" parent="map/cars" unique_id=1744383869 instance=ExtResource("8_sk5xu")]
+[node name="car v8" parent="map/cars" instance=ExtResource("8_sk5xu")]
 position = Vector2(-1253, -1113)
 
-[node name="car h8" parent="map/cars" unique_id=528645086 instance=ExtResource("10_cb173")]
+[node name="car h8" parent="map/cars" instance=ExtResource("10_cb173")]
 position = Vector2(1913, -1039)
 
-[node name="car h10" parent="map/cars" unique_id=1782551735 instance=ExtResource("10_cb173")]
+[node name="car h10" parent="map/cars" instance=ExtResource("10_cb173")]
 position = Vector2(-203, -5755)
 
-[node name="car h9" parent="map/cars" unique_id=2044710786 instance=ExtResource("11_sk5xu")]
+[node name="car h9" parent="map/cars" instance=ExtResource("11_sk5xu")]
 position = Vector2(3657, -1638)
 
-[node name="CarH4" parent="map/cars/car h9" index="1" unique_id=689170018]
+[node name="CarH4" parent="map/cars/car h9" index="1"]
 position = Vector2(3, 3)
 flip_h = true
 
-[node name="car h11" parent="map/cars" unique_id=1049875903 instance=ExtResource("11_sk5xu")]
+[node name="car h11" parent="map/cars" instance=ExtResource("11_sk5xu")]
 position = Vector2(-184, -4546)
 
-[node name="car h15" parent="map/cars" unique_id=503281520 instance=ExtResource("11_sk5xu")]
+[node name="car h15" parent="map/cars" instance=ExtResource("11_sk5xu")]
 position = Vector2(644, -5737)
 
-[node name="car h16" parent="map/cars" unique_id=399434334 instance=ExtResource("11_sk5xu")]
+[node name="car h16" parent="map/cars" instance=ExtResource("11_sk5xu")]
 position = Vector2(2348, -3551)
 
-[node name="car h20" parent="map/cars" unique_id=827420606 instance=ExtResource("13_w3la1")]
+[node name="car h20" parent="map/cars" instance=ExtResource("13_w3la1")]
 position = Vector2(3630, -1407)
 
-[node name="car h25" parent="map/cars" unique_id=1969724484 instance=ExtResource("13_w3la1")]
+[node name="car h25" parent="map/cars" instance=ExtResource("13_w3la1")]
 position = Vector2(1345, -4811)
 scale = Vector2(0.9, 0.9)
 
-[node name="car h23" parent="map/cars" unique_id=265365740 instance=ExtResource("13_w3la1")]
+[node name="car h23" parent="map/cars" instance=ExtResource("13_w3la1")]
 position = Vector2(2783, -2629.0002)
 scale = Vector2(0.9, 0.9)
 
-[node name="car h24" parent="map/cars" unique_id=1894460651 instance=ExtResource("14_mqnjb")]
+[node name="car h24" parent="map/cars" instance=ExtResource("14_mqnjb")]
 position = Vector2(634, -4138)
 
-[node name="car h22" parent="map/cars" unique_id=276246422 instance=ExtResource("14_mqnjb")]
+[node name="car h22" parent="map/cars" instance=ExtResource("14_mqnjb")]
 position = Vector2(-1064, -869)
 
-[node name="car h12" parent="map/cars" unique_id=1784851948 instance=ExtResource("28_phd1v")]
+[node name="car h12" parent="map/cars" instance=ExtResource("28_phd1v")]
 position = Vector2(2329, -3415)
 scale = Vector2(1.1, 1.1)
 
-[node name="car h27" parent="map/cars" unique_id=974599084 instance=ExtResource("28_phd1v")]
+[node name="car h27" parent="map/cars" instance=ExtResource("28_phd1v")]
 position = Vector2(1450, -5777)
 scale = Vector2(-1.05, 1.05)
 
-[node name="objects" type="Node2D" parent="map" unique_id=2043912776]
+[node name="objects" type="Node2D" parent="map"]
 y_sort_enabled = true
 
-[node name="Box1" parent="map/objects" unique_id=597898504 instance=ExtResource("25_7ndfj")]
+[node name="Box1" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(8, -1389)
 
-[node name="Box11" parent="map/objects" unique_id=360744446 instance=ExtResource("25_7ndfj")]
+[node name="Box11" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(3520, -5239)
 
-[node name="Box10" parent="map/objects" unique_id=182549378 instance=ExtResource("25_7ndfj")]
+[node name="Box10" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(-625, -3247)
 
-[node name="Box6" parent="map/objects" unique_id=1112229624 instance=ExtResource("25_7ndfj")]
+[node name="Box6" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(24, -4443)
 
-[node name="Box8" parent="map/objects" unique_id=1736509243 instance=ExtResource("25_7ndfj")]
+[node name="Box8" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(-486, -5656)
 
-[node name="Box3" parent="map/objects" unique_id=1843117723 instance=ExtResource("25_7ndfj")]
+[node name="Box3" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(3554, -3294)
 
-[node name="Box9" parent="map/objects" unique_id=316772950 instance=ExtResource("26_pam6q")]
+[node name="Box9" parent="map/objects" instance=ExtResource("26_pam6q")]
 position = Vector2(-185, -1521)
 
-[node name="Box7" parent="map/objects" unique_id=1458498392 instance=ExtResource("26_pam6q")]
+[node name="Box7" parent="map/objects" instance=ExtResource("26_pam6q")]
 position = Vector2(-1494, -3614)
 
-[node name="Box5" parent="map/objects" unique_id=1137856845 instance=ExtResource("26_pam6q")]
+[node name="Box5" parent="map/objects" instance=ExtResource("26_pam6q")]
 position = Vector2(-985, -4063)
 
-[node name="door4" type="StaticBody2D" parent="map/objects" unique_id=1889677652]
+[node name="door4" type="StaticBody2D" parent="map/objects"]
 position = Vector2(3746, -5194)
 scale = Vector2(0.75, 0.75)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/door4" unique_id=2079771592]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/door4"]
 position = Vector2(18, -43)
 rotation = 1.5707964
 scale = Vector2(0.75, 0.75)
 shape = SubResource("CapsuleShape2D_smoy8")
 
-[node name="Door" type="Sprite2D" parent="map/objects/door4" unique_id=128360366]
+[node name="Door" type="Sprite2D" parent="map/objects/door4"]
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("20_1k3tq")
 offset = Vector2(0, -289)
 flip_h = true
 
-[node name="door3" parent="map/objects" unique_id=377545055 instance=ExtResource("27_14i7x")]
+[node name="door3" parent="map/objects" instance=ExtResource("27_14i7x")]
 position = Vector2(-345, -3310.0002)
 scale = Vector2(0.9, 0.9)
 
-[node name="door2" parent="map/objects" unique_id=1364665395 instance=ExtResource("27_14i7x")]
+[node name="door2" parent="map/objects" instance=ExtResource("27_14i7x")]
 position = Vector2(-1023, -2152)
 
-[node name="ladder" parent="map/objects" unique_id=728535606 instance=ExtResource("28_5oe2j")]
+[node name="ladder" parent="map/objects" instance=ExtResource("28_5oe2j")]
 position = Vector2(-1292, -3569)
 
-[node name="ladder3" type="StaticBody2D" parent="map/objects" unique_id=568181215]
+[node name="ladder3" type="StaticBody2D" parent="map/objects"]
 position = Vector2(-1776, -1936)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/ladder3" unique_id=142120643]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/ladder3"]
 position = Vector2(4, -44)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fkspe")
 
-[node name="Ladder" type="Sprite2D" parent="map/objects/ladder3" unique_id=645610708]
+[node name="Ladder" type="Sprite2D" parent="map/objects/ladder3"]
 position = Vector2(0, -296)
 texture = ExtResource("31_opqnl")
 flip_h = true
 
-[node name="ladder4" type="StaticBody2D" parent="map/objects" unique_id=1859991574]
+[node name="ladder4" type="StaticBody2D" parent="map/objects"]
 position = Vector2(169, -4802)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/ladder4" unique_id=1078665516]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/ladder4"]
 position = Vector2(-25, -44)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_fkspe")
 
-[node name="Ladder" type="Sprite2D" parent="map/objects/ladder4" unique_id=356690611]
+[node name="Ladder" type="Sprite2D" parent="map/objects/ladder4"]
 position = Vector2(0, -296)
 texture = ExtResource("31_opqnl")
 
-[node name="ladder2" parent="map/objects" unique_id=456326923 instance=ExtResource("28_5oe2j")]
+[node name="ladder2" parent="map/objects" instance=ExtResource("28_5oe2j")]
 position = Vector2(3129, -2328)
 
-[node name="pipe16" parent="map/objects" unique_id=1042081077 instance=ExtResource("29_u7y7k")]
+[node name="pipe16" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(3167, -5701)
 
-[node name="pipe17" parent="map/objects" unique_id=185146636 instance=ExtResource("29_u7y7k")]
+[node name="pipe17" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(3170, -5653)
 
-[node name="pipe18" parent="map/objects" unique_id=171792077 instance=ExtResource("29_u7y7k")]
+[node name="pipe18" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(3167, -5601)
 
-[node name="pipe19" parent="map/objects" unique_id=568183136 instance=ExtResource("29_u7y7k")]
+[node name="pipe19" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(3167, -5553)
 
-[node name="pipe20" type="StaticBody2D" parent="map/objects" unique_id=1704142939]
+[node name="pipe20" type="StaticBody2D" parent="map/objects"]
 position = Vector2(1596, -4359)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe20" unique_id=912013034]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe20"]
 position = Vector2(4, -44)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ym6ig")
 
-[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe20" unique_id=1327678282]
+[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe20"]
 position = Vector2(0, -328)
 texture = ExtResource("33_7d1lf")
 flip_h = true
 
-[node name="pipe11" type="StaticBody2D" parent="map/objects" unique_id=1968561105]
+[node name="pipe11" type="StaticBody2D" parent="map/objects"]
 position = Vector2(3060, -1345)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe11" unique_id=1778196830]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe11"]
 position = Vector2(4, -44)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ym6ig")
 
-[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe11" unique_id=979954162]
+[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe11"]
 position = Vector2(0, -328)
 texture = ExtResource("33_7d1lf")
 flip_h = true
 
-[node name="pipe12" type="StaticBody2D" parent="map/objects" unique_id=7166447]
+[node name="pipe12" type="StaticBody2D" parent="map/objects"]
 position = Vector2(3062, -1390)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe12" unique_id=449066977]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe12"]
 position = Vector2(4, -44)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ym6ig")
 
-[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe12" unique_id=1013571097]
+[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe12"]
 position = Vector2(0, -328)
 texture = ExtResource("33_7d1lf")
 flip_h = true
 
-[node name="pipe13" type="StaticBody2D" parent="map/objects" unique_id=766596861]
+[node name="pipe13" type="StaticBody2D" parent="map/objects"]
 position = Vector2(2955, -1367)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe13" unique_id=376552029]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/pipe13"]
 position = Vector2(4, -44)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ym6ig")
 
-[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe13" unique_id=315542148]
+[node name="Pipe1" type="Sprite2D" parent="map/objects/pipe13"]
 position = Vector2(0, -328)
 texture = ExtResource("33_7d1lf")
 flip_h = true
 
-[node name="pipe5" parent="map/objects" unique_id=694755966 instance=ExtResource("29_u7y7k")]
+[node name="pipe5" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(-2152, -1023)
 
-[node name="pipe6" parent="map/objects" unique_id=1833399939 instance=ExtResource("29_u7y7k")]
+[node name="pipe6" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(-2147, -1073)
 
-[node name="pipe7" parent="map/objects" unique_id=918110798 instance=ExtResource("29_u7y7k")]
+[node name="pipe7" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(-2062, -1038)
 
-[node name="pipe8" parent="map/objects" unique_id=364384350 instance=ExtResource("29_u7y7k")]
+[node name="pipe8" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(-2140, -1116)
 
-[node name="pipe9" parent="map/objects" unique_id=1825003758 instance=ExtResource("29_u7y7k")]
+[node name="pipe9" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(-2048, -1097)
 
-[node name="pipe3" parent="map/objects" unique_id=5378075 instance=ExtResource("29_u7y7k")]
+[node name="pipe3" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(1754, -2490)
 
-[node name="pipe15" parent="map/objects" unique_id=465925033 instance=ExtResource("30_74edn")]
+[node name="pipe15" parent="map/objects" instance=ExtResource("30_74edn")]
 position = Vector2(2266, -3283)
 scale = Vector2(1.155, 1.155)
 
-[node name="pipe14" parent="map/objects" unique_id=1068985806 instance=ExtResource("30_74edn")]
+[node name="pipe14" parent="map/objects" instance=ExtResource("30_74edn")]
 position = Vector2(-751, -3332)
 
-[node name="pipe21" parent="map/objects" unique_id=919262311 instance=ExtResource("30_74edn")]
+[node name="pipe21" parent="map/objects" instance=ExtResource("30_74edn")]
 position = Vector2(-202, -2059)
 
-[node name="pipe22" parent="map/objects" unique_id=877070635 instance=ExtResource("30_74edn")]
+[node name="pipe22" parent="map/objects" instance=ExtResource("30_74edn")]
 position = Vector2(-171, -2155)
 
-[node name="pipe4" parent="map/objects" unique_id=2111748564 instance=ExtResource("30_74edn")]
+[node name="pipe4" parent="map/objects" instance=ExtResource("30_74edn")]
 position = Vector2(-793, -3403)
 scale = Vector2(1.235, 1.235)
 
-[node name="pipe10" parent="map/objects" unique_id=763801244 instance=ExtResource("30_74edn")]
+[node name="pipe10" parent="map/objects" instance=ExtResource("30_74edn")]
 position = Vector2(-1280, -5279)
 
-[node name="signboard" parent="map/objects" unique_id=871559125 instance=ExtResource("31_6gfhy")]
+[node name="signboard" parent="map/objects" instance=ExtResource("31_6gfhy")]
 position = Vector2(1849, -1939)
 
-[node name="signboard6" parent="map/objects" unique_id=654051851 instance=ExtResource("31_6gfhy")]
+[node name="signboard6" parent="map/objects" instance=ExtResource("31_6gfhy")]
 position = Vector2(3397, -5817)
 
-[node name="signboard5" parent="map/objects" unique_id=1309265694 instance=ExtResource("31_6gfhy")]
+[node name="signboard5" parent="map/objects" instance=ExtResource("31_6gfhy")]
 position = Vector2(3995, -4721)
 scale = Vector2(0.9, 0.9)
 
-[node name="signboard4" parent="map/objects" unique_id=1759285595 instance=ExtResource("31_6gfhy")]
+[node name="signboard4" parent="map/objects" instance=ExtResource("31_6gfhy")]
 position = Vector2(-263, -5719)
 
-[node name="signboard3" parent="map/objects" unique_id=640624403 instance=ExtResource("31_6gfhy")]
+[node name="signboard3" parent="map/objects" instance=ExtResource("31_6gfhy")]
 position = Vector2(-1467, -2181)
 scale = Vector2(0.787, 0.787)
 
-[node name="trash9" parent="map/objects" unique_id=2053076149 instance=ExtResource("32_opqnl")]
+[node name="trash9" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(-697, -4552)
 scale = Vector2(0.82, 0.82)
 
-[node name="trash32" parent="map/objects" unique_id=57577525 instance=ExtResource("32_opqnl")]
+[node name="trash32" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(2635, -3726)
 
-[node name="trash35" parent="map/objects" unique_id=770874196 instance=ExtResource("32_opqnl")]
+[node name="trash35" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(1764.0001, -5690.0005)
 scale = Vector2(0.745, 0.745)
 
-[node name="trash39" parent="map/objects" unique_id=794746511 instance=ExtResource("32_opqnl")]
+[node name="trash39" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(1560, -4989.0005)
 scale = Vector2(0.745, 0.745)
 
-[node name="trash38" parent="map/objects" unique_id=1655491667 instance=ExtResource("32_opqnl")]
+[node name="trash38" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(508, -5722.0005)
 scale = Vector2(0.745, 0.745)
 
-[node name="trash33" parent="map/objects" unique_id=1480492953 instance=ExtResource("32_opqnl")]
+[node name="trash33" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(2583, -3653)
 scale = Vector2(-1, 1)
 
-[node name="trash34" parent="map/objects" unique_id=1570831481 instance=ExtResource("32_opqnl")]
+[node name="trash34" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(2757, -3692)
 scale = Vector2(-0.8, 0.8)
 
-[node name="trash10" parent="map/objects" unique_id=15887792 instance=ExtResource("32_opqnl")]
+[node name="trash10" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(-196, -4463)
 scale = Vector2(0.82, 0.82)
 
-[node name="trash29" parent="map/objects" unique_id=745498668 instance=ExtResource("32_opqnl")]
+[node name="trash29" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(63, -5234)
 
-[node name="trash40" parent="map/objects" unique_id=172431664 instance=ExtResource("32_opqnl")]
+[node name="trash40" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(-1669, -5804)
 
-[node name="trash31" parent="map/objects" unique_id=1790596688 instance=ExtResource("32_opqnl")]
+[node name="trash31" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(-745, -4999)
 scale = Vector2(-1, 1)
 
-[node name="trash30" parent="map/objects" unique_id=315733404 instance=ExtResource("32_opqnl")]
+[node name="trash30" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(3584, -5144)
 scale = Vector2(0.82, 0.82)
 
-[node name="trash20" parent="map/objects" unique_id=719802414 instance=ExtResource("33_rk6qv")]
+[node name="trash20" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(-937, -3202)
 
-[node name="trash19" parent="map/objects" unique_id=213482026 instance=ExtResource("33_rk6qv")]
+[node name="trash19" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(766, -3974)
 
-[node name="trash17" parent="map/objects" unique_id=608931814 instance=ExtResource("33_rk6qv")]
+[node name="trash17" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(2010, -1376.0001)
 scale = Vector2(0.848, 0.848)
 
-[node name="trash8" parent="map/objects" unique_id=2031741831 instance=ExtResource("33_rk6qv")]
+[node name="trash8" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(-1303, -2055)
 
-[node name="trash6" parent="map/objects" unique_id=406066100 instance=ExtResource("33_rk6qv")]
+[node name="trash6" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(3537, -3416)
 
-[node name="trash21" parent="map/objects" unique_id=63401467 instance=ExtResource("34_7d1lf")]
+[node name="trash21" parent="map/objects" instance=ExtResource("34_7d1lf")]
 position = Vector2(3903, -5276)
 
-[node name="trash18" parent="map/objects" unique_id=1442260767 instance=ExtResource("34_7d1lf")]
+[node name="trash18" parent="map/objects" instance=ExtResource("34_7d1lf")]
 position = Vector2(447.99997, -4039.9998)
 scale = Vector2(0.88, 0.88)
 
-[node name="trash7" parent="map/objects" unique_id=440883192 instance=ExtResource("34_7d1lf")]
+[node name="trash7" parent="map/objects" instance=ExtResource("34_7d1lf")]
 position = Vector2(3419, -2618)
 
-[node name="trash5" parent="map/objects" unique_id=366020955 instance=ExtResource("34_7d1lf")]
+[node name="trash5" parent="map/objects" instance=ExtResource("34_7d1lf")]
 position = Vector2(2512, -847)
 
-[node name="trash4" parent="map/objects" unique_id=1348036601 instance=ExtResource("35_1k3tq")]
+[node name="trash4" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(2955, -2440)
 scale = Vector2(0.8, 0.8)
 
-[node name="trash16" parent="map/objects" unique_id=414338923 instance=ExtResource("35_1k3tq")]
+[node name="trash16" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(2137.0002, -1226)
 scale = Vector2(0.759, 0.759)
 
-[node name="wheel30" parent="map/objects" unique_id=1031244958 instance=ExtResource("36_fkspe")]
+[node name="wheel30" parent="map/objects" instance=ExtResource("36_fkspe")]
 position = Vector2(3172, -5155)
 
-[node name="wheel16" parent="map/objects" unique_id=1107887273 instance=ExtResource("36_fkspe")]
+[node name="wheel16" parent="map/objects" instance=ExtResource("36_fkspe")]
 position = Vector2(-146, -4983)
 
-[node name="wheel2" parent="map/objects" unique_id=1744849642 instance=ExtResource("37_8g2fq")]
+[node name="wheel2" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(1990, -2600)
 
-[node name="wheel23" parent="map/objects" unique_id=2102813642 instance=ExtResource("37_8g2fq")]
+[node name="wheel23" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(520, -3828)
 
-[node name="wheel24" parent="map/objects" unique_id=268136967 instance=ExtResource("37_8g2fq")]
+[node name="wheel24" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(1030, -4083)
 
-[node name="wheel8" parent="map/objects" unique_id=113117715 instance=ExtResource("37_8g2fq")]
+[node name="wheel8" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(2746, -3401)
 
-[node name="wheel9" type="StaticBody2D" parent="map/objects" unique_id=1425229213]
+[node name="wheel9" type="StaticBody2D" parent="map/objects"]
 position = Vector2(1856, -3539)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/wheel9" unique_id=1648312326]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/wheel9"]
 position = Vector2(26, -75)
 rotation = -0.616644
 shape = SubResource("CapsuleShape2D_glv3m")
 
-[node name="Wheel2" type="Sprite2D" parent="map/objects/wheel9" unique_id=19925841]
+[node name="Wheel2" type="Sprite2D" parent="map/objects/wheel9"]
 position = Vector2(50, -8)
 texture = ExtResource("42_1k3tq")
 offset = Vector2(0, -126)
 flip_h = true
 
-[node name="wheel5" parent="map/objects" unique_id=1722605867 instance=ExtResource("37_8g2fq")]
+[node name="wheel5" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(1916, -853)
 
-[node name="wheel3" parent="map/objects" unique_id=494396517 instance=ExtResource("38_q0fog")]
+[node name="wheel3" parent="map/objects" instance=ExtResource("38_q0fog")]
 position = Vector2(-171, -1687)
 
-[node name="wheel13" parent="map/objects" unique_id=951112108 instance=ExtResource("38_q0fog")]
+[node name="wheel13" parent="map/objects" instance=ExtResource("38_q0fog")]
 position = Vector2(-2099, -1178)
 
-[node name="wheel29" parent="map/objects" unique_id=1427636301 instance=ExtResource("38_q0fog")]
+[node name="wheel29" parent="map/objects" instance=ExtResource("38_q0fog")]
 position = Vector2(3894, -5200)
 
-[node name="wheel4" parent="map/objects" unique_id=1563420577 instance=ExtResource("39_ym6ig")]
+[node name="wheel4" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(50, -1666)
 
-[node name="wheel27" parent="map/objects" unique_id=1792060863 instance=ExtResource("39_ym6ig")]
+[node name="wheel27" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(3177, -5362)
 
-[node name="wheel25" parent="map/objects" unique_id=1712686141 instance=ExtResource("39_ym6ig")]
+[node name="wheel25" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(366, -2115)
 
-[node name="wheel21" parent="map/objects" unique_id=657890198 instance=ExtResource("39_ym6ig")]
+[node name="wheel21" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(1586, -4512)
 scale = Vector2(0.875, 0.875)
 
-[node name="wheel20" parent="map/objects" unique_id=1828987920 instance=ExtResource("39_ym6ig")]
+[node name="wheel20" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(-1667, -1779)
 
-[node name="wheel17" parent="map/objects" unique_id=2120858616 instance=ExtResource("39_ym6ig")]
+[node name="wheel17" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(1820, -1192)
 
-[node name="wheel15" parent="map/objects" unique_id=1629257747 instance=ExtResource("39_ym6ig")]
+[node name="wheel15" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(75, -4891)
 
-[node name="wheel10" type="StaticBody2D" parent="map/objects" unique_id=502655082]
+[node name="wheel10" type="StaticBody2D" parent="map/objects"]
 position = Vector2(-951, -1294)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/wheel10" unique_id=1665461988]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/wheel10"]
 position = Vector2(0, -106)
 shape = SubResource("CircleShape2D_wovmr")
 
-[node name="Wheel4" type="Sprite2D" parent="map/objects/wheel10" unique_id=283245131]
+[node name="Wheel4" type="Sprite2D" parent="map/objects/wheel10"]
 position = Vector2(0, 3)
 texture = ExtResource("45_fkspe")
 offset = Vector2(0, -151)
 flip_h = true
 
-[node name="wheel7" parent="map/objects" unique_id=633155385 instance=ExtResource("39_ym6ig")]
+[node name="wheel7" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(1826, -2609)
 
-[node name="wheel22" parent="map/objects" unique_id=1083923500 instance=ExtResource("39_ym6ig")]
+[node name="wheel22" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(356, -3833)
 
-[node name="wheel6" parent="map/objects" unique_id=894681135 instance=ExtResource("39_ym6ig")]
+[node name="wheel6" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(2139, -837)
 
-[node name="trash11" parent="map/objects" unique_id=1624374175 instance=ExtResource("35_1k3tq")]
+[node name="trash11" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(-862, -1007)
 
-[node name="trash12" parent="map/objects" unique_id=1558825326 instance=ExtResource("35_1k3tq")]
+[node name="trash12" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(-1601.9999, -990.00006)
 scale = Vector2(0.78, 0.78)
 
-[node name="trash13" parent="map/objects" unique_id=1491809492 instance=ExtResource("35_1k3tq")]
+[node name="trash13" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(-1004, -4477)
 
-[node name="trash15" parent="map/objects" unique_id=1274445952 instance=ExtResource("35_1k3tq")]
+[node name="trash15" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(-39, -5529)
 
-[node name="trash14" parent="map/objects" unique_id=258072481 instance=ExtResource("35_1k3tq")]
+[node name="trash14" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(-1643, -2036)
 scale = Vector2(0.62, 0.62)
 
-[node name="wheel28" parent="map/objects" unique_id=1383768868 instance=ExtResource("37_8g2fq")]
+[node name="wheel28" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(3305, -5333)
 
-[node name="wheel26" parent="map/objects" unique_id=1286504235 instance=ExtResource("37_8g2fq")]
+[node name="wheel26" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(526, -2103)
 
-[node name="wheel18" parent="map/objects" unique_id=1500228232 instance=ExtResource("37_8g2fq")]
+[node name="wheel18" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(2400, -2031)
 
-[node name="wheel19" parent="map/objects" unique_id=1239369522 instance=ExtResource("37_8g2fq")]
+[node name="wheel19" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(2458, -2024)
 
-[node name="trash22" parent="map/objects" unique_id=1663533547 instance=ExtResource("35_1k3tq")]
+[node name="trash22" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(3200, -5743)
 scale = Vector2(0.71, 0.71)
 
-[node name="trash23" parent="map/objects" unique_id=1611391497 instance=ExtResource("35_1k3tq")]
+[node name="trash23" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(458, -1403)
 
-[node name="trash24" parent="map/objects" unique_id=389100358 instance=ExtResource("35_1k3tq")]
+[node name="trash24" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(1446, -2103)
 scale = Vector2(0.9, 0.9)
 
-[node name="Box4" parent="map/objects" unique_id=1168720003 instance=ExtResource("25_7ndfj")]
+[node name="Box4" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(731, -5562)
 
-[node name="Box12" parent="map/objects" unique_id=289303759 instance=ExtResource("25_7ndfj")]
+[node name="Box12" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(42, -5361)
 scale = Vector2(-1, 1)
 
-[node name="Box14" parent="map/objects" unique_id=1103240484 instance=ExtResource("25_7ndfj")]
+[node name="Box14" parent="map/objects" instance=ExtResource("25_7ndfj")]
 position = Vector2(-2066, -5737)
 scale = Vector2(-1, 1)
 
-[node name="Box2" parent="map/objects" unique_id=1599389857 instance=ExtResource("26_pam6q")]
+[node name="Box2" parent="map/objects" instance=ExtResource("26_pam6q")]
 position = Vector2(976, -5573)
 
-[node name="Box15" parent="map/objects" unique_id=81318058 instance=ExtResource("26_pam6q")]
+[node name="Box15" parent="map/objects" instance=ExtResource("26_pam6q")]
 position = Vector2(-1844, -5726)
 
-[node name="Box13" parent="map/objects" unique_id=451149820 instance=ExtResource("26_pam6q")]
+[node name="Box13" parent="map/objects" instance=ExtResource("26_pam6q")]
 position = Vector2(1062, -5093)
 
-[node name="door" parent="map/objects" unique_id=884621366 instance=ExtResource("27_14i7x")]
+[node name="door" parent="map/objects" instance=ExtResource("27_14i7x")]
 position = Vector2(321, -5718)
 scale = Vector2(-0.75, 0.75)
 
-[node name="ladder5" parent="map/objects" unique_id=946609099 instance=ExtResource("28_5oe2j")]
+[node name="ladder5" parent="map/objects" instance=ExtResource("28_5oe2j")]
 position = Vector2(3003, -5580)
 
-[node name="pipe1" parent="map/objects" unique_id=422060398 instance=ExtResource("29_u7y7k")]
+[node name="pipe1" parent="map/objects" instance=ExtResource("29_u7y7k")]
 position = Vector2(4063, -4014)
 scale = Vector2(-1, 1)
 
-[node name="signboard2" type="StaticBody2D" parent="map/objects" unique_id=1733863848]
+[node name="signboard2" type="StaticBody2D" parent="map/objects"]
 position = Vector2(1895, -4294)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/signboard2" unique_id=60205969]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/signboard2"]
 position = Vector2(-79, -29)
 shape = SubResource("RectangleShape2D_74edn")
 
-[node name="Signboard" type="Sprite2D" parent="map/objects/signboard2" unique_id=484641773]
+[node name="Signboard" type="Sprite2D" parent="map/objects/signboard2"]
 position = Vector2(-89, 4)
 rotation = 1.5707964
 texture = ExtResource("38_1k3tq")
 offset = Vector2(-146.44, -5.59)
 
-[node name="signboard7" type="StaticBody2D" parent="map/objects" unique_id=351657602]
+[node name="signboard7" type="StaticBody2D" parent="map/objects"]
 position = Vector2(-1877, -5875)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/signboard7" unique_id=1935440157]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/signboard7"]
 position = Vector2(-79, -29)
 shape = SubResource("RectangleShape2D_74edn")
 
-[node name="Signboard" type="Sprite2D" parent="map/objects/signboard7" unique_id=25941322]
+[node name="Signboard" type="Sprite2D" parent="map/objects/signboard7"]
 position = Vector2(-89, 4)
 rotation = 1.5707964
 texture = ExtResource("38_1k3tq")
 offset = Vector2(-146.44, -5.59)
 
-[node name="trash1" parent="map/objects" unique_id=1515987737 instance=ExtResource("32_opqnl")]
+[node name="trash1" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(3916.0002, -4515)
 scale = Vector2(0.695, 0.695)
 
-[node name="trash2" parent="map/objects" unique_id=222340414 instance=ExtResource("33_rk6qv")]
+[node name="trash2" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(1862, -4819)
 scale = Vector2(-1, 1)
 
-[node name="trash25" parent="map/objects" unique_id=1936731178 instance=ExtResource("33_rk6qv")]
+[node name="trash25" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(3827, -4562)
 
-[node name="trash3" parent="map/objects" unique_id=624668916 instance=ExtResource("34_7d1lf")]
+[node name="trash3" parent="map/objects" instance=ExtResource("34_7d1lf")]
 position = Vector2(1217, -4921)
 
-[node name="trash26" parent="map/objects" unique_id=404786644 instance=ExtResource("34_7d1lf")]
+[node name="trash26" parent="map/objects" instance=ExtResource("34_7d1lf")]
 position = Vector2(3854, -3804)
 
-[node name="wheel1" parent="map/objects" unique_id=392253658 instance=ExtResource("36_fkspe")]
+[node name="wheel1" parent="map/objects" instance=ExtResource("36_fkspe")]
 position = Vector2(2724, -5314)
 
-[node name="wheel11" parent="map/objects" unique_id=1733530618 instance=ExtResource("38_q0fog")]
+[node name="wheel11" parent="map/objects" instance=ExtResource("38_q0fog")]
 position = Vector2(2709, -5474)
 
-[node name="wheel14" parent="map/objects" unique_id=1742349531 instance=ExtResource("39_ym6ig")]
+[node name="wheel14" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(1997, -5715)
 
-[node name="wheel31" parent="map/objects" unique_id=2059616113 instance=ExtResource("39_ym6ig")]
+[node name="wheel31" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(3808, -3940)
 
-[node name="wheel12" parent="map/objects" unique_id=82641337 instance=ExtResource("37_8g2fq")]
+[node name="wheel12" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(4038, -4562)
 
-[node name="wheel32" parent="map/objects" unique_id=1634382389 instance=ExtResource("37_8g2fq")]
+[node name="wheel32" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(2854, -5419)
 
-[node name="wheel35" parent="map/objects" unique_id=727766495 instance=ExtResource("37_8g2fq")]
+[node name="wheel35" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(449, -5721)
 scale = Vector2(-1, 1)
 
-[node name="wheel34" parent="map/objects" unique_id=797823068 instance=ExtResource("37_8g2fq")]
+[node name="wheel34" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(4033, -5171)
 
-[node name="wheel33" parent="map/objects" unique_id=1373607682 instance=ExtResource("37_8g2fq")]
+[node name="wheel33" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(3972, -3934)
 
-[node name="trash27" parent="map/objects" unique_id=2146613184 instance=ExtResource("35_1k3tq")]
+[node name="trash27" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(2798, -5634)
 
-[node name="trash36" parent="map/objects" unique_id=651434493 instance=ExtResource("35_1k3tq")]
+[node name="trash36" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(1925, -4398)
 
-[node name="trash37" parent="map/objects" unique_id=2143358496 instance=ExtResource("35_1k3tq")]
+[node name="trash37" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(1906, -4568)
 scale = Vector2(-1, 1)
 
-[node name="trash28" parent="map/objects" unique_id=85083564 instance=ExtResource("35_1k3tq")]
+[node name="trash28" parent="map/objects" instance=ExtResource("35_1k3tq")]
 position = Vector2(3500, -3831)
 scale = Vector2(0.75, 0.75)
 
-[node name="wheel36" parent="map/objects" unique_id=1265570285 instance=ExtResource("39_ym6ig")]
+[node name="wheel36" parent="map/objects" instance=ExtResource("39_ym6ig")]
 position = Vector2(815, -3245)
 
-[node name="wheel37" parent="map/objects" unique_id=1751741442 instance=ExtResource("38_q0fog")]
+[node name="wheel37" parent="map/objects" instance=ExtResource("38_q0fog")]
 position = Vector2(1007, -3179)
 
-[node name="wheel38" parent="map/objects" unique_id=2130214887 instance=ExtResource("37_8g2fq")]
+[node name="wheel38" parent="map/objects" instance=ExtResource("37_8g2fq")]
 position = Vector2(1094, -3173)
 
-[node name="wheel39" parent="map/objects" unique_id=1158310133 instance=ExtResource("38_q0fog")]
+[node name="wheel39" parent="map/objects" instance=ExtResource("38_q0fog")]
 position = Vector2(809, -3092)
 
-[node name="wheel40" parent="map/objects" unique_id=2021378278 instance=ExtResource("36_fkspe")]
+[node name="wheel40" parent="map/objects" instance=ExtResource("36_fkspe")]
 position = Vector2(1025, -3324)
 
-[node name="trash41" parent="map/objects" unique_id=736089297 instance=ExtResource("32_opqnl")]
+[node name="trash41" parent="map/objects" instance=ExtResource("32_opqnl")]
 position = Vector2(1016.00006, -3073)
 scale = Vector2(0.775, 0.775)
 
-[node name="trash42" parent="map/objects" unique_id=980583272 instance=ExtResource("33_rk6qv")]
+[node name="trash42" parent="map/objects" instance=ExtResource("33_rk6qv")]
 position = Vector2(726, -3325)
 
-[node name="door5" parent="map/objects" unique_id=1525231402 instance=ExtResource("27_14i7x")]
+[node name="door5" parent="map/objects" instance=ExtResource("27_14i7x")]
 position = Vector2(1145, -3067)
 
-[node name="ladder6" type="StaticBody2D" parent="map/objects" unique_id=768723836]
+[node name="ladder6" type="StaticBody2D" parent="map/objects"]
 position = Vector2(1030, -3010)
 
-[node name="Ladder" type="Sprite2D" parent="map/objects/ladder6" unique_id=753482259]
+[node name="Ladder" type="Sprite2D" parent="map/objects/ladder6"]
 position = Vector2(-79.99997, -67.5)
 rotation = -1.5707964
 texture = ExtResource("31_opqnl")
 offset = Vector2(88, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="map/objects/ladder6" unique_id=900239189]
-position = Vector2(-87.49982, -102.5)
-scale = Vector2(0.99999976, 0.99999976)
-shape = SubResource("RectangleShape2D_wiblk")
+[node name="cars on top" type="Node2D" parent="map"]
 
-[node name="cars on top" type="Node2D" parent="map" unique_id=1098961091]
-
-[node name="CarH3" type="Sprite2D" parent="map/cars on top" unique_id=2060903015]
+[node name="CarH3" type="Sprite2D" parent="map/cars on top"]
 position = Vector2(-231, -1177)
 rotation = 0.02617994
 texture = ExtResource("15_rloms")
 centered = false
 offset = Vector2(-421.5, -405)
 
-[node name="CarV7" type="Sprite2D" parent="map/cars on top" unique_id=1185020228]
+[node name="CarV7" type="Sprite2D" parent="map/cars on top"]
 position = Vector2(-1505, -4747)
 texture = ExtResource("18_pqyp1")
 
-[node name="CarV5" type="Sprite2D" parent="map/cars on top" unique_id=1445543050]
+[node name="CarV5" type="Sprite2D" parent="map/cars on top"]
 position = Vector2(3426, -2272)
 texture = ExtResource("19_phd1v")
 
-[node name="CarV6" type="Sprite2D" parent="map/cars on top" unique_id=344731078]
+[node name="CarV6" type="Sprite2D" parent="map/cars on top"]
 position = Vector2(3436, -2413)
 texture = ExtResource("20_ldql6")
 
-[node name="CarH9" type="Sprite2D" parent="map/cars on top" unique_id=1117679627]
+[node name="CarH9" type="Sprite2D" parent="map/cars on top"]
 modulate = Color(0.30482498, 0.66456586, 0.7318072, 1)
 position = Vector2(3722.0002, -5960)
 rotation = -0.18325958
 texture = ExtResource("24_phd1v")
 
-[node name="objects on top" type="Node2D" parent="map" unique_id=1132303503]
+[node name="objects on top" type="Node2D" parent="map"]
 
-[node name="Wheel4" type="Sprite2D" parent="map/objects on top" unique_id=474934988]
+[node name="Wheel4" type="Sprite2D" parent="map/objects on top"]
 position = Vector2(3858, -1388)
 texture = ExtResource("41_u7y7k")
 
-[node name="Box1" type="Sprite2D" parent="map/objects on top" unique_id=1839719806]
+[node name="Box1" type="Sprite2D" parent="map/objects on top"]
 position = Vector2(-1493.9999, -4259)
 scale = Vector2(0.8197026, 0.8197026)
 texture = ExtResource("47_8g2fq")
 
-[node name="Trash1" type="Sprite2D" parent="map/objects on top" unique_id=932599215]
+[node name="Trash1" type="Sprite2D" parent="map/objects on top"]
 position = Vector2(395, -4509)
 scale = Vector2(0.6394558, 0.6394558)
 texture = ExtResource("48_q0fog")
 
-[node name="Trash2" type="Sprite2D" parent="map/objects on top" unique_id=2009433960]
+[node name="Trash2" type="Sprite2D" parent="map/objects on top"]
 position = Vector2(3794.0002, -6135.0005)
 scale = Vector2(0.529, 0.529)
 texture = ExtResource("48_q0fog")
 
-[node name="Box2" type="Sprite2D" parent="map/objects on top" unique_id=1978623788]
+[node name="Box2" type="Sprite2D" parent="map/objects on top"]
 position = Vector2(3181.0002, -5295)
 scale = Vector2(0.58271414, 0.5827141)
 texture = ExtResource("47_8g2fq")
 
-[node name="Box3" type="Sprite2D" parent="map/objects on top" unique_id=650247753]
+[node name="Box3" type="Sprite2D" parent="map/objects on top"]
 position = Vector2(3981, -5654)
 scale = Vector2(0.58271414, 0.5827141)
 texture = ExtResource("47_8g2fq")
 flip_h = true
 
-[node name="characters" type="Node2D" parent="." unique_id=1658788523]
+[node name="characters" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Character" parent="characters" unique_id=1092893584 instance=ExtResource("2_6wfg4")]
-position = Vector2(300, -170.00003)
+[node name="Character" parent="characters" instance=ExtResource("2_6wfg4")]
+position = Vector2(428, -300)
 Speed = 275.0
 
-[node name="Control_Movement" type="Node2D" parent="characters/Character" unique_id=1487337861]
+[node name="Control_Movement" type="Node2D" parent="characters/Character"]
 y_sort_enabled = true
 script = ExtResource("3_ngkyk")
 metadata/_custom_type_script = "uid://fy8tratxjwal"
 
-[node name="Camera2D" type="Camera2D" parent="characters/Character" unique_id=2024420519]
+[node name="Camera2D" type="Camera2D" parent="characters/Character"]
 y_sort_enabled = true
 position = Vector2(0, -112.065)
 limit_left = -1419
@@ -1645,59 +1629,66 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 drag_horizontal_enabled = true
 
-[node name="Sound area" parent="characters/Character" unique_id=1083916841 instance=ExtResource("57_wiblk")]
-position = Vector2(0, -6.2499995)
-
-[node name="Character2" parent="characters" unique_id=526153115 node_paths=PackedStringArray("target") instance=ExtResource("2_6wfg4")]
+[node name="Character2" parent="characters" node_paths=PackedStringArray("target") instance=ExtResource("2_6wfg4")]
 position = Vector2(206.99998, -82.99999)
 _name = 1
 target = NodePath("../Character")
 
-[node name="Character3" parent="characters" unique_id=770981454 node_paths=PackedStringArray("target") instance=ExtResource("2_6wfg4")]
+[node name="Character3" parent="characters" node_paths=PackedStringArray("target") instance=ExtResource("2_6wfg4")]
 position = Vector2(373.99997, -104.99999)
 _name = 2
 target = NodePath("../Character")
 
-[node name="bullies" type="Node2D" parent="." unique_id=770761249]
+[node name="bullies" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="enemy" parent="bullies" unique_id=887445839 instance=ExtResource("57_ym6ig")]
+[node name="enemy" parent="bullies" instance=ExtResource("57_ym6ig")]
 position = Vector2(1436.9999, -1977)
 
-[node name="Path2D" type="Path2D" parent="bullies/enemy" unique_id=779558689]
+[node name="Path2D" type="Path2D" parent="bullies/enemy"]
 curve = SubResource("Curve2D_ym6ig")
 
-[node name="enemy2" parent="bullies" unique_id=1524176049 instance=ExtResource("57_ym6ig")]
+[node name="enemy2" parent="bullies" instance=ExtResource("57_ym6ig")]
 position = Vector2(1390, -1189)
 _name = 0
 
-[node name="Path2D" type="Path2D" parent="bullies/enemy2" unique_id=728340399]
+[node name="Path2D" type="Path2D" parent="bullies/enemy2"]
 curve = SubResource("Curve2D_wiblk")
 
-[node name="enemy3" parent="bullies" unique_id=1120558800 instance=ExtResource("57_ym6ig")]
+[node name="enemy3" parent="bullies" instance=ExtResource("57_ym6ig")]
 position = Vector2(-298.99988, -1736)
 _name = 2
 
-[node name="Path2D" type="Path2D" parent="bullies/enemy3" unique_id=730025889]
+[node name="Path2D" type="Path2D" parent="bullies/enemy3"]
 curve = SubResource("Curve2D_43dqk")
 
-[node name="enemy4" parent="bullies" unique_id=109104297 instance=ExtResource("57_ym6ig")]
+[node name="enemy4" parent="bullies" instance=ExtResource("57_ym6ig")]
 position = Vector2(-353, -2283)
 
-[node name="Path2D" type="Path2D" parent="bullies/enemy4" unique_id=1417019591]
+[node name="Path2D" type="Path2D" parent="bullies/enemy4"]
 curve = SubResource("Curve2D_0r54b")
 
-[node name="enemy5" parent="bullies" unique_id=2048524030 instance=ExtResource("57_ym6ig")]
+[node name="enemy5" parent="bullies" instance=ExtResource("57_ym6ig")]
 position = Vector2(1013.9999, -976.0001)
 _name = 0
 
-[node name="Path2D" type="Path2D" parent="bullies/enemy5" unique_id=2063884449]
+[node name="Path2D" type="Path2D" parent="bullies/enemy5"]
 curve = SubResource("Curve2D_hht8h")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=118361481]
-process_mode = 3
-stream = ExtResource("59_43dqk")
-autoplay = true
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_p2u0y")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+vertices = PackedVector2Array(-736, -625, -714, -628, -716, -705, -638, -708, -592, -759, -606, -805, -469, -826, -372, -891, -369, -951, -688, -973, -717, -1123, -743, -1122)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+vertices = PackedVector2Array(247, -1409, 199, -1361, 237, -1321, 267, -1327, 255, -1257, 265, -1235, 494, -1221, 496, -1302, 465, -1350, 464, -1414, 376, -1416)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+vertices = PackedVector2Array(807, -1624, 711, -1454, 729, -1401, 705, -1344, 721, -1320, 1095, -1314, 1155, -1387, 1107, -1431, 1109, -1463, 1149, -1487, 1156, -1551, 1089, -1617)
+affect_navigation_mesh = true
 
 [connection signal="body_entered" from="Items/item/pickup area" to="Items/item" method="_on_pickup_area_body_entered"]
 [connection signal="body_exited" from="Items/item/pickup area" to="Items/item" method="_on_pickup_area_body_exited"]
