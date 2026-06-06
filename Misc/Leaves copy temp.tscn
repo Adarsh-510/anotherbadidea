@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://gttm8pamp71k"]
+
+[ext_resource type="Texture2D" uid="uid://cjdvy1cca7og2" path="res://Misc/Leaf_placeholder-removebg-preview.png" id="1_ienr5"]
+
+[sub_resource type="Curve" id="Curve_ienr5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_y1d4b"]
+curve = SubResource("Curve_ienr5")
+
+[sub_resource type="Curve" id="Curve_tanoc"]
+_data = [Vector2(0, 0.5883669), 0.0, 1.4203135, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_d6q85"]
+curve = SubResource("Curve_tanoc")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3jh8m"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 504.72
+emission_ring_radius = 94.34
+emission_ring_inner_radius = 117.92
+emission_ring_cone_angle = 90.0
+angle_min = -407.9
+angle_max = 290.5
+direction = Vector3(-1, 0.5, 0)
+initial_velocity_min = 253.22
+initial_velocity_max = 270.38998
+gravity = Vector3(0, 9.8, 0)
+damping_min = 12.017
+damping_max = 51.502003
+damping_curve = SubResource("CurveTexture_y1d4b")
+scale_min = 0.04
+scale_max = 0.049999997
+scale_over_velocity_curve = SubResource("CurveTexture_d6q85")
+anim_speed_min = 3.7099998
+anim_speed_max = 3.7099998
+turbulence_noise_strength = 0.0
+turbulence_noise_scale = 10.0
+
+[node name="Node2D" type="Node2D" unique_id=644075583]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1247886929]
+position = Vector2(1061, -480)
+amount = 40
+texture = ExtResource("1_ienr5")
+lifetime = 14.0
+randomness = 1.0
+fixed_fps = 0
+visibility_rect = Rect2(-2720.9023, -719.8102, 3432.7144, 4029.266)
+process_material = SubResource("ParticleProcessMaterial_3jh8m")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=918189845]
