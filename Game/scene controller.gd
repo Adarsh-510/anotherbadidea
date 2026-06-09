@@ -6,13 +6,18 @@ var frozen_scenes: Dictionary = {}
 
 func swap_scene(target_scene_path: String, delete_current: bool, keep_current_running: bool) -> void:
 	var old_scene = current_active_scene
+	print("Old Scene: ", old_scene)
+	print("Old Path: ", old_scene.scene_file_path)
 	
 	if delete_current:
 		old_scene.queue_free()
+		print("Queue deleted")
 	else:
 		var old_scene_key = old_scene.scene_file_path
 		frozen_scenes[old_scene_key] = old_scene
 		
+		print("Old scene:", old_scene)
+		print("Parent:", old_scene.get_parent())
 		remove_child(old_scene)
 		
 		if not keep_current_running:

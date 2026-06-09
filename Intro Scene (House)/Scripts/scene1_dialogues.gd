@@ -16,6 +16,8 @@ extends CanvasLayer
 @onready var frank: Sprite2D = $Frank
 
 func _ready() -> void:
+	var SceneController = get_tree().current_scene
+	
 	book_panel.modulate.a = 0
 	cutscene_1.modulate.a = 0
 	cutscene_2.modulate.a = 0
@@ -213,4 +215,4 @@ func _ready() -> void:
 	await get_tree().create_timer(2).timeout
 	Dialogue22.queue_free()
 	
-	get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn")
+	SceneController.swap_scene("res://Junkyard/junkyard.tscn",true,false)

@@ -57,7 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://b2ddhtg40ln2l" path="res://Junkyard/Assets/trash1.png" id="48_q0fog"]
 [ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://Pause Menu/Scenes/pause_menu.tscn" id="56_q0fog"]
 [ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/Bullies/enemy.tscn" id="57_ym6ig"]
-[ext_resource type="Script" uid="uid://blyg1qv8wkil1" path="res://Junkyard/instructions.gd" id="58_wiblk"]
+[ext_resource type="Script" path="res://Junkyard/instructions.gd" id="58_wiblk"]
 
 [sub_resource type="GDScript" id="GDScript_ym6ig"]
 script/source = "extends Node2D
@@ -70,10 +70,12 @@ func _ready() -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
+	var SceneController = get_tree().current_scene
 	if body is Character and body._name == 0:
 		#start battle
 		DataBase.curr_enemy = DataBase.BullyLeader
-		get_tree().change_scene_to_file(\"res://Combat System/Scenes/Main_Battle.tscn\")
+		SceneController.swap_scene(\"res://Combat System/Scenes/Main_Battle.tscn\", false, false)
+		#get_tree().change_scene_to_file(\"res://Combat System/Scenes/Main_Battle.tscn\")
 "
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q0fog"]

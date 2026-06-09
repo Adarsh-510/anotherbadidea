@@ -26,6 +26,7 @@ var sound_disabled_start_pos: Vector2
 
 
 func _ready() -> void:
+	
 	sound_disabled.modulate.a = 0
 	# Store original positions
 	play_start_pos = play.position
@@ -155,7 +156,9 @@ func _on_sound_pressed() -> void:
 		
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://Intro Scene (House)/Scenes/Main.tscn")
+	var SceneController = get_tree().current_scene
+	SceneController.swap_scene("res://Intro Scene (House)/Scenes/Main.tscn", true, false)
+	#get_tree().change_scene_to_file("res://Intro Scene (House)/Scenes/Main.tscn")
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()

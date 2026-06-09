@@ -86,7 +86,6 @@ texture = ExtResource("7_cqhbb")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=769590575]
 stream = ExtResource("8_ln2b5")
 autoplay = true
-stream_paused = true
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="sound" to="." method="_on_sound_pressed"]

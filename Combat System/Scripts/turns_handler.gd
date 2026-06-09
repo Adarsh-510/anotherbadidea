@@ -30,6 +30,7 @@ var enemy_damage_offset = Vector2(60,100)
 @onready var trans_in_animation: AnimationPlayer = $"../InterFace/Trans_in_animation"
 
 @onready var damage: AudioStreamPlayer2D = $"../damage"
+@onready var SceneController = get_tree().current_scene
 
 
 func _ready() -> void:
@@ -45,7 +46,8 @@ func _process(delta: float) -> void:
 		Interface.reset()
 		death_animation()
 		await get_tree().create_timer(death_duration).timeout
-		get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn") #change to junkyard
+		SceneController.swap_scene("res://Junkyard/junkyard.tscn", true, false)
+		#get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn") #change to junkyard
 		
 		
 	if DataBase.Player1["hp"] <= 0 or DataBase.Player2["hp"] <= 0 or DataBase.Player3["hp"] <= 0:
@@ -54,7 +56,8 @@ func _process(delta: float) -> void:
 		DataBase.curr_enemy["hp"] = 100
 		Interface.reset()
 		await get_tree().create_timer(death_duration).timeout
-		get_tree().change_scene_to_file("res://Game Over/Game_over_player_died.tscn") 
+		SceneController.swap_scene("res://Game Over/Game_over_player_died.tscn", true, false)
+		#get_tree().change_scene_to_file("res://Game Over/Game_over_player_died.tscn") 
 
 
 func enemy_turn():

@@ -11,6 +11,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	
+	var SceneController = get_tree().current_scene
 	var labels = [
 		a_game_by,
 		art_direction,
@@ -32,5 +34,5 @@ func _ready() -> void:
 		tween.tween_property(label, "modulate:a", 0.0, fade_duration)
 
 		await tween.finished
-	
-	get_tree().change_scene_to_file("res://Intro Scene (House)/Scenes/Main Menu.tscn")
+	SceneController.swap_scene("res://Intro Scene (House)/Scenes/Main Menu.tscn", true, false)
+	#get_tree().change_scene_to_file("res://Intro Scene (House)/Scenes/Main Menu.tscn")
