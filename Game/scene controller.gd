@@ -12,8 +12,6 @@ func swap_scene(target_scene_path: String, delete_current: bool, keep_current_ru
 		var old_scene_key = old_scene.scene_file_path
 		frozen_scenes[old_scene_key] = old_scene
 		
-		print("Old scene:", old_scene)
-		print("Parent:", old_scene.get_parent())
 		remove_child(old_scene)
 		
 		if not keep_current_running:
