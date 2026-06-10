@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcl2u5gf8swk8"
+path="res://.godot/imported/Surprised.wav-481020cb061afcbac0295d6bc29dcf4f.sample"
+
+[deps]
+
+source_file="res://Entities/Assets/Audio/Enemy Sounds/Surprised.wav"
+dest_files=["res://.godot/imported/Surprised.wav-481020cb061afcbac0295d6bc29dcf4f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

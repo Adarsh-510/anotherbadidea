@@ -23,6 +23,7 @@ config/icon="res://Misc/icon.svg"
 
 DataBase="*res://Combat System/Scripts/data_base.gd"
 FightSystem="*res://Combat System/Scripts/FightSystem.gd"
+SceneController="*uid://c2uligiuy00e6"
 
 [display]
 

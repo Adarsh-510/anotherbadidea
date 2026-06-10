@@ -7,9 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://c370pl2xeh5ks" path="res://Entities/LEGO SHIT/Vision/vision.tscn" id="4_o1grr"]
 [ext_resource type="Texture2D" uid="uid://d16h3k75ieepq" path="res://Entities/Assets/Animations/Emotion/anger.png" id="7_ckmex"]
 [ext_resource type="Texture2D" uid="uid://ciaeqh2chugwj" path="res://Entities/Assets/Animations/Emotion/confusion.png" id="8_q5716"]
-[ext_resource type="AudioStream" uid="uid://b2j8dq33xi6ko" path="res://All Audios/Alert.wav" id="9_q5716"]
+[ext_resource type="AudioStream" uid="uid://b2j8dq33xi6ko" path="res://Entities/Assets/Audio/Enemy Sounds/Alert.wav" id="9_q5716"]
 [ext_resource type="PackedScene" uid="uid://cbvtewrk8owi3" path="res://Entities/LEGO SHIT/Pathfind/pathfind.tscn" id="9_sawca"]
-[ext_resource type="AudioStream" uid="uid://bcl2u5gf8swk8" path="res://All Audios/Surprised.wav" id="10_gcam1"]
+[ext_resource type="AudioStream" uid="uid://bcl2u5gf8swk8" path="res://Entities/Assets/Audio/Enemy Sounds/Surprised.wav" id="10_gcam1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gcam1"]
 radius = 11.0

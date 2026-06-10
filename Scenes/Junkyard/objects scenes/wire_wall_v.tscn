@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b0q2s5l823v2y"]
+
+[ext_resource type="Texture2D" uid="uid://b0ffcecyu42eq" path="res://Scenes/Junkyard/Assets/wire wall v.png" id="1_vutpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38ira"]
+size = Vector2(20, 449)
+
+[node name="wire wall v" type="StaticBody2D" unique_id=185656095]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1869200135]
+position = Vector2(0, -223.5)
+shape = SubResource("RectangleShape2D_38ira")
+
+[node name="WireWallV" type="Sprite2D" parent="." unique_id=195969599]
+y_sort_enabled = true
+texture = ExtResource("1_vutpe")
+centered = false
+offset = Vector2(-29.085, -463.38)

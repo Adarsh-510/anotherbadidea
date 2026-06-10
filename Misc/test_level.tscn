@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="1_gbhdq"]
 [ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="2_y646j"]
 [ext_resource type="PackedScene" uid="uid://8s0r14sj1pw3" path="res://Entities/LEGO SHIT/Sound Area/sound_area.tscn" id="3_lnbra"]
-[ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://Pause Menu/Scenes/pause_menu.tscn" id="5_sb12i"]
-[ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/enemy.tscn" id="6_58smv"]
+[ext_resource type="PackedScene" uid="uid://eigaxpr05k6p" path="res://GUI/Pause Menu/Scenes/pause_menu.tscn" id="5_sb12i"]
+[ext_resource type="PackedScene" uid="uid://dgvwbi1luc4bl" path="res://Entities/Enemies/Bullies/enemy.tscn" id="6_58smv"]
 
 [sub_resource type="Curve2D" id="Curve2D_4ptq8"]
 _data = {

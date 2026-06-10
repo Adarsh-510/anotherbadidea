@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bcpwvvg8f24ra"]
+
+[ext_resource type="Texture2D" uid="uid://ddjgrbwnqlixt" path="res://Scenes/Junkyard/Assets/signboard.png" id="1_qervs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sp3l4"]
+size = Vector2(214.5, 55.25)
+
+[node name="signboard" type="StaticBody2D" unique_id=871559125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1515847032]
+position = Vector2(9, -7)
+shape = SubResource("RectangleShape2D_sp3l4")
+
+[node name="Signboard" type="Sprite2D" parent="." unique_id=484641773]
+position = Vector2(0, -7)
+texture = ExtResource("1_qervs")
+offset = Vector2(0, -267)

@@ -1,0 +1,297 @@
+[gd_scene format=3 uid="uid://cbtlgxn7x3nqe"]
+
+[ext_resource type="Script" uid="uid://djbvin7d38rsh" path="res://Scenes/Ending/ending.gd" id="1_f4cf0"]
+[ext_resource type="Texture2D" uid="uid://j352qnr3sv8t" path="res://Scenes/Intro/Assets/House_grass.png" id="1_nkkon"]
+[ext_resource type="Texture2D" uid="uid://bvkc1mhi81kh1" path="res://Scenes/Intro/Assets/House_house.png" id="2_f4cf0"]
+[ext_resource type="Texture2D" uid="uid://dbjcyimpkqvkm" path="res://Scenes/Intro/Assets/House_driveway.png" id="3_43171"]
+[ext_resource type="Texture2D" uid="uid://csnlkfghlcvil" path="res://Scenes/Intro/Assets/House_tree1.png" id="4_3nj8a"]
+[ext_resource type="Texture2D" uid="uid://dyoa1jh8nj15i" path="res://Scenes/Intro/Assets/House_tree2.png" id="5_6asdv"]
+[ext_resource type="Texture2D" uid="uid://bsysit4t8d2jq" path="res://Scenes/Intro/Assets/House_fence.png" id="6_o0buh"]
+[ext_resource type="Texture2D" uid="uid://bd5jk8xmbm1rq" path="res://Scenes/Intro/Assets/Shadow Overlay.png" id="7_dlb8t"]
+[ext_resource type="Texture2D" uid="uid://c5s8p4ey0rh65" path="res://Scenes/Intro/Assets/Highlight Overlay.png" id="8_16g43"]
+[ext_resource type="Texture2D" uid="uid://d05x2bxshybba" path="res://Scenes/Intro/Assets/Light Overlay.png" id="9_5nvnh"]
+[ext_resource type="Texture2D" uid="uid://baf2o6tk1er7f" path="res://Scenes/Ending/1000007218.png" id="11_3nj8a"]
+[ext_resource type="Texture2D" uid="uid://cxcko5mikw1cb" path="res://Scenes/Ending/1000007219.png" id="12_6asdv"]
+[ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="13_6asdv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2resh"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nj8a"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="Grass" type="Sprite2D" parent="Map"]
+position = Vector2(450.49997, 320)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass2" type="Sprite2D" parent="Map"]
+position = Vector2(1363, 320.00003)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass3" type="Sprite2D" parent="Map"]
+position = Vector2(450.99997, 944)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass4" type="Sprite2D" parent="Map"]
+position = Vector2(1363, 944)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass5" type="Sprite2D" parent="Map"]
+position = Vector2(2269, 320)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass6" type="Sprite2D" parent="Map"]
+position = Vector2(2270, 939)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass7" type="Sprite2D" parent="Map"]
+position = Vector2(452.49997, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass8" type="Sprite2D" parent="Map"]
+position = Vector2(1365, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass9" type="Sprite2D" parent="Map"]
+position = Vector2(452.99997, 2187)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass10" type="Sprite2D" parent="Map"]
+position = Vector2(1365, 2187)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass11" type="Sprite2D" parent="Map"]
+position = Vector2(2271, 1563)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass12" type="Sprite2D" parent="Map"]
+position = Vector2(2272, 2182)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass13" type="Sprite2D" parent="Map"]
+position = Vector2(-464.0002, 309)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass14" type="Sprite2D" parent="Map"]
+position = Vector2(-463.00006, 929.9999)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass15" type="Sprite2D" parent="Map"]
+position = Vector2(-459.0001, 1551.9995)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass16" type="Sprite2D" parent="Map"]
+position = Vector2(-465.00003, 2169)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass17" type="Sprite2D" parent="Map"]
+position = Vector2(3166.27, 316)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass18" type="Sprite2D" parent="Map"]
+position = Vector2(3170, 935)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass19" type="Sprite2D" parent="Map"]
+position = Vector2(3170, 1554)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="Grass20" type="Sprite2D" parent="Map"]
+position = Vector2(3170, 2169)
+scale = Vector2(0.3689516, 0.35575828)
+texture = ExtResource("1_nkkon")
+
+[node name="House" type="Sprite2D" parent="Map"]
+position = Vector2(1366, 471)
+texture = ExtResource("2_f4cf0")
+
+[node name="Driveway" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1061)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_43171")
+
+[node name="Driveway2" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1404)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_43171")
+
+[node name="Driveway3" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1747)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_43171")
+
+[node name="Driveway4" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 1977)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_43171")
+
+[node name="Driveway5" type="Sprite2D" parent="Map"]
+position = Vector2(609.25, 2318)
+scale = Vector2(1.4296635, 1)
+texture = ExtResource("3_43171")
+
+[node name="Tree" type="Sprite2D" parent="Map"]
+position = Vector2(1541, 979)
+texture = ExtResource("4_3nj8a")
+
+[node name="Tree2" type="Sprite2D" parent="Map"]
+position = Vector2(2536, 1872)
+texture = ExtResource("5_6asdv")
+
+[node name="Tree3" type="Sprite2D" parent="Map"]
+position = Vector2(124, 1491)
+texture = ExtResource("5_6asdv")
+
+[node name="Tree4" type="Sprite2D" parent="Map"]
+position = Vector2(-116, 256)
+texture = ExtResource("4_3nj8a")
+
+[node name="Fence" type="Sprite2D" parent="Map"]
+position = Vector2(2530, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence2" type="Sprite2D" parent="Map"]
+position = Vector2(2128, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence3" type="Sprite2D" parent="Map"]
+position = Vector2(1726, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence4" type="Sprite2D" parent="Map"]
+position = Vector2(1325, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence5" type="Sprite2D" parent="Map"]
+position = Vector2(1018, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence6" type="Sprite2D" parent="Map"]
+position = Vector2(197, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence7" type="Sprite2D" parent="Map"]
+position = Vector2(-202, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence8" type="Sprite2D" parent="Map"]
+position = Vector2(-518, 2050)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence9" type="Sprite2D" parent="Map"]
+position = Vector2(2925, 2055)
+texture = ExtResource("6_o0buh")
+
+[node name="Fence10" type="Sprite2D" parent="Map"]
+position = Vector2(3325, 2054)
+texture = ExtResource("6_o0buh")
+
+[node name="Shadow Overlay" type="Sprite2D" parent="Map"]
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(1446, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("7_dlb8t")
+
+[node name="Highlight Overlay" type="Sprite2D" parent="Map"]
+self_modulate = Color(1, 1, 1, 0.29411766)
+position = Vector2(1451, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("8_16g43")
+
+[node name="Light Overlay" type="Sprite2D" parent="Map"]
+self_modulate = Color(1, 1, 1, 0.78431374)
+position = Vector2(1456, 1040)
+scale = Vector2(2, 2)
+texture = ExtResource("9_5nvnh")
+
+[node name="Boundary Left" type="Panel" parent="Map"]
+offset_left = -456.0
+offset_right = -121.0
+offset_bottom = 2197.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2resh")
+
+[node name="Boundary Right" type="Panel" parent="Map"]
+offset_left = 3052.0
+offset_right = 3387.0
+offset_bottom = 2197.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_2resh")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1463, 1087)
+zoom = Vector2(0.5, 0.5)
+limit_enabled = false
+limit_left = 3537
+limit_top = 0
+limit_right = -258
+limit_bottom = 2490
+
+[node name="Dialogues" type="CanvasLayer" parent="."]
+script = ExtResource("1_f4cf0")
+
+[node name="cutscene 1" type="Sprite2D" parent="Dialogues"]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("11_3nj8a")
+
+[node name="cutscene 2" type="Sprite2D" parent="Dialogues"]
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("12_6asdv")
+
+[node name="cutscene 0" type="Panel" parent="Dialogues"]
+offset_right = 1925.0
+offset_bottom = 1085.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3nj8a")
+
+[node name="Label" type="Label" parent="Dialogues/cutscene 0"]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1096.0
+theme_override_fonts/font = ExtResource("13_6asdv")
+theme_override_font_sizes/font_size = 128
+text = "A bit of summoning rituals later...."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="cutscene 3" type="Panel" parent="Dialogues"]
+offset_right = 1925.0
+offset_bottom = 1085.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3nj8a")
+
+[node name="Label" type="Label" parent="Dialogues/cutscene 3"]
+layout_mode = 0
+offset_right = 1925.0
+offset_bottom = 1096.0
+theme_override_fonts/font = ExtResource("13_6asdv")
+theme_override_font_sizes/font_size = 72
+text = "Owen was pelted with 327 water balloons that day, he left the scene bruised
+Number of water balloon crimes this year: 156,899 
+28 more as we speak 
+Keep you and your kids safe from water balloon crimes this summer 
+Stay safe. Stay dry. Thanks for playing"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

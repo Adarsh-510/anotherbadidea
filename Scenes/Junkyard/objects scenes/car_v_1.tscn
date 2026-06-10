@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bbw7lnx6ulqom"]
+
+[ext_resource type="Texture2D" uid="uid://degel1wn1in3l" path="res://Scenes/Junkyard/Assets/car v1.png" id="1_yrqg7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dedhd"]
+size = Vector2(398.75, 477.875)
+
+[node name="car v1" type="StaticBody2D" unique_id=365150522]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1237918255]
+position = Vector2(5.625, -240.0625)
+shape = SubResource("RectangleShape2D_dedhd")
+
+[node name="CarV1" type="Sprite2D" parent="." unique_id=21168693]
+texture = ExtResource("1_yrqg7")
+centered = false
+offset = Vector2(-217, -595)

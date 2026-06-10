@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cj2d7wloax2yh"]
+
+[ext_resource type="Texture2D" uid="uid://6idarler2bqj" path="res://Scenes/Junkyard/Assets/trash4.png" id="1_5gd4t"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smoy8"]
+radius = 160.0
+height = 460.0
+
+[node name="trash4" type="StaticBody2D" unique_id=1889677652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079771592]
+position = Vector2(-1, -164)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_smoy8")
+
+[node name="Trash4" type="Sprite2D" parent="." unique_id=753433105]
+position = Vector2(0, -5)
+texture = ExtResource("1_5gd4t")
+offset = Vector2(0, -225)

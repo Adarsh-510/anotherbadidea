@@ -46,8 +46,8 @@ func _process(delta: float) -> void:
 		Interface.reset()
 		death_animation()
 		await get_tree().create_timer(death_duration).timeout
-		SceneController.swap_scene("res://Junkyard/junkyard.tscn", true, false)
-		#get_tree().change_scene_to_file("res://Junkyard/junkyard.tscn") #change to junkyard
+		
+		SceneController.swap_scene("res://Scenes/Junkyard/junkyard.tscn", true, false)
 		
 		
 	if DataBase.Player1["hp"] <= 0 or DataBase.Player2["hp"] <= 0 or DataBase.Player3["hp"] <= 0:
@@ -56,8 +56,8 @@ func _process(delta: float) -> void:
 		DataBase.curr_enemy["hp"] = 100
 		Interface.reset()
 		await get_tree().create_timer(death_duration).timeout
-		SceneController.swap_scene("res://Game Over/Game_over_player_died.tscn", true, false)
-		#get_tree().change_scene_to_file("res://Game Over/Game_over_player_died.tscn") 
+		
+		SceneController.swap_scene("res://Scenes/Game Over/Game_over_player_died.tscn", true, false)
 
 
 func enemy_turn():

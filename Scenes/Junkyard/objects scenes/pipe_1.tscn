@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ro580rhp1fo7"]
+
+[ext_resource type="Texture2D" uid="uid://b0axmcjyk3w8g" path="res://Scenes/Junkyard/Assets/pipe1.png" id="1_20e0y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smoy8"]
+radius = 41.0
+height = 262.0
+
+[node name="pipe1" type="StaticBody2D" unique_id=1889677652]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079771592]
+position = Vector2(4, -44)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_smoy8")
+
+[node name="Pipe1" type="Sprite2D" parent="." unique_id=1327678282]
+position = Vector2(0, -328)
+texture = ExtResource("1_20e0y")
