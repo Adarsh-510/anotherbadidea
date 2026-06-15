@@ -35,7 +35,7 @@ func setup():
 	elif target:
 		refresh_position.start()
 		has_target = true
-		target_desired_distance = 40
+		target_desired_distance = 10
 	else:
 		refresh_position.stop()
 		target_desired_distance = 10

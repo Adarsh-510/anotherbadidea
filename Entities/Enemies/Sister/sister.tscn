@@ -1,26 +1,72 @@
 [gd_scene format=3 uid="uid://dxxlcrefes768"]
 
 [ext_resource type="Script" uid="uid://hkk5uwwl8odi" path="res://Entities/Enemies/Sister/sister.gd" id="1_kqhgp"]
-[ext_resource type="SpriteFrames" uid="uid://ctyfrh2cdkh10" path="res://Entities/Assets/Animations/Movement Animations/Owen.tres" id="2_kqhgp"]
+[ext_resource type="Texture2D" uid="uid://bwa3hr75rstbi" path="res://Entities/Assets/Sprite Sheets/Sister/looking aorund/l1.png" id="2_bbw85"]
 [ext_resource type="Script" uid="uid://d2ca0aj8b7nyq" path="res://Entities/Enemies/Sister/sister vision.gd" id="3_6sm4w"]
 [ext_resource type="Texture2D" uid="uid://cf55aw5fsbp04" path="res://Entities/Enemies/Sister/Assets/black.png" id="4_ny2hb"]
+[ext_resource type="Texture2D" uid="uid://u7nws8rymjph" path="res://Entities/Assets/Sprite Sheets/Sister/looking aorund/l4.png" id="4_sr4ud"]
+[ext_resource type="Texture2D" uid="uid://cqp7x11xq7i16" path="res://Entities/Assets/Sprite Sheets/Sister/looking aorund/l2.png" id="5_o3y31"]
 [ext_resource type="Texture2D" uid="uid://dgjksojydyftk" path="res://Entities/Enemies/Sister/Assets/green.png" id="5_olgi4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bbw85"]
+load_path = "res://.godot/imported/t1.png-bd7b6de8bdf0d5e1e8cd632c8a36d439.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ui2nc"]
+load_path = "res://.godot/imported/t2.png-b12808b82f68dc0fff112e62e3269403.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wejjt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_bbw85")
+}],
+"loop": true,
+"name": &"Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o3y31")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_bbw85")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_ui2nc")
+}],
+"loop": true,
+"name": &"Phone",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_sr4ud")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]
 
 [node name="sister" type="CharacterBody2D" unique_id=237785608]
 scale = Vector2(1.6, 1.6)
 script = ExtResource("1_kqhgp")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=2052355218]
-scale = Vector2(0.115, 0.115)
-sprite_frames = ExtResource("2_kqhgp")
-animation = &"Idle Down"
-autoplay = "Idle Down"
-offset = Vector2(16, -517)
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_wejjt")
+animation = &"Phone"
+autoplay = "Phone"
+offset = Vector2(-48.98, -517)
 
 [node name="vision" type="Area2D" parent="." unique_id=1170359591]
 z_index = 5
 position = Vector2(0, -24)
-scale = Vector2(3, 1.5)
+scale = Vector2(2.425, 1.213)
 collision_layer = 7
 collision_mask = 7
 script = ExtResource("3_6sm4w")

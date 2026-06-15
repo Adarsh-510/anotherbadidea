@@ -208,9 +208,9 @@ var BullyLeader = {
 }
 
 var CollectedItems = {
-	"Spindal": true,
-	"Lemonade": true, 
-	"Pickle": true,
-	"Flute": true,
-	"Mask": true
+	"Spindal": false,
+	"Lemonade": false, 
+	"Pickle": false,
+	"Flute": false,
+	"Mask": false
 }

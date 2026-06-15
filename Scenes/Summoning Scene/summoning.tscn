@@ -169,7 +169,7 @@ texture = ExtResource("8_h0frt")
 
 [node name="sister" parent="." unique_id=237785608 instance=ExtResource("10_uo04w")]
 y_sort_enabled = true
-position = Vector2(906.00006, 483.99997)
+position = Vector2(891, 479.99997)
 
 [node name="characters" type="Node2D" parent="." unique_id=359352435]
 y_sort_enabled = true

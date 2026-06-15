@@ -7,12 +7,11 @@ extends CharacterBody2D
 @onready var progress_bar: TextureProgressBar = $"CanvasLayer/phone progress/TextureProgressBar"
 @onready var shock_effect: ColorRect = $"CanvasLayer2/shock effect"
 
-
-const look_angle = 20
-const look_time = 3
-const stay_time = 1
+const look_angle = 30
+const look_time = 2.5
+const stay_time = 0.5
 var phone_time
-var looking_at_phone
+var looking_at_phone = true
 var vision_scale
 
 func _ready() -> void:
@@ -25,22 +24,19 @@ func _process(_delta: float) -> void:
 	if not looking_at_phone: animate()
 
 func end_game():
-	# play animation to call mom
-	# end game
 	await flash_screen()
-	get_tree().quit()
-	pass
+	
+	var SceneController = get_tree().current_scene
+	SceneController.swap_scene("res://Scenes/Game Over/Game_over_player_got_caught.tscn", false, false)
 
 func animate():
 	var angle = vision.global_rotation
-	var current_animation = ""
 	
-	if angle > deg_to_rad(50) and angle < deg_to_rad(130): current_animation += "Down"
+	if angle > deg_to_rad(90 - (90.0 - look_angle) / 2) and angle < deg_to_rad(90 + (90.0 - look_angle) / 2): sprite.play("Down")
+	elif Vector2.from_angle(angle).x > 0:
+		sprite.play("Right")
 	else:
-		sprite.flip_h = Vector2.from_angle(angle).x < 0
-		current_animation += "Side"
-	
-	sprite.play("Idle " + current_animation)
+		sprite.play("Left")
 
 func look_around():
 	while true:
@@ -65,16 +61,14 @@ func look_around():
 		await get_tree().create_timer(0.5).timeout
 
 func phone_up():
-	# look at phone sprite
-	
-	
 	var tween1 = create_tween()
 	tween1.set_ease(Tween.EASE_IN)
 	tween1.set_trans(Tween.TRANS_QUAD)
-	tween1.tween_property(vision, "scale", Vector2.ZERO, 1.5)
+	tween1.tween_property(vision, "scale", Vector2.ZERO, 1)
 	await tween1.finished
 	
 	looking_at_phone = true
+	sprite.play("Phone")
 	
 	phone_progress.visible = true
 	var tween2 = create_tween()
@@ -90,7 +84,7 @@ func phone_down():
 	var tween = create_tween()
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_trans(Tween.TRANS_QUAD)
-	tween.tween_property(vision, "scale", vision_scale, 1.5)
+	tween.tween_property(vision, "scale", vision_scale, 1)
 	await tween.finished
 
 func flash_screen():
