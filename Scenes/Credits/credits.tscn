@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cp32ku23mk6xi" path="res://Scenes/Credits/credits.gd" id="1_4lsct"]
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="2_y7j6d"]
-[ext_resource type="AudioStream" uid="uid://diw4uaq0ckh2y" path="res://All Audios/Title_music.wav" id="3_y7j6d"]
+[ext_resource type="AudioStream" uid="uid://diw4uaq0ckh2y" path="res://Not All But Most Audios/Title_music.wav" id="3_y7j6d"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txvy0"]
 bg_color = Color(0, 0, 0, 1)

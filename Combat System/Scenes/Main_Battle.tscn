@@ -27,8 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://ph8rhko82a7g" path="res://Combat System/Assets/explosion/10.png" id="16_yvwol"]
 [ext_resource type="Texture2D" uid="uid://bj1saa10rp3h7" path="res://Combat System/Assets/explosion/11.png" id="17_ns2ii"]
 [ext_resource type="Texture2D" uid="uid://cy4df6o74y721" path="res://Combat System/Assets/explosion/12.png" id="18_lpifd"]
-[ext_resource type="AudioStream" uid="uid://dv0rqbbxjr8q6" path="res://All Audios/Explosion (1).wav" id="28_h0bhx"]
-[ext_resource type="AudioStream" uid="uid://b1k8t3r880q3q" path="res://All Audios/Battle_Start.wav" id="29_2qpd5"]
+[ext_resource type="AudioStream" uid="uid://dv0rqbbxjr8q6" path="res://Not All But Most Audios/Explosion (1).wav" id="28_h0bhx"]
+[ext_resource type="AudioStream" uid="uid://b1k8t3r880q3q" path="res://Not All But Most Audios/Battle_Start.wav" id="29_2qpd5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0, 0, 0, 1)

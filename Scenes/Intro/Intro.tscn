@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://derqx7ycd13km" path="res://Scenes/Intro/Assets/1000007217.png" id="14_okvih"]
 [ext_resource type="Texture2D" uid="uid://cdtx3hljndp4n" path="res://Scenes/Intro/Assets/1000007141.png" id="15_rqnv2"]
 [ext_resource type="Texture2D" uid="uid://jfsvtt578fjl" path="res://Scenes/Intro/Assets/sitting sprites (1).png" id="16_dbah2"]
-[ext_resource type="AudioStream" uid="uid://by4e0g4vlwmfi" path="res://All Audios/Gameplay_Theme.wav" id="17_ptqpx"]
+[ext_resource type="AudioStream" uid="uid://by4e0g4vlwmfi" path="res://Not All But Most Audios/Gameplay_Theme.wav" id="17_ptqpx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v25tx"]
 bg_color = Color(0, 0, 0, 1)

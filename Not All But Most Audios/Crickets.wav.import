@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cgn5sda7wsyvl"
-path="res://.godot/imported/Crickets.wav-d6ab22559e291ba3f99f97c4c8fa2763.sample"
+path="res://.godot/imported/Crickets.wav-df0256b032c5d54674dda8fc6bc4de3e.sample"
 
 [deps]
 
-source_file="res://All Audios/Crickets.wav"
-dest_files=["res://.godot/imported/Crickets.wav-d6ab22559e291ba3f99f97c4c8fa2763.sample"]
+source_file="res://Not All But Most Audios/Crickets.wav"
+dest_files=["res://.godot/imported/Crickets.wav-df0256b032c5d54674dda8fc6bc4de3e.sample"]
 
 [params]
 

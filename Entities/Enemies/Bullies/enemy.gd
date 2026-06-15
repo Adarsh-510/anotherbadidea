@@ -1,3 +1,4 @@
+@tool
 
 extends CharacterBody2D
 class_name Enemy
@@ -8,20 +9,18 @@ class_name Enemy
 @onready var confusion_sound: AudioStreamPlayer2D = $"confusion sound"
 @onready var shock_effect: ColorRect = $"CanvasLayer/shock effect"
 
-
-
 var sprites = [
-	preload("res://Entities/Assets/Animations/Movement Animations/Andy.tres"),
-	preload("res://Entities/Assets/Animations/Movement Animations/Rudy.tres"),
-	preload("res://Entities/Assets/Animations/Movement Animations/Owen.tres")
+	preload("res://Entities/Assets/Animations/Movement Animations/Bully.tres"),
+	preload("res://Entities/Assets/Animations/Movement Animations/Bully.tres"),
+	preload("res://Entities/Assets/Animations/Movement Animations/Bully.tres")
 ]
 
-@export_enum("Boxer", "Tall", "Fat") var _name: int = 0
-	#set(value):
-		#_name = value
-		#if Engine.is_editor_hint():
-			#$"movement animation".sprite_frames = sprites[_name]
-		#Name = NAMES[_name]
+@export_enum("Boxer", "Tall", "Fat") var _name: int = 0:
+	set(value):
+		_name = value
+		if Engine.is_editor_hint():
+			$"movement animation".sprite_frames = sprites[_name]
+		Name = NAMES[_name]
 
 @export var Speed: float = 150
 @export var time_before_battle: float = 1.5
@@ -44,10 +43,10 @@ func _ready() -> void:
 	anger_sprite.visible = false
 	confusion_sprite.visible = false
 	if _name == 0: set_collision_layer_value(1, true)
-	#update_sprite()
-#
-#func update_sprite():
-	#$"movement animation".sprite_frames = sprites[_name]
+	update_sprite()
+
+func update_sprite():
+	$"movement animation".sprite_frames = sprites[_name]
 
 func _physics_process(_delta: float) -> void:
 	if Engine.is_editor_hint(): return
@@ -81,7 +80,6 @@ func start_battle():
 		2: DataBase.curr_enemy = DataBase.Bully3
 	
 	SceneController.swap_scene("res://Combat System/Scenes/Main_Battle.tscn", false, false)
-	#get_tree().change_scene_to_file("res://Combat System/Scenes/Main_Battle.tscn")
 
 func confusion(player):
 	while can_hear_player and not can_see_player:

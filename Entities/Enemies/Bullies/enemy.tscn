@@ -40,16 +40,14 @@ position = Vector2(0, -28.124996)
 [node name="Pathfind" parent="." unique_id=649794201 instance=ExtResource("9_sawca")]
 
 [node name="anger indicator" type="Sprite2D" parent="." unique_id=1976945375]
-visible = false
 z_index = 100
-position = Vector2(1, -84.66668)
+position = Vector2(1.875, -126.25001)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("7_ckmex")
 
 [node name="confusion indicator" type="Sprite2D" parent="." unique_id=1535234509]
-visible = false
 z_index = 100
-position = Vector2(2.6666641, -84.666664)
+position = Vector2(3.1250002, -126.25)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("8_q5716")
 

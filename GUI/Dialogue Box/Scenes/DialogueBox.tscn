@@ -16,6 +16,10 @@
 [ext_resource type="Texture2D" uid="uid://dpekprnp434y0" path="res://GUI/Dialogue Box/Assets/God_default.png" id="14_0e7vu"]
 [ext_resource type="Texture2D" uid="uid://b3ch5h3gly3xl" path="res://GUI/Dialogue Box/Assets/God_angry.png" id="15_twvw3"]
 [ext_resource type="Texture2D" uid="uid://c3jq0r1a2oij8" path="res://GUI/Dialogue Box/Assets/God_happy.png" id="16_1grv4"]
+[ext_resource type="Texture2D" uid="uid://c0eqw32qqp8tv" path="res://GUI/Dialogue Box/Assets/Bully 1.png" id="17_06sut"]
+[ext_resource type="Texture2D" uid="uid://duxqci8no2sb2" path="res://GUI/Dialogue Box/Assets/Bully 2.png" id="18_6f1u3"]
+[ext_resource type="Texture2D" uid="uid://dj6bgmd8i3nmq" path="res://GUI/Dialogue Box/Assets/Bully 3.png" id="19_vbo75"]
+[ext_resource type="Texture2D" uid="uid://cgqfoooo4e4an" path="res://GUI/Dialogue Box/Assets/Bully Leader.png" id="20_x6ih8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g8wed"]
 bg_color = Color(0, 0, 0, 1)
@@ -24,10 +28,10 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 
-[node name="DialogueBox" type="Node2D"]
+[node name="DialogueBox" type="Node2D" unique_id=1746332675]
 script = ExtResource("1_wtubw")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=396767251]
 z_index = 1
 offset_left = 69.0
 offset_top = 735.0
@@ -35,7 +39,7 @@ offset_right = 1845.0
 offset_bottom = 1008.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g8wed")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" type="Label" parent="Panel" unique_id=1209717039]
 layout_mode = 0
 offset_left = 72.0
 offset_top = 37.0
@@ -45,72 +49,92 @@ theme_override_fonts/font = ExtResource("1_w1vtm")
 theme_override_font_sizes/font_size = 64
 autowrap_mode = 3
 
-[node name="Andy_bored" type="Sprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="." unique_id=791692074]
+
+[node name="Andy_bored" type="Sprite2D" parent="Sprites" unique_id=413342952]
 position = Vector2(1586, 564)
 scale = Vector2(1, 0.908)
 texture = ExtResource("2_g8wed")
 
-[node name="Andy_default" type="Sprite2D" parent="."]
+[node name="Andy_default" type="Sprite2D" parent="Sprites" unique_id=596740442]
 position = Vector2(1587, 563)
 scale = Vector2(1, 0.908)
 texture = ExtResource("3_mxav6")
 
-[node name="Andy_happy" type="Sprite2D" parent="."]
+[node name="Andy_happy" type="Sprite2D" parent="Sprites" unique_id=2077785964]
 position = Vector2(1587, 563)
 scale = Vector2(1, 0.908)
 texture = ExtResource("4_7ir7q")
 
-[node name="Andy_scared" type="Sprite2D" parent="."]
+[node name="Andy_scared" type="Sprite2D" parent="Sprites" unique_id=1802185966]
 position = Vector2(1587, 560)
 scale = Vector2(1, 0.908)
 texture = ExtResource("5_fos01")
 
-[node name="Owen_happy" type="Sprite2D" parent="."]
+[node name="Owen_happy" type="Sprite2D" parent="Sprites" unique_id=1679144703]
 position = Vector2(1587, 570)
 scale = Vector2(1, 0.908)
 texture = ExtResource("6_s2lrg")
 
-[node name="Owen_sad" type="Sprite2D" parent="."]
+[node name="Owen_sad" type="Sprite2D" parent="Sprites" unique_id=456328757]
 position = Vector2(1587, 570)
 scale = Vector2(1, 0.908)
 texture = ExtResource("7_q73cw")
 
-[node name="Owen_inlove" type="Sprite2D" parent="."]
+[node name="Owen_inlove" type="Sprite2D" parent="Sprites" unique_id=803836736]
 position = Vector2(1587, 570)
 scale = Vector2(1, 0.908)
 texture = ExtResource("9_rcxrg")
 
-[node name="Rudy_bored" type="Sprite2D" parent="."]
+[node name="Rudy_bored" type="Sprite2D" parent="Sprites" unique_id=834617488]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("8_wtubw")
 
-[node name="Rudy_default" type="Sprite2D" parent="."]
+[node name="Rudy_default" type="Sprite2D" parent="Sprites" unique_id=1362918439]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("9_6jejf")
 
-[node name="Rudy_happy" type="Sprite2D" parent="."]
+[node name="Rudy_happy" type="Sprite2D" parent="Sprites" unique_id=1576672724]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("10_rcxrg")
 
-[node name="Rudy_possesed" type="Sprite2D" parent="."]
+[node name="Rudy_possessed" type="Sprite2D" parent="Sprites" unique_id=180230791]
 position = Vector2(1587, 566)
 scale = Vector2(1, 0.908)
 texture = ExtResource("13_ad1w4")
 
-[node name="God_default" type="Sprite2D" parent="."]
+[node name="God_default" type="Sprite2D" parent="Sprites" unique_id=907951152]
 position = Vector2(1587, 526)
 scale = Vector2(1, 0.908)
 texture = ExtResource("14_0e7vu")
 
-[node name="God_angry" type="Sprite2D" parent="."]
+[node name="God_angry" type="Sprite2D" parent="Sprites" unique_id=1246079124]
 position = Vector2(1587, 526)
 scale = Vector2(1, 0.908)
 texture = ExtResource("15_twvw3")
 
-[node name="God_happy" type="Sprite2D" parent="."]
+[node name="God_happy" type="Sprite2D" parent="Sprites" unique_id=1934024125]
 position = Vector2(1587, 526)
 scale = Vector2(1, 0.908)
 texture = ExtResource("16_1grv4")
+
+[node name="Bully1_default" type="Sprite2D" parent="Sprites" unique_id=1506691038]
+position = Vector2(1567, 556)
+texture = ExtResource("17_06sut")
+flip_h = true
+
+[node name="Bully2_default" type="Sprite2D" parent="Sprites" unique_id=424447736]
+position = Vector2(1574, 568)
+texture = ExtResource("18_6f1u3")
+
+[node name="Bully3_default" type="Sprite2D" parent="Sprites" unique_id=358189306]
+position = Vector2(1529, 582)
+texture = ExtResource("19_vbo75")
+
+[node name="Leader_default" type="Sprite2D" parent="Sprites" unique_id=1156665065]
+position = Vector2(1561, 530)
+texture = ExtResource("20_x6ih8")
+flip_h = true
