@@ -27,7 +27,7 @@ func end_game():
 	await flash_screen()
 	
 	var SceneController = get_tree().current_scene
-	SceneController.swap_scene("res://Scenes/Game Over/Game_over_player_got_caught.tscn", false, false)
+	SceneController.swap_scene("res://Scenes/Game Over/Game_over_player_got_caught.tscn", true, false)
 
 func animate():
 	var angle = vision.global_rotation

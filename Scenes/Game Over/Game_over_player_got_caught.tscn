@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bhlnqoh8wicye"]
 
 [ext_resource type="Texture2D" uid="uid://bekg5hhl4jht0" path="res://Scenes/Game Over/Assets/1000007215.png" id="1_a8iem"]
+[ext_resource type="Script" uid="uid://bwmf6j3rs4e0f" path="res://Scenes/Game Over/game_over_player_got_caught.gd" id="1_yvs3b"]
 [ext_resource type="FontFile" uid="uid://dv7vlp5wdvsqn" path="res://Combat System/Assets/OMORI_GAME2.ttf" id="2_3piae"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vnho4"]
@@ -13,19 +14,20 @@ border_width_top = 10
 border_width_right = 10
 border_width_bottom = 10
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=111190937]
+script = ExtResource("1_yvs3b")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1343705234]
 offset_right = 1926.0
 offset_bottom = 1079.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vnho4")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1261384471]
 position = Vector2(491, 382)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_a8iem")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=1526470563]
 offset_top = 527.0
 offset_right = 1923.0
 offset_bottom = 786.0
@@ -35,7 +37,7 @@ text = "Game Over
 You got caught"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=5691344]
 offset_left = 734.0
 offset_top = 829.0
 offset_right = 1188.0
@@ -44,3 +46,5 @@ theme_override_fonts/font = ExtResource("2_3piae")
 theme_override_font_sizes/font_size = 128
 theme_override_styles/normal = SubResource("StyleBoxFlat_vv0k2")
 text = "Retry"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
