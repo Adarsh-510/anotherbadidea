@@ -2,21 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dxusf1xe2gkw0" path="res://GUI/Pause Menu/Scripts/pause menu.gd" id="1_0g3m2"]
 [ext_resource type="Shader" uid="uid://gpgylovnqew1" path="res://GUI/Pause Menu/Scripts/blur.gdshader" id="2_4x5p1"]
-[ext_resource type="Texture2D" uid="uid://b3oxfngfxlhe8" path="res://GUI/Pause Menu/Assets/book closed.jpg" id="3_4x5p1"]
+[ext_resource type="Texture2D" uid="uid://7h5adlm2yexs" path="res://Scenes/Intro/Assets/Book.png" id="3_p0dtl"]
+[ext_resource type="Texture2D" uid="uid://c2svc18pq6sdn" path="res://Scenes/Menu/Assets/1000007214.png" id="3_w720m"]
 [ext_resource type="Texture2D" uid="uid://vkhvscegj8t4" path="res://GUI/Pause Menu/Assets/book open.png" id="4_4x5p1"]
 [ext_resource type="Texture2D" uid="uid://dmbpnhr6o0n4n" path="res://GUI/Pause Menu/Assets/strikeout line 1.png" id="5_iss3t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_c4gd1"]
 shader = ExtResource("2_4x5p1")
 shader_parameter/amount = 2.50000011875
-
-[sub_resource type="LabelSettings" id="LabelSettings_3sbs4"]
-font_size = 64
-outline_size = 8
-outline_color = Color(1, 0, 0.03529412, 1)
-shadow_size = 8
-shadow_color = Color(0, 0, 0, 1)
-shadow_offset = Vector2(6.825, 4.74)
 
 [node name="Pause Menu" type="CanvasLayer" unique_id=423058424]
 process_mode = 3
@@ -45,13 +38,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_override_constants/separation = 45
 
-[node name="Label" type="Label" parent="closed book/left" unique_id=1947502515]
+[node name="TextureRect" type="TextureRect" parent="closed book/left" unique_id=1659207523]
+custom_minimum_size = Vector2(0, 290)
 layout_mode = 2
-size_flags_horizontal = 4
-text = "GAME NAME"
-label_settings = SubResource("LabelSettings_3sbs4")
-horizontal_alignment = 1
-vertical_alignment = 1
+texture = ExtResource("3_w720m")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="resume" type="Button" parent="closed book/left" unique_id=81310232]
 custom_minimum_size = Vector2(600, 100)
@@ -77,13 +69,15 @@ size_flags_horizontal = 3
 
 [node name="book" type="TextureButton" parent="closed book/right" unique_id=1736974797]
 texture_filter = 1
-custom_minimum_size = Vector2(600, 1080)
+custom_minimum_size = Vector2(850, 1080)
 layout_mode = 2
-texture_normal = ExtResource("3_4x5p1")
+disabled = true
+texture_normal = ExtResource("3_p0dtl")
 ignore_texture_size = true
 stretch_mode = 5
 
 [node name="opened book" type="Control" parent="." unique_id=2146302573]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

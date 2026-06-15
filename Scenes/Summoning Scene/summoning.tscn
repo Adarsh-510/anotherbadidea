@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dxxlcrefes768" path="res://Entities/Enemies/Sister/sister.tscn" id="10_uo04w"]
 [ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="11_vg7dp"]
 [ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="12_vg7dp"]
+[ext_resource type="AudioStream" uid="uid://by4e0g4vlwmfi" path="res://Not All But Most Audios/Gameplay_Theme.wav" id="13_dt13i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vg7dp"]
 size = Vector2(2166, 875)
@@ -217,5 +218,9 @@ affect_navigation_mesh = true
 [node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=749823022]
 vertices = PackedVector2Array(1234, 1019, 1229, 1069, 1279, 1089, 1319, 1073, 1320, 1025, 1296, 1010)
 affect_navigation_mesh = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1135754656]
+stream = ExtResource("13_dt13i")
+autoplay = true
 
 [editable path="background/summoning circle"]
