@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var DialogueBox = preload("res://Dialogue Box/Scenes/DialogueBox.tscn")
+@onready var DialogueBox = preload("res://GUI/Dialogue Box/Scenes/DialogueBox.tscn")
 
 @onready var cutscene_0: Panel = $"cutscene 0"
 @onready var cutscene_1: Sprite2D = $"cutscene 1"

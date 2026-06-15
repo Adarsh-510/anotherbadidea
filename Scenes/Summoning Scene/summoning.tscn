@@ -9,11 +9,29 @@
 [ext_resource type="PackedScene" uid="uid://brg83bki07wsc" path="res://Scenes/Summoning Scene/Object Scenes/tree_2.tscn" id="9_4ah3g"]
 [ext_resource type="PackedScene" uid="uid://cc8vthn85bgb4" path="res://Scenes/Summoning Scene/Summoning Circle/summoning_circle.tscn" id="9_nelst"]
 [ext_resource type="PackedScene" uid="uid://udebvubd3onn" path="res://Scenes/Summoning Scene/Object Scenes/tree_1.tscn" id="10_mu4sa"]
+[ext_resource type="PackedScene" uid="uid://dxxlcrefes768" path="res://Entities/Enemies/Sister/sister.tscn" id="10_uo04w"]
+[ext_resource type="PackedScene" uid="uid://ck7etv02qnjn8" path="res://Entities/Characters/character.tscn" id="11_vg7dp"]
+[ext_resource type="Script" uid="uid://fy8tratxjwal" path="res://Entities/LEGO SHIT/movement control.gd" id="12_vg7dp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg7dp"]
+size = Vector2(2166, 875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dt13i"]
+size = Vector2(1480, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1tcwu"]
+size = Vector2(2288, 528)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_vg7dp"]
+vertices = PackedVector2Array(852.78125, 609.46875, 1298.1875, 999.5781, 1224.8281, 1010.22656, 114.21094, 888.53906, 117.38281, 852.03906, 755.9297, 613.0078, 21.851563, 185.21094, 117.02344, -18.632813, 118.02344, 466.20313, 10.5234375, 250.36719, -336.96875, -2.3515625, -110.53906, 182.88281, 462.28906, 459.21875, 461.3125, 474.03906, 93.67969, 829.72656, 383, 1104.9766, 1749.2969, 1107.9688, 1755.6719, 1311.9766, -340.89844, 1309.0078, 225.21094, 1109.9609, 1244.2188, 470.96094, 1234.2109, 7.7890625, 1747.0078, -2.78125, 1748.9766, 1066.9297, 1330.1172, 1019.53125, 1329.1797, 1064.1563, 829.71875, 554.1328, 679.40625, 609.1172, 1219.5, 1063.4375, 383, 1057.9297, 223.78906, 1043, -339.09375, 1111.9609, -334.03125, 1043, 24.078125, 893.21875, 1.078125, 870.21875, 25.46875, 834.35156, -135.28906, 240.61719, 715.5625, 551.8906, -89.46875, 258.14063)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(10, 7, 6, 11), PackedInt32Array(8, 12, 13, 4, 14), PackedInt32Array(15, 16, 17, 18, 19), PackedInt32Array(20, 21, 22, 23, 24, 1), PackedInt32Array(23, 25, 24), PackedInt32Array(20, 1, 0, 26), PackedInt32Array(27, 5, 4), PackedInt32Array(3, 2, 28, 29, 30), PackedInt32Array(18, 31, 19), PackedInt32Array(15, 19, 30, 29), PackedInt32Array(3, 30, 32, 33), PackedInt32Array(34, 33, 32), PackedInt32Array(35, 34, 32, 10, 36), PackedInt32Array(13, 20, 26, 37), PackedInt32Array(13, 37, 27, 4), PackedInt32Array(8, 14, 35, 36, 38), PackedInt32Array(10, 11, 36), PackedInt32Array(9, 8, 38)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-347, -12, 127, -29, 128, 456, 473, 449, 472, 464, 1234, 461, 1224, -2, 1757, -13, 1759, 1077, 393, 1068, 393, 1095, 1759, 1098, 1766, 1322, -351, 1319, -349, 1102, 215, 1100, 214, 1053, -344, 1053)])
 
 [node name="Summoning" type="Node2D" unique_id=766960750]
 y_sort_enabled = true
 
 [node name="background" type="Node2D" parent="." unique_id=859414685]
+scale = Vector2(0.5, 0.5)
 
 [node name="TextureRect" type="TextureRect" parent="background" unique_id=980311291]
 offset_left = -1222.0
@@ -23,10 +41,6 @@ offset_bottom = 8684.985
 scale = Vector2(0.369, 0.369)
 texture = ExtResource("1_rno8c")
 stretch_mode = 1
-
-[node name="House" type="Sprite2D" parent="background" unique_id=1125675864]
-position = Vector2(1366, 471)
-texture = ExtResource("2_u022o")
 
 [node name="Driveway" type="Sprite2D" parent="background" unique_id=237325394]
 position = Vector2(609.25, 1061)
@@ -53,8 +67,42 @@ position = Vector2(609.25, 2318)
 scale = Vector2(1.4296635, 1)
 texture = ExtResource("3_pdosh")
 
+[node name="summoning circle" parent="background" unique_id=627597777 node_paths=PackedStringArray("Rudy", "Owen") instance=ExtResource("9_nelst")]
+position = Vector2(1914.0002, 1470)
+scale = Vector2(0.44, 0.44)
+Rudy = NodePath("../../characters/Character2")
+Owen = NodePath("../../characters/Character3")
+
+[node name="Rudy Hide" parent="background/summoning circle/positions" parent_id_path=PackedInt32Array(627597777, 2081320843) index="0" unique_id=1661833647]
+position = Vector2(1718.1807, 1463.6362)
+
+[node name="Owen Hide" parent="background/summoning circle/positions" parent_id_path=PackedInt32Array(627597777, 2081320843) index="1" unique_id=386889218]
+position = Vector2(-1313.6372, -549.99976)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="background" unique_id=220885062]
+y_sort_enabled = true
+position = Vector2(1366, 912)
+
+[node name="House" type="Sprite2D" parent="background/StaticBody2D" unique_id=1125675864]
+y_sort_enabled = true
+texture = ExtResource("2_u022o")
+offset = Vector2(0, -440)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="background/StaticBody2D" unique_id=472038911]
+position = Vector2(-4, -463.5)
+shape = SubResource("RectangleShape2D_vg7dp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="background/StaticBody2D" unique_id=810030738]
+position = Vector2(336, -14)
+shape = SubResource("RectangleShape2D_dt13i")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="background/StaticBody2D" unique_id=609211424]
+position = Vector2(0, -636)
+shape = SubResource("RectangleShape2D_1tcwu")
+
 [node name="Map" type="Node2D" parent="." unique_id=2090318748]
 y_sort_enabled = true
+scale = Vector2(0.5, 0.5)
 
 [node name="fences" type="Node2D" parent="Map" unique_id=1390162168]
 y_sort_enabled = true
@@ -105,6 +153,7 @@ position = Vector2(1543, 1166)
 position = Vector2(2539, 2108)
 
 [node name="Overlays" type="Node2D" parent="." unique_id=335580596]
+scale = Vector2(0.5, 0.5)
 
 [node name="Shadow Overlay" type="Sprite2D" parent="Overlays" unique_id=880573851]
 self_modulate = Color(1, 1, 1, 0.29411766)
@@ -118,5 +167,55 @@ position = Vector2(1451, 1040)
 scale = Vector2(2, 2)
 texture = ExtResource("8_h0frt")
 
-[node name="summoning circle" parent="." unique_id=627597777 instance=ExtResource("9_nelst")]
-position = Vector2(1689, 1442)
+[node name="sister" parent="." unique_id=237785608 instance=ExtResource("10_uo04w")]
+y_sort_enabled = true
+position = Vector2(906.00006, 483.99997)
+
+[node name="characters" type="Node2D" parent="." unique_id=359352435]
+y_sort_enabled = true
+
+[node name="Character" parent="characters" unique_id=1092893584 instance=ExtResource("11_vg7dp")]
+position = Vector2(263.00006, 1269)
+_name = 0
+
+[node name="Control_Movement" type="Node2D" parent="characters/Character" unique_id=2096508418]
+script = ExtResource("12_vg7dp")
+metadata/_custom_type_script = "uid://fy8tratxjwal"
+
+[node name="Camera2D" type="Camera2D" parent="characters/Character" unique_id=574796366]
+limit_left = -306
+limit_top = 1305
+limit_right = 1735
+limit_bottom = 0
+limit_smoothed = true
+
+[node name="Character2" parent="characters" unique_id=1837289791 node_paths=PackedStringArray("target") instance=ExtResource("11_vg7dp")]
+position = Vector2(37.00003, 1230.0001)
+target = NodePath("../Character")
+
+[node name="Character3" parent="characters" unique_id=1989052962 node_paths=PackedStringArray("target") instance=ExtResource("11_vg7dp")]
+position = Vector2(564, 1237)
+_name = 2
+target = NodePath("../Character")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." unique_id=2124103320]
+visible = false
+navigation_polygon = SubResource("NavigationPolygon_vg7dp")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1261343899]
+vertices = PackedVector2Array(-104, 193, -122, 235, -88, 248, 2, 241, 10, 195)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1965604510]
+vertices = PackedVector2Array(31, 844, 14, 869, 28, 883, 105, 879, 107, 856, 90, 840)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=1484145732]
+vertices = PackedVector2Array(721, 562, 697, 600, 756, 603, 838, 600, 823, 564)
+affect_navigation_mesh = true
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="NavigationRegion2D" unique_id=749823022]
+vertices = PackedVector2Array(1234, 1019, 1229, 1069, 1279, 1089, 1319, 1073, 1320, 1025, 1296, 1010)
+affect_navigation_mesh = true
+
+[editable path="background/summoning circle"]

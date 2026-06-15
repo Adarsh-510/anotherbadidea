@@ -35,7 +35,7 @@ func setup():
 	elif target:
 		refresh_position.start()
 		has_target = true
-		target_desired_distance = 10
+		target_desired_distance = 40
 	else:
 		refresh_position.stop()
 		target_desired_distance = 10
@@ -87,9 +87,6 @@ func check_movement_type():
 		parent.is_squatting = false
 	elif distance_to_player < 150: 
 		if target is Character and target.is_squatting:
-			parent.is_sprinting = false
-			parent.is_squatting = true
-		elif target is not Character:
 			parent.is_sprinting = false
 			parent.is_squatting = true
 	else:

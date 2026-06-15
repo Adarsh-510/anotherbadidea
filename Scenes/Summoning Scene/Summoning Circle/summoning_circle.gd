@@ -1,4 +1,5 @@
 extends StaticBody2D
+class_name summoning_circle
 
 @onready var items: Node2D = $items
 @onready var circle: Area2D = $circle
@@ -20,7 +21,7 @@ func _ready() -> void:
 	items.visible = false
 
 func toggle_fill():
-	is_filled = is_filled
+	is_filled = not is_filled
 	items.visible = not items.visible
 	
 	if Rudy.target == rudy_circle: Rudy.target = rudy_hide
@@ -34,7 +35,7 @@ func toggle_fill():
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Interact") and in_circle:
 		toggle_fill()
-	if event.is_action_pressed("Select") and in_position:
+	if event.is_action_pressed("Select") and in_position and is_filled:
 		progress.value += 1
 
 func _on_circle_body_entered(body: Node2D) -> void:
@@ -52,3 +53,8 @@ func _on_player_position_body_entered(body: Node2D) -> void:
 func _on_player_position_body_exited(body: Node2D) -> void:
 	if body is Character and body._name == 0:
 		in_position = false
+
+func _on_texture_progress_bar_value_changed(value: float) -> void:
+	if value == progress.max_value:
+		var SceneController = get_tree().current_scene
+		SceneController.swap_scene("res://Scenes/Ending/Ending.tscn", false, false)

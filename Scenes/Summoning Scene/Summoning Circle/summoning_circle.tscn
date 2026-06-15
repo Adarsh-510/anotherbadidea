@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://dgjksojydyftk" path="res://Entities/Enemies/Sister/Assets/green.png" id="8_nnsnj"]
 [ext_resource type="Texture2D" uid="uid://cmtly3apou8bl" path="res://Scenes/Summoning Scene/Assets/Book.png" id="8_yrksj"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ebfa1"]
+radius = 841.3715
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_e8xd8"]
 radius = 923.8187
 
@@ -18,10 +21,15 @@ radius = 923.8187
 radius = 195.74728
 
 [node name="summoning circle" type="StaticBody2D" unique_id=627597777]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_4gp8i")
 
 [node name="SummoningCircle" type="Sprite2D" parent="." unique_id=539946796]
 texture = ExtResource("2_lnen3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=237541563]
+shape = SubResource("CircleShape2D_ebfa1")
 
 [node name="items" type="Node2D" parent="." unique_id=68153046]
 
@@ -82,10 +90,8 @@ position = Vector2(-343, 571)
 position = Vector2(-315, -501)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1079166735]
-visible = false
 
 [node name="summoning progress" type="Control" parent="CanvasLayer" unique_id=376556024]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,7 +109,7 @@ offset_top = 36.0
 offset_right = 605.0
 offset_bottom = 66.0
 grow_horizontal = 2
-max_value = 150.0
+max_value = 10.0
 nine_patch_stretch = true
 texture_under = ExtResource("7_0fi0a")
 texture_progress = ExtResource("8_nnsnj")
@@ -122,7 +128,19 @@ text = "SUMMON APOPHIS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=480162695]
+
+[node name="shock effect" type="ColorRect" parent="CanvasLayer2" unique_id=918925887]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [connection signal="body_entered" from="circle" to="." method="_on_circle_body_entered"]
 [connection signal="body_exited" from="circle" to="." method="_on_circle_body_exited"]
 [connection signal="body_entered" from="player position" to="." method="_on_player_position_body_entered"]
 [connection signal="body_exited" from="player position" to="." method="_on_player_position_body_exited"]
+[connection signal="value_changed" from="CanvasLayer/summoning progress/TextureProgressBar" to="." method="_on_texture_progress_bar_value_changed"]

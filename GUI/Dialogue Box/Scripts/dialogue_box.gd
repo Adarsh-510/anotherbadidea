@@ -35,13 +35,12 @@ var _expression
 
 var text_duration
 var sleep_duration = 0.5
-var text_speed = 0.07 # lower = faster text
+var text_speed = 0.05 # lower = faster text
 var text_finished = false
 
 var tween: Tween
 
 func _ready() -> void:
-	setup("TEST TEXT!! THIS TEXT IS FOR TESTING!! MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW MEOW!!!", "Andy", "Scared")
 	hide_all()
 
 func _process(_delta: float) -> void:

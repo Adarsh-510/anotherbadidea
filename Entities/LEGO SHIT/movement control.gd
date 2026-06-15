@@ -10,7 +10,7 @@ func _physics_process(_delta: float) -> void:
 	direction = Input.get_vector("Left", "Right", "Up", "Down")
 	
 	var speed_modifier = 1
-	speed_modifier = 0.25 if parent.is_squatting else (1.75 if parent.is_sprinting else 1.0)
+	speed_modifier = 0.5 if parent.is_squatting else (1.75 if parent.is_sprinting else 1.0)
 	
 	parent.velocity = direction * parent.Speed * speed_modifier
 	

@@ -4,15 +4,17 @@ extends Area2D
 @onready var sight: RayCast2D = $RayCast2D
 @onready var cone_visual: Polygon2D = $Polygon2D
 
-var is_in_cone: bool = false
-var player_in_cone: Character
+var is_p_in_cone: bool = false
+var is_c_in_cone: bool = false
+var body_in_cone
 
 func _physics_process(_delta: float) -> void:
-	if is_in_cone: is_it_visible()
+	if is_p_in_cone: is_it_visible()
+	if is_c_in_cone and body_in_cone is summoning_circle and body_in_cone.is_filled: parent.end_game()
 	#current_cone_visual()
 
 func is_it_visible():
-	sight.target_position = sight.to_local(player_in_cone.global_position)
+	sight.target_position = sight.to_local(body_in_cone.global_position)
 	sight.force_raycast_update()
 	
 	# edit it to accept the circle
@@ -21,12 +23,17 @@ func is_it_visible():
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Character and body._name == 0:
-		is_in_cone = true
-		player_in_cone = body
+		is_p_in_cone = true
+		body_in_cone = body
+	if body is summoning_circle:
+		is_c_in_cone = true
+		body_in_cone = body
 
 func _on_body_exited(body: Node2D) -> void:
 	if body is Character and body._name == 0:
-		is_in_cone = false
+		is_p_in_cone = false
+	if body is summoning_circle:
+		is_c_in_cone = false
 
 #func current_cone_visual():
 	#if parent.can_see_player and cone_visual.modulate == Color("ffffff50"): cone_visual.modulate = "ff000050"

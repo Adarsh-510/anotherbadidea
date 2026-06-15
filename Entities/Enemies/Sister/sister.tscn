@@ -7,32 +7,37 @@
 [ext_resource type="Texture2D" uid="uid://dgjksojydyftk" path="res://Entities/Enemies/Sister/Assets/green.png" id="5_olgi4"]
 
 [node name="sister" type="CharacterBody2D" unique_id=237785608]
+scale = Vector2(1.6, 1.6)
 script = ExtResource("1_kqhgp")
 
 [node name="sprite" type="AnimatedSprite2D" parent="." unique_id=2052355218]
-scale = Vector2(2, 2)
+scale = Vector2(0.115, 0.115)
 sprite_frames = ExtResource("2_kqhgp")
 animation = &"Idle Down"
 autoplay = "Idle Down"
-offset = Vector2(0, -15)
+offset = Vector2(16, -517)
 
 [node name="vision" type="Area2D" parent="." unique_id=1170359591]
+z_index = 5
 position = Vector2(0, -24)
 scale = Vector2(3, 1.5)
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("3_6sm4w")
 
 [node name="Polygon2D" type="Polygon2D" parent="vision" unique_id=1752190532]
 modulate = Color(1, 1, 1, 0.3137255)
 z_index = -1
 scale = Vector2(1, 1.2)
-polygon = PackedVector2Array(0, 0, 192, -64, 208, -48, 216, -32, 224, -16, 224, 16, 216, 32, 208, 48, 192, 64)
+polygon = PackedVector2Array(0, 0, 192, -64, 210.41664, -58.88889, 219.79164, -42.22222, 224, -16, 224, 16, 218.74998, 46.319443, 209.99998, 58.819443, 192, 64)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="vision" unique_id=1226454365]
 scale = Vector2(1, 1.2)
-polygon = PackedVector2Array(0, 0, 192, -64, 208, -48, 216, -32, 224, -16, 224, 0, 224, 16, 216, 32, 208, 48, 192, 64)
+polygon = PackedVector2Array(0, 0, 192, -64, 211.24998, -58.88889, 219.58331, -41.875, 224, -16, 224, 0, 224, 16, 218.74998, 46.666664, 210.62498, 59.166664, 192, 64)
 
 [node name="RayCast2D" type="RayCast2D" parent="vision" unique_id=1719034941]
 target_position = Vector2(200, 0)
+collision_mask = 3
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1600074081]
 
@@ -54,6 +59,7 @@ offset_top = 96.0
 offset_right = 605.0
 offset_bottom = 126.0
 grow_horizontal = 2
+max_value = 1000.0
 nine_patch_stretch = true
 texture_under = ExtResource("4_ny2hb")
 texture_progress = ExtResource("5_olgi4")
@@ -71,6 +77,17 @@ grow_horizontal = 2
 text = "TIME LEFT ON PHONE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=2018786267]
+
+[node name="shock effect" type="ColorRect" parent="CanvasLayer2" unique_id=1254829893]
+process_mode = 3
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [connection signal="body_entered" from="vision" to="vision" method="_on_body_entered"]
 [connection signal="body_exited" from="vision" to="vision" method="_on_body_exited"]
